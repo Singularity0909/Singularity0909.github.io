@@ -4,5 +4,8 @@
     <title><![CDATA[Hello World]]></title>
     <url>%2F2019%2F06%2F13%2FHello-World%2F</url>
     <content type="text"><![CDATA[这是我的第一篇博文入坑Github，成功搭建Hexo博客！在此要感谢hwr dalao]]></content>
+      <categories>
+        <category>Daily</category>
+      </categories>
   </entry>
 </search>
