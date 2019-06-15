@@ -1,0 +1,1982 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="en">
+    <head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.6 -->
+    <script>
+        window.materialVersion = "1.5.6"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0',
+            '1.5.2',
+            '1.5.5'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+    <link rel="dns-prefetch" href="https://busuanzi.ibruce.info">
+
+
+
+
+
+
+
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            SDUWH 高级语言程序设计 课程设计 学生成绩管理系统 | 
+        
+        Singularity
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="https://s2.ax1x.com/2019/06/15/VoA9df.jpg">
+    <link rel="icon" href="https://s2.ax1x.com/2019/06/15/VoA9df.jpg">
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" itemprop="description" content="An ACMer&#39;s blog">
+    <meta name="keywords" content=",课程设计">
+    <meta name="theme-color" content="#00bfff">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.en.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?NKhlKQkXw/c66TR5p4wO+w==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+            
+                <style id="prettify_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_css","/css/prettify.min.css?zp8STOU9v89XWFEnN+6YmQ==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+                <style id="prettify_theme"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_theme","/css/prettify/tomorrow-night-eighties.min.css?2LJQzURO+Kr8r/fl/T8oMA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+            
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #00bfff !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #00bfff !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #00bfff !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-image: url(https://s2.ax1x.com/2019/06/15/VoACo8.jpg);
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Singularity">
+    <meta name="msapplication-starturl" content="www.singularity2u.top/2019/06/15/SDUWH-高级语言程序设计-课程设计-学生成绩管理系统/">
+    <meta name="msapplication-navbutton-color" content="#00bfff">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Singularity">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="https://s2.ax1x.com/2019/06/15/VoA9df.jpg">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="www.singularity2u.top/2019/06/15/SDUWH-高级语言程序设计-课程设计-学生成绩管理系统/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="SDUWH 高级语言程序设计 课程设计 学生成绩管理系统 | Singularity">
+    <meta property="og:image" content="https://s2.ax1x.com/2019/06/15/VoA9df.jpg">
+    <meta property="og:description" content="An ACMer&#39;s blog">
+    <meta property="og:article:tag" content="课程设计"> 
+
+    
+        <meta property="article:published_time" content="Sat Jun 15 2019 23:12:58 GMT+0800">
+        <meta property="article:modified_time" content="Sun Jun 16 2019 00:26:48 GMT+0800">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="www.singularity2u.top/2019/06/15/SDUWH-高级语言程序设计-课程设计-学生成绩管理系统/index.html">
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "www.singularity2u.top/2019/06/15/SDUWH-高级语言程序设计-课程设计-学生成绩管理系统/index.html",
+    "headline": "SDUWH 高级语言程序设计 课程设计 学生成绩管理系统",
+    "datePublished": "Sat Jun 15 2019 23:12:58 GMT+0800",
+    "dateModified": "Sun Jun 16 2019 00:26:48 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "2U",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://s2.ax1x.com/2019/06/15/VoA9df.jpg"
+        },
+        "description": "Brainy is the new sexy"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Singularity",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "https://s2.ax1x.com/2019/06/15/VoA9df.jpg"
+        }
+    },
+    "keywords": ",课程设计",
+    "description": "An ACMer&#39;s blog",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+
+</head>
+
+
+    
+        <head>
+            <script type="text/javascript" src="/js/love.js"></script>
+            <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+            <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+            <script type="text/javascript" src="/js/firework.js"></script>
+        </head>
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span id="MD-burger-id" class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn" class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#下载链接（提取码：tyq7）"><span class="post-toc-number">1.</span> <span class="post-toc-text">下载链接（提取码：tyq7）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#功能导图"><span class="post-toc-number">2.</span> <span class="post-toc-text">功能导图</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#数据文件"><span class="post-toc-number">3.</span> <span class="post-toc-text">数据文件</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#源文件"><span class="post-toc-number">4.</span> <span class="post-toc-text">源文件</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#头文件"><span class="post-toc-number">5.</span> <span class="post-toc-text">头文件</span></a></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        <!-- Custom Thumbnail -->
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(https://s2.ax1x.com/2019/06/15/VoIEdK.jpg)">
+    
+            <p class="article-headline-p">
+                SDUWH 高级语言程序设计 课程设计 学生成绩管理系统
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="https://s2.ax1x.com/2019/06/15/VoA9df.jpg" width="44px" height="44px" alt="Author Avatar">
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>2U</strong>
+        <span>Jun 15, 2019</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/课程设计/">课程设计</a>
+    </li></ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+        
+            <!-- Busuanzi Views -->
+            <a class="post_share-link" href="#">
+                <li class="mdl-menu__item">
+                    <span id="busuanzi_container_page_pv">
+                        <span id="busuanzi_value_page_pv"></span>&nbsp;Views
+                    </span>
+                </li>
+            </a>
+        
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=SDUWH 高级语言程序设计 课程设计 学生成绩管理系统&url=www.singularity2u.top/2019/06/15/SDUWH-高级语言程序设计-课程设计-学生成绩管理系统/index.html&pic=www.singularity2u.tophttps://s2.ax1x.com/2019/06/15/VoA9df.jpg&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Weibo
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=SDUWH 高级语言程序设计 课程设计 学生成绩管理系统&url=www.singularity2u.top/2019/06/15/SDUWH-高级语言程序设计-课程设计-学生成绩管理系统/index.html&via=2U" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=www.singularity2u.top/2019/06/15/SDUWH-高级语言程序设计-课程设计-学生成绩管理系统/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=www.singularity2u.top/2019/06/15/SDUWH-高级语言程序设计-课程设计-学生成绩管理系统/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+        <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=www.singularity2u.top/2019/06/15/SDUWH-高级语言程序设计-课程设计-学生成绩管理系统/index.html&title=SDUWH 高级语言程序设计 课程设计 学生成绩管理系统" target="_blank">
+            <li class="mdl-menu__item">
+                Share to LinkedIn
+            </li>
+        </a>
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Singularity&title=SDUWH 高级语言程序设计 课程设计 学生成绩管理系统&summary=An ACMer&#39;s blog&pics=www.singularity2u.tophttps://s2.ax1x.com/2019/06/15/VoA9df.jpg&url=www.singularity2u.top/2019/06/15/SDUWH-高级语言程序设计-课程设计-学生成绩管理系统/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                Share to QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+        <a class="post_share-link" href="https://telegram.me/share/url?url=www.singularity2u.top/2019/06/15/SDUWH-高级语言程序设计-课程设计-学生成绩管理系统/index.html&text=SDUWH 高级语言程序设计 课程设计 学生成绩管理系统" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Telegram
+            </li>
+        </a>
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h3 id="下载链接（提取码：tyq7）"><a href="#下载链接（提取码：tyq7）" class="headerlink" title="下载链接（提取码：tyq7）"></a><a href="https://pan.baidu.com/s/15nJAni-pLe9g0fA6q1CZSQ" target="_blank" rel="noopener">下载链接</a>（提取码：tyq7）</h3><hr>
+<h3 id="功能导图"><a href="#功能导图" class="headerlink" title="功能导图"></a>功能导图</h3><p><img src="https://s2.ax1x.com/2019/06/15/VoI0Lq.png" alt="思维导图"></p>
+<hr>
+<h3 id="数据文件"><a href="#数据文件" class="headerlink" title="数据文件"></a>数据文件</h3><ol>
+<li><p><strong>password.txt</strong></p>
+</li>
+<li><p><strong>student.txt</strong></p>
+</li>
+<li><p><strong>subject.txt</strong></p>
+</li>
+</ol>
+<hr>
+<h3 id="源文件"><a href="#源文件" class="headerlink" title="源文件"></a>源文件</h3><p><strong>main.cpp</strong></p>
+<pre><code class="cpp">#include &lt;cstdio&gt;
+#include &lt;cstdlib&gt;
+#include &lt;cstring&gt;
+#include &lt;iostream&gt;
+#include &lt;iomanip&gt;
+#include &lt;fstream&gt;
+#include &lt;vector&gt;
+#include &lt;map&gt;
+#include &lt;string&gt;
+#include &lt;algorithm&gt;
+#include &lt;windows.h&gt;
+#include &quot;data.h&quot;
+#include &quot;student.h&quot;
+#include &quot;subject.h&quot;
+#include &quot;system.h&quot;
+
+int main()
+{
+    welcome();
+    login();
+    load();
+    do showMenu();
+    while (chooseFunc());
+    save();
+    system(&quot;pause&quot;);
+    return 0;
+}</code></pre>
+<hr>
+<h3 id="头文件"><a href="#头文件" class="headerlink" title="头文件"></a>头文件</h3><p><strong>data.h</strong></p>
+<pre><code class="cpp">#pragma once
+
+using namespace std;
+
+struct Sub
+{
+    string name;
+    double weight;
+};
+map&lt;int, Sub&gt; sub; //存储所有科目信息
+
+struct Stu
+{
+    string name, id;
+    int claz;
+    map&lt;int, int&gt; m;
+    double gpa()
+    {
+        double suma = 0, sumb = 0;
+        for (auto it = m.begin(); it != m.end(); it++)
+        {
+            suma += it-&gt;second * sub[it-&gt;first].weight;
+            sumb += sub[it-&gt;first].weight;
+        }
+        return suma / sumb;
+    }
+    int sum()
+    {
+        int res = 0;
+        for (auto it = m.begin(); it != m.end(); it++)
+            res += it-&gt;second;
+        return res;
+    }
+};
+vector&lt;Stu&gt; stu; //存储所有学生信息
+vector&lt;Stu&gt; temp; //存储某次查询得到的学生信息</code></pre>
+<p><strong>student.h</strong></p>
+<pre><code class="cpp">#pragma once
+
+using namespace std;
+
+void stuInsert()
+{
+    string name, id; char c;
+    int claz, score;
+    map&lt;int, int&gt; m;
+    cout &lt;&lt; &quot;请输入学生信息，按回车键开始&quot; &lt;&lt; endl;
+    getchar();
+    while ((c = getchar()) != &#39;0&#39;)
+    {
+        system(&quot;cls&quot;);
+        m.clear();
+        cout &lt;&lt; &quot;姓名：&quot;; cin &gt;&gt; name;
+        cout &lt;&lt; &quot;学号：&quot;; cin &gt;&gt; id;
+        cout &lt;&lt; &quot;班级：&quot;; cin &gt;&gt; claz;
+        for (auto it = sub.begin(); it != sub.end(); it++)
+        {
+            cout &lt;&lt; it-&gt;second.name &lt;&lt; &quot;成绩：&quot;; cin &gt;&gt; score;
+            m[it-&gt;first] = score;
+        }
+        stu.push_back(Stu{ name, id, claz, m });
+        cout &lt;&lt; endl &lt;&lt; &quot;按回车键继续输入，输入0返回根目录&quot; &lt;&lt; endl;
+        getchar();
+    }
+}
+
+void stuDelete()
+{
+menu:
+    system(&quot;cls&quot;);
+    cout &lt;&lt; &quot;请输入您需要进行的操作标号&quot; &lt;&lt; endl;
+    cout &lt;&lt; &quot;------------------------------&quot; &lt;&lt; endl;
+    cout &lt;&lt; endl &lt;&lt; &quot;0\t返回根目录&quot; &lt;&lt; endl;
+    cout &lt;&lt; endl &lt;&lt; &quot;1\t按指定学生编号逐个删除&quot; &lt;&lt; endl;
+    cout &lt;&lt; endl &lt;&lt; &quot;2\t按指定班级编号批量删除&quot; &lt;&lt; endl &lt;&lt; endl;
+    cout &lt;&lt; &quot;------------------------------&quot; &lt;&lt; endl;
+    string id; int claz, ope; cin &gt;&gt; ope;
+    switch (ope)
+    {
+    case 0: break;
+    case 1:
+        system(&quot;cls&quot;);
+        cout &lt;&lt; &quot;请输入需要删除信息的学生编号：&quot;;
+        while (cin &gt;&gt; id &amp;&amp; id != &quot;0&quot;)
+        {
+            bool flag = false; //标记是否查询到对象
+            for (int i = 0; i &lt; (int)stu.size(); i++) //遍历vector，逐个检验学生是否与指定编号匹配
+            {
+                if (stu[i].id == id)
+                {
+                    system(&quot;cls&quot;);
+                    flag = true; //查询到对象
+                    cout &lt;&lt; &quot;请确认是否删除该学生的信息[Y/N]&quot; &lt;&lt; endl &lt;&lt; endl;
+                    cout &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; &quot;姓名&quot; &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; &quot;学号&quot; &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; &quot;班级&quot;;
+                    for (auto it = sub.begin(); it != sub.end(); it++)
+                        cout &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; it-&gt;second.name;
+                    cout &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; &quot;总成绩&quot; &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; &quot;平均学分绩点&quot;;
+                    cout &lt;&lt; endl &lt;&lt; endl;
+                    cout &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; stu[i].name &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; stu[i].id &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; stu[i].claz;
+                    for (auto it = sub.begin(); it != sub.end(); it++)
+                    {
+                        if (stu[i].m.count(it-&gt;first)) cout &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; stu[i].m[it-&gt;first];
+                        else cout &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; &quot;尚未录入&quot;;
+                    }
+                    cout &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; stu[i].sum() &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; stu[i].gpa();
+                    cout &lt;&lt; endl;
+                    string ope; cin &gt;&gt; ope;
+                    if (ope == &quot;Y&quot; || ope == &quot;y&quot;)
+                    {
+                        stu.erase(stu.begin() + i);
+                        cout &lt;&lt; endl &lt;&lt; &quot;成功删除&quot; &lt;&lt; endl;
+                    }
+                    else cout &lt;&lt; endl &lt;&lt; &quot;取消删除&quot; &lt;&lt; endl;
+                    break;
+                }
+            }
+            if (!flag) //未查询到对象
+                cout &lt;&lt; endl &lt;&lt; &quot;不存在该学生编号！&quot; &lt;&lt; endl;
+            system(&quot;pause&quot;);
+            system(&quot;cls&quot;);
+            cout &lt;&lt; &quot;（输入0返回上级目录）&quot; &lt;&lt; endl &lt;&lt; endl;
+            cout &lt;&lt; &quot;请继续输入需要删除信息的学生编号：&quot;;
+        }
+        goto menu;
+    case 2:
+        system(&quot;cls&quot;);
+        cout &lt;&lt; &quot;请输入需要删除信息的班级编号：&quot;;
+        while (cin &gt;&gt; claz &amp;&amp; claz)
+        {
+            bool flag = false; //标记是否查询到对象
+            for (auto it = stu.begin(); it != stu.end();) //遍历vector，逐个检验学生是否属于指定班级
+            {
+                if (it-&gt;claz == claz)
+                {
+                    system(&quot;pause&quot;);
+                    system(&quot;cls&quot;);
+                    flag = true; //查询到对象
+                    cout &lt;&lt; &quot;请确认是否删除该学生的信息[Y/N]&quot; &lt;&lt; endl &lt;&lt; endl;
+                    cout &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; &quot;姓名&quot; &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; &quot;学号&quot; &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; &quot;班级&quot;;
+                    for (auto iter = sub.begin(); iter != sub.end(); iter++)
+                        cout &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; iter-&gt;second.name;
+                    cout &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; &quot;总成绩&quot; &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; &quot;平均学分绩点&quot;;
+                    cout &lt;&lt; endl &lt;&lt; endl;
+                    cout &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; it-&gt;name &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; it-&gt;id &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; it-&gt;claz;
+                    for (auto iter = sub.begin(); iter != sub.end(); iter++)
+                    {
+                        if (it-&gt;m.count(iter-&gt;first)) cout &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; it-&gt;m[iter-&gt;first];
+                        else cout &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; &quot;尚未录入&quot;;
+                    }
+                    cout &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; it-&gt;sum() &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; it-&gt;gpa();
+                    cout &lt;&lt; endl;
+                    string ope; cin &gt;&gt; ope;
+                    if (ope == &quot;Y&quot; || ope == &quot;y&quot;)
+                    {
+                        it = stu.erase(it); //迭代器stu.erase(it)指向被删除元素的下一个，利用其返回值避免当前迭代器失效
+                        cout &lt;&lt; endl &lt;&lt; &quot;成功删除&quot; &lt;&lt; endl;
+                    }
+                    else
+                    {
+                        cout &lt;&lt; endl &lt;&lt; &quot;取消删除&quot; &lt;&lt; endl;
+                        it++;
+                    }
+                }
+                else it++;
+            }
+            if (!flag) //未查询到对象
+                cout &lt;&lt; endl &lt;&lt; &quot;不存在该班级编号！&quot; &lt;&lt; endl;
+            system(&quot;pause&quot;);
+            system(&quot;cls&quot;);
+            cout &lt;&lt; &quot;（输入0返回上级目录）&quot; &lt;&lt; endl &lt;&lt; endl;
+            cout &lt;&lt; &quot;请继续输入需要删除信息的班级编号：&quot;;
+        }
+        goto menu;
+    default:
+        cout &lt;&lt; &quot;指令无效，请重新输入！&quot; &lt;&lt; endl;
+        system(&quot;pause&quot;);
+        goto menu;
+    }
+}
+
+int suborder; //存储某次按指定科目排序的科目次序
+
+//以下为各种条件下的排序规则函数
+bool cmp_nameAsc(const Stu &amp;a, const Stu &amp;b) { return a.name != b.name ? a.name &lt; b.name : a.id &lt; b.id; }
+bool cmp_nameDes(const Stu &amp;a, const Stu &amp;b) { return a.name != b.name ? a.name &gt; b.name : a.id &lt; b.id; }
+bool cmp_idAsc(const Stu &amp;a, const Stu &amp;b) { return a.id &lt; b.id; }
+bool cmp_idDes(const Stu &amp;a, const Stu &amp;b) { return a.id &gt; b.id; }
+bool cmp_sumAsc(Stu &amp;a, Stu &amp;b) { return a.sum() != b.sum() ? a.sum() &lt; b.sum() : a.id &lt; b.id; }
+bool cmp_sumDes(Stu &amp;a, Stu &amp;b) { return a.sum() != b.sum() ? a.sum() &gt; b.sum() : a.id &lt; b.id; }
+bool cmp_gpaAsc(Stu &amp;a, Stu &amp;b) { return a.gpa() != b.gpa() ? a.gpa() &lt; b.gpa() : a.gpa() &lt; b.gpa(); }
+bool cmp_gpaDes(Stu &amp;a, Stu &amp;b) { return a.gpa() != b.gpa() ? a.gpa() &gt; b.gpa() : a.gpa() &lt; b.gpa(); }
+bool cmp_subAsc(Stu &amp;a, Stu &amp;b)
+{
+    int i = 0, sid;
+    for (auto it = sub.begin(); it != sub.end() &amp;&amp; i &lt; suborder; it++, i++)
+        sid = it-&gt;first;
+    if (a.m.count(sid) &amp;&amp; b.m.count(sid)) return a.m[sid] != b.m[sid] ? a.m[sid] &lt; b.m[sid] : a.id &lt; b.id;
+    return a.m.count(sid) ? false : b.m.count(sid) ? true : a.id &lt; b.id;
+}
+bool cmp_subDes(Stu &amp;a, Stu &amp;b)
+{
+    int i = 0, sid;
+    for (auto it = sub.begin(); it != sub.end() &amp;&amp; i &lt; suborder; it++, i++)
+        sid = it-&gt;first;
+    if (a.m.count(sid) &amp;&amp; b.m.count(sid)) return a.m[sid] != b.m[sid] ? a.m[sid] &gt; b.m[sid] : a.id &lt; b.id;
+    return a.m.count(sid) ? true : b.m.count(sid) ? false : a.id &lt; b.id;
+}
+
+void print() //打印某次查询得到的学生信息
+{
+    cout &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; &quot;姓名&quot; &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; &quot;学号&quot; &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; &quot;班级&quot;;
+    for (auto it = sub.begin(); it != sub.end(); it++)
+        cout &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; it-&gt;second.name;
+    cout &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; &quot;总成绩&quot; &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; &quot;平均学分绩点&quot;;
+    cout &lt;&lt; endl &lt;&lt; endl;
+    for (int i = 0; i &lt; (int)temp.size(); i++)
+    {
+        cout &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; temp[i].name &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; temp[i].id &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; temp[i].claz;
+        for (auto it = sub.begin(); it != sub.end(); it++)
+        {
+            if (temp[i].m.count(it-&gt;first)) cout &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; temp[i].m[it-&gt;first];
+            else cout &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; &quot;尚未录入&quot;;
+        }
+        cout &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; temp[i].sum() &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; temp[i].gpa() &lt;&lt; endl &lt;&lt; endl;
+    }
+}
+
+void stuFind()
+{
+menu1:
+    system(&quot;cls&quot;);
+    cout &lt;&lt; &quot;请输入您需要进行的操作标号&quot; &lt;&lt; endl;
+    cout &lt;&lt; &quot;------------------------------&quot; &lt;&lt; endl;
+    cout &lt;&lt; endl &lt;&lt; &quot;0\t返回根目录&quot; &lt;&lt; endl &lt;&lt; endl;
+    cout &lt;&lt; &quot;1\t按指定学生姓名查询&quot; &lt;&lt; endl &lt;&lt; endl;
+    cout &lt;&lt; &quot;2\t按指定学生编号查询&quot; &lt;&lt; endl &lt;&lt; endl;
+    cout &lt;&lt; &quot;3\t按指定班级编号查询&quot; &lt;&lt; endl &lt;&lt; endl;
+    cout &lt;&lt; &quot;------------------------------&quot; &lt;&lt; endl;
+    string name, id; int claz, ope; cin &gt;&gt; ope;
+    switch (ope)
+    {
+    case 0: break;
+    case 1:
+        system(&quot;cls&quot;);
+        cout &lt;&lt; &quot;请输入学生姓名：&quot;;
+        while (cin &gt;&gt; name &amp;&amp; name != &quot;0&quot;)
+        {
+            temp.clear();
+            bool flag = false; //标记是否查询到对象
+            for (int i = 0; i &lt; (int)stu.size(); i++)
+            {
+                if (stu[i].name == name)
+                {
+                    flag = true; //查询到对象
+                    temp.push_back(stu[i]);
+                }
+            }
+            if (!flag) //未查询到对象
+                cout &lt;&lt; endl &lt;&lt; &quot;不存在该学生姓名！&quot; &lt;&lt; endl;
+            else
+            {
+                system(&quot;cls&quot;);
+                print();
+            }
+            system(&quot;pause&quot;);
+            system(&quot;cls&quot;);
+            cout &lt;&lt; &quot;（输入0返回上级目录）&quot; &lt;&lt; endl &lt;&lt; endl;
+            cout &lt;&lt; &quot;请继续输入需要查询的学生姓名：&quot;;
+        }
+        goto menu1;
+    case 2:
+        system(&quot;cls&quot;);
+        cout &lt;&lt; &quot;请输入学生编号：&quot;;
+        while (cin &gt;&gt; id &amp;&amp; id != &quot;0&quot;)
+        {
+            bool flag = false; //标记是否查询到对象
+            for (int i = 0; i &lt; (int)stu.size(); i++)
+            {
+                if (stu[i].id == id)
+                {
+                    system(&quot;cls&quot;);
+                    flag = true; //查询到对象
+                    cout &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; &quot;姓名&quot; &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; &quot;学号&quot; &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; &quot;班级&quot;;
+                    for (auto it = sub.begin(); it != sub.end(); it++)
+                        cout &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; it-&gt;second.name;
+                    cout &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; &quot;总成绩&quot; &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; &quot;平均学分绩点&quot;;
+                    cout &lt;&lt; endl &lt;&lt; endl;
+                    cout &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; stu[i].name &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; stu[i].id &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; stu[i].claz;
+                    for (auto it = sub.begin(); it != sub.end(); it++)
+                    {
+                        if (stu[i].m.count(it-&gt;first)) cout &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; stu[i].m[it-&gt;first];
+                        else cout &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; &quot;尚未录入&quot;;
+                    }
+                    cout &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; stu[i].sum() &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; stu[i].gpa();
+                    cout &lt;&lt; endl;
+                }
+            }
+            if (!flag) //未查询到对象
+                cout &lt;&lt; endl &lt;&lt; &quot;不存在该学生编号！&quot; &lt;&lt; endl;
+            system(&quot;pause&quot;);
+            system(&quot;cls&quot;);
+            cout &lt;&lt; &quot;（输入0返回上级目录）&quot; &lt;&lt; endl &lt;&lt; endl;
+            cout &lt;&lt; &quot;请继续输入需要查询的学生编号：&quot;;
+        }
+        goto menu1;
+    case 3:
+        system(&quot;cls&quot;);
+        cout &lt;&lt; &quot;请输入班级编号：&quot;;
+        while (cin &gt;&gt; claz &amp;&amp; claz)
+        {
+            temp.clear();
+            bool flag = false; //标记是否查询到对象
+            for (int i = 0; i &lt; (int)stu.size(); i++)
+            {
+                if (stu[i].claz == claz)
+                {
+                    flag = true; //查询到对象
+                    temp.push_back(stu[i]);
+                }
+            }
+            if (!flag) //未查询到对象
+            {
+                cout &lt;&lt; endl &lt;&lt; &quot;不存在该班级编号！&quot; &lt;&lt; endl;
+                system(&quot;pause&quot;);
+                system(&quot;cls&quot;);
+                cout &lt;&lt; &quot;（输入0返回上级目录）&quot; &lt;&lt; endl &lt;&lt; endl;
+                cout &lt;&lt; &quot;请继续输入需要查询的班级编号：&quot;;
+                continue;
+            }
+        menu2:
+            system(&quot;cls&quot;);
+            cout &lt;&lt; &quot;请输入您需要进行的操作标号&quot; &lt;&lt; endl;
+            cout &lt;&lt; &quot;--------------------------------------------------&quot; &lt;&lt; endl;
+            cout &lt;&lt; endl &lt;&lt; setw(5) &lt;&lt; 0 &lt;&lt; &quot; 重新输入班级编号&quot; &lt;&lt; endl &lt;&lt; endl;
+            cout &lt;&lt; setw(5) &lt;&lt; 1 &lt;&lt; &quot; 按学生姓名字典升序&quot; &lt;&lt; endl &lt;&lt; endl;
+            cout &lt;&lt; setw(5) &lt;&lt; 2 &lt;&lt; &quot; 按学生姓名字典降序&quot; &lt;&lt; endl &lt;&lt; endl;
+            cout &lt;&lt; setw(5) &lt;&lt; 3 &lt;&lt; &quot; 按学生编号升序&quot; &lt;&lt; endl &lt;&lt; endl;
+            cout &lt;&lt; setw(5) &lt;&lt; 4 &lt;&lt; &quot; 按学生编号降序&quot; &lt;&lt; endl &lt;&lt; endl;
+            cout &lt;&lt; setw(5) &lt;&lt; 5 &lt;&lt; &quot; 按总成绩升序&quot; &lt;&lt; endl &lt;&lt; endl;
+            cout &lt;&lt; setw(5) &lt;&lt; 6 &lt;&lt; &quot; 按总成绩降序&quot; &lt;&lt; endl &lt;&lt; endl;
+            cout &lt;&lt; setw(5) &lt;&lt; 7 &lt;&lt; &quot; 按平均学分绩点升序&quot; &lt;&lt; endl &lt;&lt; endl;
+            cout &lt;&lt; setw(5) &lt;&lt; 8 &lt;&lt; &quot; 按平均学分绩点降序&quot; &lt;&lt; endl &lt;&lt; endl;
+            int order = 9;
+            for (auto it = sub.begin(); it != sub.end(); it++, order += 2)
+            {
+                cout &lt;&lt; setw(5) &lt;&lt; order &lt;&lt; &quot; 按&quot; &lt;&lt; it-&gt;second.name &lt;&lt; &quot;成绩升序&quot; &lt;&lt; endl &lt;&lt; endl;
+                cout &lt;&lt; setw(5) &lt;&lt; order + 1 &lt;&lt; &quot; 按&quot; &lt;&lt; it-&gt;second.name &lt;&lt; &quot;成绩降序&quot; &lt;&lt; endl &lt;&lt; endl;
+            }
+            cout &lt;&lt; &quot;--------------------------------------------------&quot; &lt;&lt; endl;
+            int ope; cin &gt;&gt; ope;
+            switch (ope)
+            {
+            case 0: break;
+            case 1: sort(temp.begin(), temp.end(), cmp_nameAsc); system(&quot;cls&quot;); print(); system(&quot;pause&quot;); goto menu2;
+            case 2: sort(temp.begin(), temp.end(), cmp_nameDes); system(&quot;cls&quot;); print(); system(&quot;pause&quot;); goto menu2;
+            case 3: sort(temp.begin(), temp.end(), cmp_idAsc); system(&quot;cls&quot;); print(); system(&quot;pause&quot;); goto menu2;
+            case 4: sort(temp.begin(), temp.end(), cmp_idDes); system(&quot;cls&quot;); print(); system(&quot;pause&quot;); goto menu2;
+            case 5: sort(temp.begin(), temp.end(), cmp_sumAsc); system(&quot;cls&quot;); print(); system(&quot;pause&quot;); goto menu2;
+            case 6: sort(temp.begin(), temp.end(), cmp_sumDes); system(&quot;cls&quot;); print(); system(&quot;pause&quot;); goto menu2;
+            case 7: sort(temp.begin(), temp.end(), cmp_gpaAsc); system(&quot;cls&quot;); print(); system(&quot;pause&quot;); goto menu2;
+            case 8: sort(temp.begin(), temp.end(), cmp_gpaDes); system(&quot;cls&quot;); print(); system(&quot;pause&quot;); goto menu2;
+            default:
+                if (ope &gt;= 9 &amp;&amp; ope &lt;= (int)sub.size() * 2 + 7)
+                {
+                    if (ope &amp; 1) { suborder = (ope - 9) / 2 + 1; sort(temp.begin(), temp.end(), cmp_subAsc); }
+                    else { suborder = (ope - 10) / 2 + 1; sort(temp.begin(), temp.end(), cmp_subDes); }
+                    system(&quot;cls&quot;); print();
+                }
+                else cout &lt;&lt; &quot;指令无效，请重新输入&quot; &lt;&lt; endl; system(&quot;pause&quot;); goto menu2;
+            }
+            system(&quot;cls&quot;);
+            cout &lt;&lt; &quot;（输入0返回上级目录）&quot; &lt;&lt; endl &lt;&lt; endl;
+            cout &lt;&lt; &quot;请继续输入需要查询的班级编号：&quot;;
+        }
+        goto menu1;
+    default:
+        cout &lt;&lt; &quot;指令无效，请重新输入&quot; &lt;&lt; endl;
+        system(&quot;pause&quot;);
+        goto menu1;
+    }
+}
+
+void stuModify()
+{
+menu:
+    system(&quot;cls&quot;);
+    cout &lt;&lt; &quot;请输入您需要进行的操作标号&quot; &lt;&lt; endl;
+    cout &lt;&lt; &quot;-------------------------&quot; &lt;&lt; endl;
+    cout &lt;&lt; endl &lt;&lt; &quot;0\t返回根目录&quot; &lt;&lt; endl &lt;&lt; endl;
+    cout &lt;&lt; &quot;1\t修改指定学生编号&quot; &lt;&lt; endl &lt;&lt; endl;
+    cout &lt;&lt; &quot;2\t修改指定班级编号&quot; &lt;&lt; endl &lt;&lt; endl;
+    cout &lt;&lt; &quot;-------------------------&quot; &lt;&lt; endl;
+    string id; int ope, score; cin &gt;&gt; ope;
+    switch (ope)
+    {
+    case 0: break;
+    case 1:
+        system(&quot;cls&quot;);
+        cout &lt;&lt; &quot;请输入需要修改的学生编号：&quot;;
+        while (cin &gt;&gt; id &amp;&amp; id != &quot;0&quot;)
+        {
+            bool flag = false; //标记是否查询到对象
+            for (int i = 0; i &lt; (int)stu.size(); i++)
+            {
+                if (stu[i].id == id)
+                {
+                    system(&quot;cls&quot;);
+                    flag = true; //查询到对象
+                    cout &lt;&lt; &quot;该学生的当前信息如下：&quot; &lt;&lt; endl &lt;&lt; endl;
+                    cout &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; &quot;姓名&quot; &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; &quot;学号&quot; &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; &quot;班级&quot;;
+                    for (auto it = sub.begin(); it != sub.end(); it++)
+                        cout &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; it-&gt;second.name;
+                    cout &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; &quot;总成绩&quot; &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; &quot;平均学分绩点&quot;;
+                    cout &lt;&lt; endl &lt;&lt; endl;
+                    cout &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; stu[i].name &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; stu[i].id &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; stu[i].claz;
+                    for (auto it = sub.begin(); it != sub.end(); it++)
+                    {
+                        if (stu[i].m.count(it-&gt;first)) cout &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; stu[i].m[it-&gt;first];
+                        else cout &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; &quot;尚未录入&quot;;
+                    }
+                    cout &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; stu[i].sum() &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; stu[i].gpa();
+                    cout &lt;&lt; endl &lt;&lt; endl &lt;&lt; &quot;请输入修改后的学生信息：&quot; &lt;&lt; endl &lt;&lt; endl;
+                    string name; int claz;
+                    cout &lt;&lt; &quot;姓名：&quot;; cin &gt;&gt; name; stu[i].name = name;
+                    cout &lt;&lt; &quot;学号：&quot;; cin &gt;&gt; id; stu[i].id = id;
+                    cout &lt;&lt; &quot;班级：&quot;; cin &gt;&gt; claz; stu[i].claz = claz;
+                    for (auto it = sub.begin(); it != sub.end(); it++)
+                    {
+                        cout &lt;&lt; it-&gt;second.name &lt;&lt; &quot;成绩：&quot;; cin &gt;&gt; score;
+                        stu[i].m[it-&gt;first] = score;
+                    }
+                    cout &lt;&lt; endl &lt;&lt; &quot;成功修改&quot; &lt;&lt; endl;
+                    break;
+                }
+            }
+            if (!flag) //未查询到对象
+                cout &lt;&lt; endl &lt;&lt; &quot;不存在该学生编号！&quot; &lt;&lt; endl;
+            system(&quot;pause&quot;);
+            system(&quot;cls&quot;);
+            cout &lt;&lt; &quot;（输入0返回上级目录）&quot; &lt;&lt; endl &lt;&lt; endl;
+            cout &lt;&lt; &quot;请继续输入需要修改的学生编号：&quot;;
+        }
+        goto menu;
+    case 2:
+        int claz, newnum;
+        system(&quot;cls&quot;);
+        cout &lt;&lt; &quot;请输入需要修改的班级编号：&quot;;
+        while (cin &gt;&gt; claz &amp;&amp; claz)
+        {
+            bool flag = false; //标记是否查询到对象
+            for (int i = 0; i &lt; (int)stu.size(); i++)
+            {
+                if (stu[i].claz == claz)
+                {
+                    flag = true; //查询到对象
+                    cout &lt;&lt; &quot;请输入修改后的班级编号：&quot;;
+                    cin &gt;&gt; newnum;
+                    stu[i].claz = newnum;
+                    cout &lt;&lt; endl &lt;&lt; &quot;成功修改&quot; &lt;&lt; endl;
+                }
+            }
+            if (!flag) //未查询到对象
+                cout &lt;&lt; endl &lt;&lt; &quot;不存在该班级编号！&quot; &lt;&lt; endl;
+            system(&quot;pause&quot;);
+            system(&quot;cls&quot;);
+            cout &lt;&lt; &quot;（输入0返回上级目录）&quot; &lt;&lt; endl &lt;&lt; endl;
+            cout &lt;&lt; &quot;请继续输入需要修改的班级编号：&quot;;
+        }
+        goto menu;
+    default:
+        cout &lt;&lt; &quot;指令无效，请重新输入&quot; &lt;&lt; endl;
+        system(&quot;pause&quot;);
+        goto menu;
+    }
+}</code></pre>
+<p><strong>subject.h</strong></p>
+<pre><code class="cpp">#pragma once
+
+void subInsert()
+{
+    string name;
+    int sid;
+    double weight;
+    system(&quot;cls&quot;);
+    cout &lt;&lt; &quot;请输入新科目名称：&quot;;
+    cin &gt;&gt; name;
+    bool flag = false; //标记是否输入未重复编号
+    while (!flag)
+    {
+        flag = true;
+        cout &lt;&lt; &quot;请输入新科目编号：&quot;;
+        cin &gt;&gt; sid;
+        for (auto it = sub.begin(); it != sub.end(); it++)
+        {
+            if (it-&gt;first == sid)
+            {
+                flag = false;
+                cout &lt;&lt; &quot;该编号已存在！&quot; &lt;&lt; endl &lt;&lt; endl;
+                break;
+            }
+        }
+    }
+    cout &lt;&lt; &quot;请输入新科目学分：&quot;;
+    cin &gt;&gt; weight;
+    sub[sid].name = name;
+    sub[sid].weight = weight;
+    cout &lt;&lt; endl &lt;&lt; &quot;成功增添&quot; &lt;&lt; endl;
+    system(&quot;pause&quot;);
+}
+
+void subDelete()
+{
+menu:
+    system(&quot;cls&quot;);
+    cout &lt;&lt; &quot;请输入您需要进行的操作标号&quot; &lt;&lt; endl;
+    cout &lt;&lt; &quot;------------------------------&quot; &lt;&lt; endl;
+    cout &lt;&lt; endl &lt;&lt; &quot;0\t返回根目录&quot; &lt;&lt; endl &lt;&lt; endl;
+    cout &lt;&lt; &quot;1\t按指定编号删除学科&quot; &lt;&lt; endl &lt;&lt; endl;
+    cout &lt;&lt; &quot;2\t按指定名称删除学科&quot; &lt;&lt; endl &lt;&lt; endl;
+    cout &lt;&lt; &quot;------------------------------&quot; &lt;&lt; endl;
+    string name; int ope, sid; cin &gt;&gt; ope;
+    bool flag = false;
+    switch (ope)
+    {
+    case 0: break;
+    case 1:
+        system(&quot;cls&quot;);
+        cout &lt;&lt; &quot;请输入需要删除信息的学科编号：&quot;;
+        cin &gt;&gt; sid;
+        flag = false; //标记是否查询到对象
+        for (auto it = sub.begin(); it != sub.end(); it++) //遍历map，逐个检验学科是否与指定编号匹配
+        {
+            if (it-&gt;first == sid)
+            {
+                flag = true; //查询到对象
+                sub.erase(it);
+                for (int i = 0; i &lt; (int)stu.size(); i++)
+                {
+                    if (stu[i].m.count(sid))
+                        stu[i].m.erase(sid);
+                }
+                cout &lt;&lt; endl &lt;&lt; &quot;成功删除&quot; &lt;&lt; endl;
+                break;
+            }
+        }
+        if (!flag) //未查询到对象
+            cout &lt;&lt; endl &lt;&lt; &quot;不存在该学科编号！&quot; &lt;&lt; endl;
+        system(&quot;pause&quot;);
+        system(&quot;cls&quot;);
+        goto menu;
+    case 2:
+        system(&quot;cls&quot;);
+        cout &lt;&lt; &quot;请输入需要删除信息的学科名称：&quot;;
+        cin &gt;&gt; name;
+        flag = false; //标记是否查询到对象
+        for (auto it = sub.begin(); it != sub.end(); it++) //遍历map，逐个检验学科是否与指定名称匹配
+        {
+            if (it-&gt;second.name == name)
+            {
+                flag = true; //查询到对象
+                for (int i = 0; i &lt; (int)stu.size(); i++)
+                {
+                    if (stu[i].m.count(it-&gt;first))
+                        stu[i].m.erase(it-&gt;first);
+                }
+                sub.erase(it);
+                cout &lt;&lt; endl &lt;&lt; &quot;成功删除&quot; &lt;&lt; endl;
+                break;
+            }
+        }
+        if (!flag) //未查询到对象
+            cout &lt;&lt; endl &lt;&lt; &quot;不存在该学科名称！&quot; &lt;&lt; endl;
+        system(&quot;pause&quot;);
+        system(&quot;cls&quot;);
+        goto menu;
+    default:
+        cout &lt;&lt; &quot;指令无效，请重新输入！&quot; &lt;&lt; endl;
+        system(&quot;pause&quot;);
+        goto menu;
+    }
+}
+
+void subModify()
+{
+menu:
+    system(&quot;cls&quot;);
+    cout &lt;&lt; &quot;请输入您需要进行的操作标号&quot; &lt;&lt; endl;
+    cout &lt;&lt; &quot;------------------------------&quot; &lt;&lt; endl;
+    cout &lt;&lt; endl &lt;&lt; &quot;0\t返回根目录&quot; &lt;&lt; endl &lt;&lt; endl;
+    cout &lt;&lt; &quot;1\t按指定编号修改学科&quot; &lt;&lt; endl &lt;&lt; endl;
+    cout &lt;&lt; &quot;2\t按指定名称修改学科&quot; &lt;&lt; endl &lt;&lt; endl;
+    cout &lt;&lt; &quot;------------------------------&quot; &lt;&lt; endl;
+    string name; int ope, sid; cin &gt;&gt; ope;
+    double weight;
+    bool flag = false;
+    switch (ope)
+    {
+    case 0: break;
+    case 1:
+        system(&quot;cls&quot;);
+        cout &lt;&lt; &quot;请输入需要修改信息的学科编号：&quot;;
+        cin &gt;&gt; sid;
+        flag = false; //标记是否查询到对象
+        for (auto it = sub.begin(); it != sub.end(); it++) //遍历map，逐个检验学科是否与指定编号匹配
+        {
+            if (it-&gt;first == sid)
+            {
+                flag = true; //查询到对象
+                bool flagg = false; //标记是否输入未重复编号
+                while (!flagg)
+                {
+                    flagg = true;
+                    cout &lt;&lt; &quot;请输入修改后的科目编号：&quot;;
+                    cin &gt;&gt; sid;
+                    for (auto it = sub.begin(); it != sub.end(); it++)
+                    {
+                        if (it-&gt;first == sid)
+                        {
+                            flagg = false;
+                            cout &lt;&lt; &quot;该编号已存在！&quot; &lt;&lt; endl &lt;&lt; endl;
+                            break;
+                        }
+                    }
+                }
+                for (int i = 0; i &lt; (int)stu.size(); i++)
+                {
+                    if (stu[i].m.count(it-&gt;first))
+                    {
+                        stu[i].m[sid] = stu[i].m[it-&gt;first];
+                        stu[i].m.erase(it-&gt;first);
+                    }
+                }
+                cout &lt;&lt; &quot;请输入修改后的科目名称：&quot;;
+                cin &gt;&gt; name;
+                cout &lt;&lt; &quot;请输入修改后的科目学分：&quot;;
+                cin &gt;&gt; weight;
+                sub[sid] = Sub{ name, weight };
+                sub.erase(it);
+                cout &lt;&lt; endl &lt;&lt; &quot;成功修改&quot; &lt;&lt; endl;
+                break;
+            }
+        }
+        if (!flag) //未查询到对象
+            cout &lt;&lt; endl &lt;&lt; &quot;不存在该学科编号！&quot; &lt;&lt; endl;
+        system(&quot;pause&quot;);
+        system(&quot;cls&quot;);
+        goto menu;
+    case 2:
+        system(&quot;cls&quot;);
+        cout &lt;&lt; &quot;请输入需要修改信息的学科名称：&quot;;
+        cin &gt;&gt; name;
+        flag = false; //标记是否查询到对象
+        for (auto it = sub.begin(); it != sub.end(); it++) //遍历map，逐个检验学科是否与指定名称匹配
+        {
+            if (it-&gt;second.name == name)
+            {
+                flag = true; //查询到对象
+                bool flagg = false; //标记是否输入未重复编号
+                while (!flagg)
+                {
+                    flagg = true;
+                    cout &lt;&lt; &quot;请输入修改后的科目编号：&quot;;
+                    cin &gt;&gt; sid;
+                    for (auto it = sub.begin(); it != sub.end(); it++)
+                    {
+                        if (it-&gt;first == sid)
+                        {
+                            flagg = false;
+                            cout &lt;&lt; &quot;该编号已存在！&quot; &lt;&lt; endl &lt;&lt; endl;
+                            break;
+                        }
+                    }
+                }
+                for (int i = 0; i &lt; (int)stu.size(); i++)
+                {
+                    if (stu[i].m.count(it-&gt;first))
+                    {
+                        stu[i].m[sid] = stu[i].m[it-&gt;first];
+                        stu[i].m.erase(it-&gt;first);
+                    }
+                }
+                cout &lt;&lt; &quot;请输入修改后的科目名称：&quot;;
+                cin &gt;&gt; name;
+                cout &lt;&lt; &quot;请输入修改后的科目学分：&quot;;
+                cin &gt;&gt; weight;
+                sub[sid] = Sub{ name, weight };
+                sub.erase(it);
+                cout &lt;&lt; endl &lt;&lt; &quot;成功修改&quot; &lt;&lt; endl;
+                break;
+            }
+        }
+        if (!flag) //未查询到对象
+            cout &lt;&lt; endl &lt;&lt; &quot;不存在该学科名称！&quot; &lt;&lt; endl;
+        system(&quot;pause&quot;);
+        system(&quot;cls&quot;);
+        goto menu;
+    default:
+        cout &lt;&lt; &quot;指令无效，请重新输入！&quot; &lt;&lt; endl;
+        system(&quot;pause&quot;);
+        goto menu;
+    }
+}
+
+void subDisplay() //显示各项学科信息
+{
+    system(&quot;cls&quot;);
+    cout &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; &quot;科目编号&quot; &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; &quot;科目名称&quot; &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; &quot;科目学分&quot; &lt;&lt; endl &lt;&lt; endl;
+    for (auto it = sub.begin(); it != sub.end(); it++)
+        cout &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; it-&gt;first &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; it-&gt;second.name &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; it-&gt;second.weight &lt;&lt; endl &lt;&lt; endl;
+    system(&quot;pause&quot;);
+}</code></pre>
+<p><strong>system</strong></p>
+<pre><code class="cpp">#pragma once
+
+using namespace std;
+
+void welcome()
+{
+    system(&quot;color 3f&quot;);
+    cout &lt;&lt; &quot;--------------------------&quot; &lt;&lt; endl;
+    cout &lt;&lt; &quot;欢迎使用学生信息管理系统！&quot; &lt;&lt; endl;
+    cout &lt;&lt; &quot;--------------------------&quot; &lt;&lt; endl;
+    cout &lt;&lt; &quot;正在加载，请稍后&quot; &lt;&lt; endl &lt;&lt; endl;
+    for (int i = 0; i &lt; 20; i++)
+    {
+        Sleep(100);
+        cout &lt;&lt; &quot;■&quot;;
+    }
+    cout &lt;&lt; endl;
+}
+
+void login() //实现登录功能
+{
+    system(&quot;pause&quot;);
+    system(&quot;cls&quot;);
+    ifstream file;
+    file.open(&quot;./src/password.txt&quot;);
+    if (!file)
+    {
+        cout &lt;&lt; &quot;数据异常，无法访问！&quot; &lt;&lt; endl;
+        system(&quot;pause&quot;);
+        exit(0);
+    }
+    string pass, input;
+    file &gt;&gt; pass;
+    file.close();
+    cout &lt;&lt; &quot;请输入密码：&quot;;
+    while (cin &gt;&gt; input &amp;&amp; pass != input) //检验输入串与密码是否匹配
+    {
+        if (input == &quot;0&quot;) //输入指令0，取消登录操作
+        {
+            system(&quot;pause&quot;);
+            exit(0);
+        }
+        system(&quot;cls&quot;);
+        cout &lt;&lt; &quot;（输入0退出系统）&quot; &lt;&lt; endl &lt;&lt; endl;
+        cout &lt;&lt; &quot;密码错误，请重试：&quot;;
+    }
+    cout &lt;&lt; endl &lt;&lt; &quot;登录成功！&quot; &lt;&lt; endl;
+    system(&quot;pause&quot;);
+}
+
+void load() //从文件中读取全部学生信息和科目信息
+{
+    ifstream file;
+    file.open(&quot;./src/subject.txt&quot;);
+    if (!file)
+    {
+        cout &lt;&lt; &quot;数据异常，无法访问！&quot; &lt;&lt; endl;
+        system(&quot;pause&quot;);
+        exit(0);
+    }
+    int sid;
+    while (file &gt;&gt; sid)
+        file &gt;&gt; sub[sid].name &gt;&gt; sub[sid].weight;
+    file.close();
+    file.open(&quot;./src/student.txt&quot;);
+    if (!file)
+    {
+        cout &lt;&lt; &quot;数据异常，无法访问！&quot; &lt;&lt; endl;
+        system(&quot;pause&quot;);
+        exit(0);
+    }
+    string name, id;
+    int claz, score, nsub;
+    map&lt;int, int&gt; m;
+    while (file &gt;&gt; name &gt;&gt; id &gt;&gt; claz &gt;&gt; nsub)
+    {
+        m.clear();
+        for (int i = 0; i &lt; nsub; i++)
+        {
+            file &gt;&gt; sid &gt;&gt; score;
+            m[sid] = score;
+        }
+        stu.push_back(Stu{ name, id, claz, m });
+    }
+}
+
+void save() //程序运行结束前，将学生信息和科目信息写入文件
+{
+    ofstream student(&quot;./src/student.txt&quot;);
+    for (int i = 0; i &lt; (int)stu.size(); i++)
+    {
+        student &lt;&lt; stu[i].name &lt;&lt; &quot; &quot; &lt;&lt; stu[i].id &lt;&lt; &quot; &quot; &lt;&lt; stu[i].claz &lt;&lt; &quot; &quot; &lt;&lt; (int)stu[i].m.size();
+        for (auto it = stu[i].m.begin(); it != stu[i].m.end(); it++)
+            student &lt;&lt; &quot; &quot; &lt;&lt; it-&gt;first &lt;&lt; &quot; &quot; &lt;&lt; it-&gt;second;
+        student &lt;&lt; endl;
+    }
+    student.close();
+    ofstream subject(&quot;./src/subject.txt&quot;);
+    for (auto it = sub.begin(); it != sub.end(); it++)
+        subject &lt;&lt; it-&gt;first &lt;&lt; &quot; &quot; &lt;&lt; it-&gt;second.name &lt;&lt; &quot; &quot; &lt;&lt; it-&gt;second.weight &lt;&lt; endl;
+}
+
+void showMenu()
+{
+    system(&quot;cls&quot;);
+    cout &lt;&lt; &quot;请输入您需要进行的操作标号&quot; &lt;&lt; endl;
+    cout &lt;&lt; &quot;---------------------&quot; &lt;&lt; endl;
+    cout &lt;&lt; endl &lt;&lt; &quot;0\t退出系统&quot; &lt;&lt; endl &lt;&lt; endl;
+    cout &lt;&lt; &quot;1\t修改密码&quot; &lt;&lt; endl &lt;&lt; endl;
+    cout &lt;&lt; &quot;2\t增添学生信息&quot; &lt;&lt; endl &lt;&lt; endl;
+    cout &lt;&lt; &quot;3\t删除学生信息&quot; &lt;&lt; endl &lt;&lt; endl;
+    cout &lt;&lt; &quot;4\t修改学生信息&quot; &lt;&lt; endl &lt;&lt; endl;
+    cout &lt;&lt; &quot;5\t查询学生信息&quot; &lt;&lt; endl &lt;&lt; endl;
+    cout &lt;&lt; &quot;6\t增添科目信息&quot; &lt;&lt; endl &lt;&lt; endl;
+    cout &lt;&lt; &quot;7\t删除科目信息&quot; &lt;&lt; endl &lt;&lt; endl;
+    cout &lt;&lt; &quot;8\t修改科目信息&quot; &lt;&lt; endl &lt;&lt; endl;
+    cout &lt;&lt; &quot;9\t显示科目信息&quot; &lt;&lt; endl &lt;&lt; endl;
+    cout &lt;&lt; &quot;---------------------&quot; &lt;&lt; endl;
+}
+
+void changePass()
+{
+    system(&quot;cls&quot;);
+    cout &lt;&lt; &quot;请输入3-10位新密码：&quot; &lt;&lt; endl;
+    string pass;
+    while (cin &gt;&gt; pass &amp;&amp; (pass.length() &lt; 3 || pass.length() &gt; 10)) //检验新密码长度是否符合要求
+    {
+        system(&quot;cls&quot;);
+        cout &lt;&lt; &quot;密码不符合要求，请重新输入：&quot; &lt;&lt; endl;
+    }
+    ofstream file(&quot;./src/password.txt&quot;);
+    file &lt;&lt; pass;
+    file.close();
+    system(&quot;cls&quot;);
+    cout &lt;&lt; &quot;密码修改成功，新密码为：&quot; &lt;&lt; pass &lt;&lt; endl;
+    system(&quot;pause&quot;);
+}
+
+bool chooseFunc()
+{
+    int ope; cin &gt;&gt; ope;
+    switch (ope)
+    {
+    case 0: return false;
+    case 1: changePass(); break;
+    case 2: stuInsert(); break;
+    case 3: stuDelete(); break;
+    case 4: stuModify(); break;
+    case 5: stuFind(); break;
+    case 6: subInsert(); break;
+    case 7: subDelete(); break;
+    case 8: subModify(); break;
+    case 9: subDisplay(); break;
+    default: cout &lt;&lt; &quot;指令无效，请重新输入！&quot; &lt;&lt; endl; system(&quot;pause&quot;);
+    }
+    return true;
+}</code></pre>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 Gitalk -->
+<div id="gitalk-comment">
+    <!-- Gitalk 评论框 -->
+<div id="gitalk-container"></div>
+
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<script>
+    var gitalk = new Gitalk({
+            clientID: '',
+            clientSecret: '',
+            repo: '',
+            owner: '',
+            admin: [''],
+            // facebook-like distraction free mode
+            distractionFreeMode: false
+        })
+   gitalk.render('gitalk-container')
+</script>
+</div>
+<style>
+    #gitalk-comment {
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2019/06/13/2018-2019-大学一年级总结/" id="post_nav-older" class="next-content">
+            Older
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="https://s2.ax1x.com/2019/06/15/VoA9df.jpg" alt="2U's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        904854724@qq.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=904854724&amp;site=qq&amp;menu=yes" target="_blank" title="QQ">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">chat</i>
+                        
+                        QQ
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                Home
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    Archives
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2019/06/">June 2019<span class="sidebar_archives-count">3</span></a>
+            </li></ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                Categories
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/C-C/">C/C++<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Daily/">Daily<span class="sidebar_archives-count">2</span></a>
+            </li></ul>
+        </li>
+        
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/about" title="About me">
+                
+                    <i class="material-icons sidebar-material-icons">person</i>
+                
+                About me
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/tags" title="Tags cloud">
+                
+                    <i class="material-icons sidebar-material-icons">tab</i>
+                
+                Tags cloud
+            </a>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
+
+    <!-- Article Number  -->
+    
+        <li>
+            <a href="/archives">
+                Number of articles
+                <span class="sidebar-badge">3</span>
+            </a>
+        </li>
+        
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+    <a href="https://github.com/viosey/hexo-theme-material" class="sidebar-footer-text-a" target="_blank">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+            Theme - Material
+            <span class="sidebar-badge badge-circle">i</span>
+        </div>
+    </a>
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+    <a href="https://blog.viosey.com/index.php/Material.html" target="_blank" class="sidebar-footer-text-a">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+             sidebar.about_theme
+            <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></div>
+    </a>
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+        <a href="https://twitter.com/Singularity0909" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter">
+                <span class="visuallyhidden">Twitter</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Facebook -->
+    
+        <a href="https://www.facebook.com/2U0909" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-facebook">
+                <span class="visuallyhidden">Facebook</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+        <a href="https://www.weibo.com/u/3194536504" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-weibo">
+                <span class="visuallyhidden">Weibo</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Instagram -->
+    
+        <a href="https://www.instagram.com/singularity2u/" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-instagram">
+                <span class="visuallyhidden">Instagram</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Tumblr -->
+    
+        <a href="https://www.tumblr.com/blog/singularity0812" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-tumblr">
+                <span class="visuallyhidden">Tumblr</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Github -->
+    
+        <a href="https://github.com/Singularity0909" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+        <a href="https://www.linkedin.com/in/%E5%90%8C%E6%9C%89-%E4%BB%98-8b77b2183" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-linkedin">
+                <span class="visuallyhidden">LinkedIn</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Zhihu -->
+    
+        <a href="https://www.zhihu.com/people/singularity0909-83/activities" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-zhihu">
+                <span class="visuallyhidden">Zhihu</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Bilibili -->
+    
+        <a href="https://space.bilibili.com/342589499" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-bilibili">
+                <span class="visuallyhidden">Bilibili</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Telegram -->
+    
+        <a href="https://telegram.org/Singularity0909" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-telegram">
+                <span class="visuallyhidden">Telegram</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- V2EX -->
+    
+
+    <!-- Segmentfault -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;<span year></span>&nbsp;Singularity
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?Bn9UzEm8RrBSxqyZB0zPjA==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+    <!-- Busuanzi -->
+    <script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+   <!-- GitTalk -->
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+    
+        
+            <script>lsloader.load("prettify_js","/js/prettify.min.js?WN07fivHQSMKWy7BmHBB6w==", true)</script>
+        
+    
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+        
+            $(function() {
+                $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+                prettyPrint();
+                })
+        
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    var copyrightNow = new Date().getFullYear();
+    var textContent = document.querySelector('span[year]')
+
+    copyrightSince = 0000;
+    if (copyrightSince === copyrightNow||copyrightSince === 0000) {
+        textContent.textContent = copyrightNow
+    } else {
+        textContent.textContent = copyrightSince + ' - ' + copyrightNow
+    }
+
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>
