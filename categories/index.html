@@ -24,10 +24,15 @@
     <meta http-equiv="x-dns-prefetch-control" content="on">
 
 
+    <link rel="dns-prefetch" href="https://cdn1.lncld.net">
+
 
     <link rel="dns-prefetch" href="https://busuanzi.ibruce.info">
 
 
+
+    <link rel="dns-prefetch" href="https://cdn1.lncld.net">
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
 
 
 
@@ -465,34 +470,30 @@
                 <!-- Post Comments -->
                 
                     
-    <!-- 使用 Gitalk -->
-<div id="gitalk-comment">
-    <!-- Gitalk 评论框 -->
-<div id="gitalk-container"></div>
-
-<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-
-<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-
+    <div id="comment" style="padding:10px;" class="vcomment"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
 <script>
-    var gitalk = new Gitalk({
-            clientID: 'd7ea222cc9d1f10cb839',
-            clientSecret: 'bd62a17e229e78a8cfc0ab5a095dfe116de6b602',
-            repo: 'singularity0909.github.io',
-            owner: 'Singularity0909',
-            admin: ['Singularity0909'],
-            // facebook-like distraction free mode
-            distractionFreeMode: false
-        })
-   gitalk.render('gitalk-container')
+    var GUEST_INFO = ['nick','mail','link'];
+    var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+        return GUEST_INFO.indexOf(item) > -1
+    });
+    var notify = 'true' === 'true';
+    var verify = 'false' === 'true';
+    new Valine({
+        el: '.vcomment',
+        notify: true,
+        verify: false,
+        appId: "mOOKmHvlqSdTda1XFQsJF2nJ-gzGzoHsz",
+        appKey: "flsKmTlNp3xOJvegXy3eQ5pW",
+        placeholder: "Just go go",
+        pageSize:'10',
+        avatar:'identicon',
+        lang:'en',
+        guest_info: guest_info
+    });
 </script>
-</div>
-<style>
-    #gitalk-comment {
-        background-color: #eee;
-        padding: 2pc;
-    }
-</style>
+
 
                 
             </div>
@@ -618,6 +619,16 @@
     <!-- Pages  -->
     
         <li>
+            <a href="/tags" title="Tags">
+                
+                    <i class="material-icons sidebar-material-icons">tab</i>
+                
+                Tags
+            </a>
+        </li>
+        
+    
+        <li>
             <a href="/about" title="About me">
                 
                     <i class="material-icons sidebar-material-icons">person</i>
@@ -625,18 +636,6 @@
                 About me
             </a>
         </li>
-        
-    
-        <li>
-            <a href="/tags" title="Tags cloud">
-                
-                    <i class="material-icons sidebar-material-icons">tab</i>
-                
-                Tags cloud
-            </a>
-        </li>
-        
-            <li class="divider"></li>
         
     
 
@@ -888,7 +887,7 @@ It will not impact the appearance and can give developers a lot of support :)
 
 
 
-   <!-- GitTalk -->
+   
 
 
 
