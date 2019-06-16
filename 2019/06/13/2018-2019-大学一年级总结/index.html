@@ -586,7 +586,7 @@
 <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
 <script>
     var GUEST_INFO = ['nick','mail','link'];
-    var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+    var guest_info = 'nick,mail'.split(',').filter(function(item){
         return GUEST_INFO.indexOf(item) > -1
     });
     var notify = 'true' === 'true';
@@ -597,7 +597,7 @@
         verify: true,
         appId: "mOOKmHvlqSdTda1XFQsJF2nJ-gzGzoHsz",
         appKey: "flsKmTlNp3xOJvegXy3eQ5pW",
-        placeholder: "Just go go",
+        placeholder: "Don&#39;t forget you e-mail!",
         pageSize:'10',
         avatar:'identicon',
         lang:'en',
