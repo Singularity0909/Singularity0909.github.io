@@ -27,8 +27,6 @@
     <link rel="dns-prefetch" href="https://cdn1.lncld.net">
 
 
-    <link rel="dns-prefetch" href="https://busuanzi.ibruce.info">
-
 
 
     <link rel="dns-prefetch" href="https://cdn1.lncld.net">
@@ -318,6 +316,7 @@
     
         <head>
             <script type="text/javascript" src="/js/love.js"></script>
+
             <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
             <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
             <script type="text/javascript" src="/js/firework.js"></script>
@@ -446,17 +445,6 @@
 <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
     
 
-    
-        
-            <!-- Busuanzi Views -->
-            <a class="post_share-link" href="#">
-                <li class="mdl-menu__item">
-                    <span id="busuanzi_container_page_pv">
-                        <span id="busuanzi_value_page_pv"></span>&nbsp;Views
-                    </span>
-                </li>
-            </a>
-        
     
 
     <!-- Share Weibo -->
@@ -1017,9 +1005,6 @@ It will not impact the appearance and can give developers a lot of support :)
 
 
 
-    <!-- Busuanzi -->
-    <script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
 
 
    
@@ -1117,5 +1102,11 @@ console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viose
                 </main>
             </div>
         </body>
+        <script src="/js/activate-power-mode.js"></script>
+        <script>
+            POWERMODE.colorful = true; // make power mode colorful
+            POWERMODE.shake = false; // turn off shake
+            document.body.addEventListener('input', POWERMODE);
+        </script>
     
 </html>
