@@ -520,8 +520,7 @@
                     
     <div id="comment" style="padding:10px;" class="vcomment"></div>
 <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-/*<script src="//unpkg.com/valine/dist/Valine.min.js"></script>*/
-<script src="/js/Valine.min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
 <script>
     var GUEST_INFO = ['nick','mail','link'];
     var guest_info = 'nick,mail'.split(',').filter(function(item){
@@ -532,7 +531,7 @@
     new Valine({
         el: '.vcomment',
         notify: true,
-        verify: true,
+        verify: false,
         appId: "mOOKmHvlqSdTda1XFQsJF2nJ-gzGzoHsz",
         appKey: "flsKmTlNp3xOJvegXy3eQ5pW",
         placeholder: "Don&#39;t forget to leave your e-mail address!",
