@@ -464,8 +464,8 @@
     var guest_info = 'nick,mail'.split(',').filter(function(item){
         return GUEST_INFO.indexOf(item) > -1
     });
-    var notify = 'true' === 'true';
-    var verify = 'true' === 'true';
+    var notify = 'false' === 'true';
+    var verify = 'false' === 'true';
     new Valine({
         el: '.vcomment',
         notify: true,
