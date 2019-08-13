@@ -51,7 +51,7 @@
     
     <title>
         
-            tags | 
+            题解 洛谷P2516 [HAOI2010]最长公共子序列 | 
         
         Singularity
     </title>
@@ -62,7 +62,7 @@
 
     <meta name="format-detection" content="telephone=no">
     <meta name="description" itemprop="description" content="An ACMer&#39;s blog">
-    <meta name="keywords" content>
+    <meta name="keywords" content=",最长公共子序列,基础DP">
     <meta name="theme-color" content="#00bfff">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -89,6 +89,9 @@
         <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?NKhlKQkXw/c66TR5p4wO+w==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
 
         
+            
+                <style id="prettify_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_css","/css/prettify.min.css?zp8STOU9v89XWFEnN+6YmQ==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+                <style id="prettify_theme"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_theme","/css/prettify/tranquil-heart.min.css?ul3p9I9MsbOxK0L+BHzDDg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
             
         
 
@@ -220,7 +223,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Singularity">
-    <meta name="msapplication-starturl" content="https://www.singularity2u.top/tags/">
+    <meta name="msapplication-starturl" content="https://www.singularity2u.top/2019/08/12/题解-洛谷P2516-HAOI2010-最长公共子序列/">
     <meta name="msapplication-navbutton-color" content="#00bfff">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Singularity">
@@ -235,13 +238,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="https://www.singularity2u.top/tags/">
+    <meta property="og:url" content="https://www.singularity2u.top/2019/08/12/题解-洛谷P2516-HAOI2010-最长公共子序列/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="tags | Singularity">
+    <meta property="og:title" content="题解 洛谷P2516 [HAOI2010]最长公共子序列 | Singularity">
     <meta property="og:image" content="https://s2.ax1x.com/2019/06/15/VoA9df.jpg">
     <meta property="og:description" content="An ACMer&#39;s blog">
-    
+    <meta property="og:article:tag" content="最长公共子序列"> <meta property="og:article:tag" content="基础DP"> 
 
+    
+        <meta property="article:published_time" content="Mon Aug 12 2019 12:02:29 GMT+0800">
+        <meta property="article:modified_time" content="Mon Aug 12 2019 12:40:35 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -249,13 +255,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="https://www.singularity2u.top/tags/index.html">
+        <link rel="canonical" href="https://www.singularity2u.top/2019/08/12/题解-洛谷P2516-HAOI2010-最长公共子序列/index.html">
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "https://www.singularity2u.top/2019/08/12/题解-洛谷P2516-HAOI2010-最长公共子序列/index.html",
+    "headline": "题解 洛谷P2516 [HAOI2010]最长公共子序列",
+    "datePublished": "Mon Aug 12 2019 12:02:29 GMT+0800",
+    "dateModified": "Mon Aug 12 2019 12:40:35 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "2U",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://s2.ax1x.com/2019/06/15/VoA9df.jpg"
+        },
+        "description": "Brainy is the new sexy"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Singularity",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "https://s2.ax1x.com/2019/06/15/VoA9df.jpg"
+        }
+    },
+    "keywords": ",最长公共子序列,基础DP",
+    "description": "An ACMer&#39;s blog",
+}
+</script>
 
 
     
@@ -297,60 +333,334 @@
 
                     <!-- Post TOC -->
 
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn" class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#题目描述"><span class="post-toc-number">1.</span> <span class="post-toc-text">题目描述</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#输入格式"><span class="post-toc-number">2.</span> <span class="post-toc-text">输入格式</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#输出格式"><span class="post-toc-number">3.</span> <span class="post-toc-text">输出格式</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#输入输出样例"><span class="post-toc-number">4.</span> <span class="post-toc-text">输入输出样例</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#题解"><span class="post-toc-number">5.</span> <span class="post-toc-text">题解</span></a></li></ol>
+    </ul>
+    
+
+
+
 
 <!-- Layouts -->
 
-    <!-- Tags Cloud -->
-    <style>
-    #bottom{
-        position: relative;
-    }
+    <!-- Post Module -->
+    <div class="material-post_container">
 
-    @media screen and (max-width: 480px) {
-        .material-tagscloud{
-            margin: 6em 2em 0;
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 14 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                题解 洛谷P2516 [HAOI2010]最长公共子序列
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="https://s2.ax1x.com/2019/06/15/VoA9df.jpg" width="44px" height="44px" alt="Author Avatar">
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>2U</strong>
+        <span>Aug 12, 2019</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/基础DP/">基础DP</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/最长公共子序列/">最长公共子序列</a>
+    </li></ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=题解 洛谷P2516 [HAOI2010]最长公共子序列&url=https://www.singularity2u.top/2019/08/12/题解-洛谷P2516-HAOI2010-最长公共子序列/index.html&pic=https://www.singularity2u.tophttps://s2.ax1x.com/2019/06/15/VoA9df.jpg&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Weibo
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=题解 洛谷P2516 [HAOI2010]最长公共子序列&url=https://www.singularity2u.top/2019/08/12/题解-洛谷P2516-HAOI2010-最长公共子序列/index.html&via=2U" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://www.singularity2u.top/2019/08/12/题解-洛谷P2516-HAOI2010-最长公共子序列/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=https://www.singularity2u.top/2019/08/12/题解-洛谷P2516-HAOI2010-最长公共子序列/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+        <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.singularity2u.top/2019/08/12/题解-洛谷P2516-HAOI2010-最长公共子序列/index.html&title=题解 洛谷P2516 [HAOI2010]最长公共子序列" target="_blank">
+            <li class="mdl-menu__item">
+                Share to LinkedIn
+            </li>
+        </a>
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Singularity&title=题解 洛谷P2516 [HAOI2010]最长公共子序列&summary=An ACMer&#39;s blog&pics=https://www.singularity2u.tophttps://s2.ax1x.com/2019/06/15/VoA9df.jpg&url=https://www.singularity2u.top/2019/08/12/题解-洛谷P2516-HAOI2010-最长公共子序列/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                Share to QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+        <a class="post_share-link" href="https://telegram.me/share/url?url=https://www.singularity2u.top/2019/08/12/题解-洛谷P2516-HAOI2010-最长公共子序列/index.html&text=题解 洛谷P2516 [HAOI2010]最长公共子序列" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Telegram
+            </li>
+        </a>
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>字符序列的子序列是指从给定字符序列中随意地（不一定连续）去掉若干个字符（可能一个也不去掉）后所形成的字符序列。令给定的字符序列X=“x0，x1，…，xm-1”，序列Y=“y0，y1，…，yk-1”是X的子序列，存在X的一个严格递增下标序列&lt;i0，i1，…，ik-1&gt;，使得对所有的j=0，1，…，k-1，有xij = yj。例如，X=“ABCBDAB”，Y=“BCDB”是X的一个子序列。对给定的两个字符序列，求出他们最长的公共子序列长度，以及最长公共子序列个数。</p>
+<h2 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h2><p>第1行为第1个字符序列，都是大写字母组成，以”.”结束。长度小于5000。</p>
+<p>第2行为第2个字符序列，都是大写字母组成，以”.”结束，长度小于5000。</p>
+<h2 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h2><p>第1行输出上述两个最长公共子序列的长度。</p>
+<p>第2行输出所有可能出现的最长公共子序列个数，答案可能很大，只要将答案对100,000,000求余即可。</p>
+<h2 id="输入输出样例"><a href="#输入输出样例" class="headerlink" title="输入输出样例"></a>输入输出样例</h2><p><strong>输入 #1</strong></p>
+<pre><code>ABCBDAB.
+BACBBD.</code></pre><p><strong>输出 #1</strong></p>
+<pre><code>4
+7</code></pre><h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><p>这是我在洛谷上AC的第二道紫题Orz，听了队友涵哥的讲解我对这题的递推过程颇有感触，特此给出详细解析。</p>
+<p><strong>a、b两个字符串的最长公共子序列的长度是唯一的，但最长公共子序列不是唯一的。</strong></p>
+<p>用f[i][j]表示<strong>a的前i位字符子串和b的前j位字符子串的最长公共子序列（下称lcm(i, j)）的长度</strong>，g[i][j]表示<strong>lcm(i, j)的种数</strong>。</p>
+<p>要求最长公共子序列的长度并不难，易知状态转移方程为：f[i][j] = i == j ? f[i][j] = a[i] == b[j] ? f[i - 1][j - 1] + 1 : max(f[i - 1][j], f[i][j - 1])。</p>
+<p>要求最长公共子序列的种数，可以给每个状态下的情况分类讨论：</p>
+<p>①a[i]和b[j]都属于所有的lcm(i, j)。</p>
+<p>②a[i]属于所有的lcm(i, j)，b[j]并非属于所有的lcm(i, j)。</p>
+<p>③a[i]并非属于所有的lcm(i, j)，b[j]属于所有的lcm(i, j)。</p>
+<p>④a[i]和b[j]都并非属于所有的lcm(i, j)。</p>
+<p>若a[i] = b[j]，则f[i][j] = f[i - 1][j - 1] + 1，对应情况①。</p>
+<p>若f[i][j] = f[i][j - 1]，则b[j]并非属于所有的lcm(i, j)（可根据逆否命题推断），对应的情况包括②④。</p>
+<p>若f[i - 1][j] = f[i][j]，则a[i]并非属于所有的lcm(i, j)（可根据逆否命题推断），对应的情况包括③④。</p>
+<p>若f[i][j] = f[i - 1][j - 1]，则对应情况④，<strong>并且此时也必满足其上两种的条件</strong>。</p>
+<p>以上4种条件的结论涵盖各种情况，综上有：</p>
+<p>if (a[i] == b[j]) g[i][j] += g[i - 1][j - 1]</p>
+<p>if (f[i][j] == f[i][j - 1]) g[i][j] += g[i][j - 1]</p>
+<p>if (f[i][j] == f[i - 1][j]) g[i][j] += g[i - 1][j]</p>
+<p>if (f[i][j] == f[i - 1][j - 1]) g[i][j] -= g[i - 1][j - 1]（容斥原理）</p>
+<p>滚动数组优化，k表示i状态，k ^ 1表示i - 1状态。</p>
+<pre><code class="cpp">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+typedef long long ll;
+
+const int maxn = 5e3 + 10, mod = 1e8;
+int n, m, k;
+char ch, a[maxn], b[maxn];
+ll f[2][maxn], g[2][maxn];
+
+int main()
+{
+    for (int i = 1; (ch = getchar()) != &#39;.&#39;; a[i] = ch, n = i, i++) ;
+    getchar();
+    for (int i = 1; (ch = getchar()) != &#39;.&#39;; b[i] = ch, m = i, i++) ;
+    for (int i = 0; i &lt;= m; i++) g[0][i] = 1; g[1][0] = 1;
+    for (int i = 1; i &lt;= n; i++, k ^= 1)
+    {
+        for (int j = 1; j &lt;= m; j++)
+        {
+            g[k ^ 1][j] = 0;
+            f[k ^ 1][j] = a[i] == b[j] ? f[k][j - 1] + 1 : max(f[k][j], f[k ^ 1][j - 1]);
+            if (a[i] == b[j]) g[k ^ 1][j] += g[k][j - 1];
+            if (f[k ^ 1][j] == f[k ^ 1][j - 1]) g[k ^ 1][j] += g[k ^ 1][j - 1];
+            if (f[k ^ 1][j] == f[k][j]) g[k ^ 1][j] += g[k][j];
+            if (f[k ^ 1][j] == f[k][j - 1]) g[k ^ 1][j] -= g[k][j - 1];
+            g[k ^ 1][j] %= mod;
         }
     }
+    printf(&quot;%lld\n%lld\n&quot;, f[k][m], g[k][m]);
+    return 0;
+}</code></pre>
 
-    .material-tagscloud a{
-        text-decoration:none;
-        padding: 1px 9px;
-        margin: 9px 1px;
-        line-height: 40px;
-        white-space: nowrap;
-        transition: .6s;
-        opacity: .85;
-    }
+        
+                <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
+                    <p><strong>
+                         
+                            <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"></a>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
+                        </strong>
+                        <br>
+                        <strong>Link to this article: </strong><a href="https://www.singularity2u.top/2019/08/12/题解-洛谷P2516-HAOI2010-最长公共子序列/">https://www.singularity2u.top/2019/08/12/题解-洛谷P2516-HAOI2010-最长公共子序列/</a>
+                    </p>
+                </blockquote>
+        
+    
 
-    .material-tagscloud a:hover{
-        transition: .6s;
-        opacity: 1;
-        background: #FAFAFA;
-        box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
-    }
-</style>
-
-<div class=" material-tagscloud">
-    <div class="material-post mdl-grid">
-        <a href="/tags/基础DP/" style="font-size: 16px; color: #757575">基础DP</a> <a href="/tags/大一总结/" style="font-size: 16px; color: #757575">大一总结</a> <a href="/tags/数位DP/" style="font-size: 16px; color: #757575">数位DP</a> <a href="/tags/数论/" style="font-size: 16px; color: #757575">数论</a> <a href="/tags/最长公共子序列/" style="font-size: 16px; color: #757575">最长公共子序列</a> <a href="/tags/欧拉函数/" style="font-size: 16px; color: #757575">欧拉函数</a> <a href="/tags/课程设计/" style="font-size: 16px; color: #757575">课程设计</a>
-    </div>
+    
 </div>
 
 
-<script type="text/ls-javascript" id="page-tagcloud-script">
-    var adjustFooter = function() {
-        if( ($('#bottom').offset().top + $('#bottom').outerHeight() ) < $(window).height() ) {
-            var footerBottom = $(window).height() - $('#bottom').outerHeight() - $('#bottom').offset().top;
-            $('#bottom').css('bottom', '-' + footerBottom + 'px');
-        }
-    };
+                
 
-    $(document).ready(function() {
-        adjustFooter();
+                <!-- Post Comments -->
+                
+                    
+    <div id="comment" style="padding:10px;" class="vcomment"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+    var GUEST_INFO = ['nick','mail','link'];
+    var guest_info = 'nick,mail'.split(',').filter(function(item){
+        return GUEST_INFO.indexOf(item) > -1
+    });
+    var notify = 'false' === 'true';
+    var verify = 'false' === 'true';
+    new Valine({
+        el: '.vcomment',
+        notify: true,
+        verify: true,
+        appId: "mOOKmHvlqSdTda1XFQsJF2nJ-gzGzoHsz",
+        appKey: "flsKmTlNp3xOJvegXy3eQ5pW",
+        placeholder: "Don&#39;t forget to leave your e-mail address!",
+        pageSize:'10',
+        avatar:'identicon',
+        lang:'en',
+        guest_info: guest_info
     });
 </script>
 
 
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2019/08/12/题解-Codeforces-Round-518-Div-1-A-Array-Without-Local-Maximums/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Newer
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2019/06/15/课程设计-学生成绩管理系统/" id="post_nav-older" class="next-content">
+            Older
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
 
 
 
@@ -550,6 +860,14 @@ It will not impact the appearance and can give developers a lot of support :)
                     
 
                     
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
 
                     <!--Footer-->
 <footer class="mdl-mini-footer" id="bottom">
@@ -743,6 +1061,10 @@ It will not impact the appearance and can give developers a lot of support :)
 <!-- Import prettify js  -->
 
     
+        
+            <script>lsloader.load("prettify_js","/js/prettify.min.js?WN07fivHQSMKWy7BmHBB6w==", true)</script>
+        
+    
 
 
 
@@ -755,6 +1077,11 @@ It will not impact the appearance and can give developers a lot of support :)
     });
 
     
+        
+            $(function() {
+                $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+                prettyPrint();
+                })
         
     
     
