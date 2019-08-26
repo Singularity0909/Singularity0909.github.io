@@ -51,7 +51,7 @@
     
     <title>
         
-            categories | 
+            题解 Gym101873B Buildings | 
         
         Singularity
     </title>
@@ -62,7 +62,7 @@
 
     <meta name="format-detection" content="telephone=no">
     <meta name="description" itemprop="description" content="An ACMer&#39;s blog">
-    <meta name="keywords" content>
+    <meta name="keywords" content=",Polya定理,组合数学">
     <meta name="theme-color" content="#00bfff">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -89,6 +89,9 @@
         <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?NKhlKQkXw/c66TR5p4wO+w==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
 
         
+            
+                <style id="prettify_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_css","/css/prettify.min.css?zp8STOU9v89XWFEnN+6YmQ==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+                <style id="prettify_theme"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_theme","/css/prettify/tranquil-heart.min.css?ul3p9I9MsbOxK0L+BHzDDg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
             
         
 
@@ -220,7 +223,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Singularity">
-    <meta name="msapplication-starturl" content="https://www.singularity2u.top/categories/">
+    <meta name="msapplication-starturl" content="https://www.singularity2u.top/2019/08/26/题解-Gym101873B-Buildings/">
     <meta name="msapplication-navbutton-color" content="#00bfff">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Singularity">
@@ -235,13 +238,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="https://www.singularity2u.top/categories/">
+    <meta property="og:url" content="https://www.singularity2u.top/2019/08/26/题解-Gym101873B-Buildings/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="categories | Singularity">
+    <meta property="og:title" content="题解 Gym101873B Buildings | Singularity">
     <meta property="og:image" content="https://s2.ax1x.com/2019/06/15/VoA9df.jpg">
     <meta property="og:description" content="An ACMer&#39;s blog">
-    
+    <meta property="og:article:tag" content="Polya定理"> <meta property="og:article:tag" content="组合数学"> 
 
+    
+        <meta property="article:published_time" content="Mon Aug 26 2019 14:03:25 GMT+0800">
+        <meta property="article:modified_time" content="Mon Aug 26 2019 14:29:23 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -249,13 +255,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="https://www.singularity2u.top/categories/index.html">
+        <link rel="canonical" href="https://www.singularity2u.top/2019/08/26/题解-Gym101873B-Buildings/index.html">
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "https://www.singularity2u.top/2019/08/26/题解-Gym101873B-Buildings/index.html",
+    "headline": "题解 Gym101873B Buildings",
+    "datePublished": "Mon Aug 26 2019 14:03:25 GMT+0800",
+    "dateModified": "Mon Aug 26 2019 14:29:23 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "2U",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://s2.ax1x.com/2019/06/15/VoA9df.jpg"
+        },
+        "description": "IT = intelligent + tough"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Singularity",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "https://s2.ax1x.com/2019/06/15/VoA9df.jpg"
+        }
+    },
+    "keywords": ",Polya定理,组合数学",
+    "description": "An ACMer&#39;s blog",
+}
+</script>
 
 
     
@@ -297,6 +333,38 @@
 
                     <!-- Post TOC -->
 
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn" class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#题目描述"><span class="post-toc-number">1.</span> <span class="post-toc-text">题目描述</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#输入"><span class="post-toc-number">2.</span> <span class="post-toc-text">输入</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#输出"><span class="post-toc-number">3.</span> <span class="post-toc-text">输出</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#样例输入"><span class="post-toc-number">4.</span> <span class="post-toc-text">样例输入</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#样例输出"><span class="post-toc-number">5.</span> <span class="post-toc-text">样例输出</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#题解"><span class="post-toc-number">6.</span> <span class="post-toc-text">题解</span></a></li></ol>
+    </ul>
+    
+
+
+
 
 <!-- Layouts -->
 
@@ -323,7 +391,7 @@
         
     
             <p class="article-headline-p">
-                categories
+                题解 Gym101873B Buildings
             </p>
         </div>
 
@@ -342,7 +410,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>2U</strong>
-        <span>Jun 13, 2019</span>
+        <span>Aug 26, 2019</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -360,6 +428,15 @@
 
     <!-- Tags (bookmark) -->
     
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/Polya定理/">Polya定理</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/组合数学/">组合数学</a>
+    </li></ul>
+    
 
     <!-- Share -->
     
@@ -374,7 +451,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=categories&url=https://www.singularity2u.top/categories/index.html&pic=https://www.singularity2u.tophttps://s2.ax1x.com/2019/06/15/VoA9df.jpg&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=题解 Gym101873B Buildings&url=https://www.singularity2u.top/2019/08/26/题解-Gym101873B-Buildings/index.html&pic=https://www.singularity2u.tophttps://s2.ax1x.com/2019/06/15/VoA9df.jpg&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 Share to Weibo
             </li>
@@ -395,7 +472,7 @@
 
     <!-- Share QQ -->
     
-        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Singularity&title=categories&summary=An ACMer&#39;s blog&pics=https://www.singularity2u.tophttps://s2.ax1x.com/2019/06/15/VoA9df.jpg&url=https://www.singularity2u.top/categories/index.html" target="_blank">
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Singularity&title=题解 Gym101873B Buildings&summary=An ACMer&#39;s blog&pics=https://www.singularity2u.tophttps://s2.ax1x.com/2019/06/15/VoA9df.jpg&url=https://www.singularity2u.top/2019/08/26/题解-Gym101873B-Buildings/index.html" target="_blank">
             <li class="mdl-menu__item">
                 Share to QQ
             </li>
@@ -414,7 +491,49 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        
+        <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>As a traveling salesman in a globalized world, Alan has always moved a lot. He almost never lived in the same town for more than a few years until his heart yearned for a different place.</p>
+<p>However, this newest town is his favorite yet - it is just so colorful. Alan has recently moved to Colorville, a smallish city in between some really nice mountains. Here, Alan has finally decided to settle down and build himself a home - a nice big house to call his own.</p>
+<p>In Colorville, many people have their own houses - each painted with a distinct pattern of colors such that no two houses look the same. Every wall consists of exactly n × n squares, each painted with a given color (windows and doors are also seen as unique “colors”). The walls of the houses are arranged in the shape of a regular m-gon, with a roof on top. According to the deep traditions of Colorville, the roofs should show the unity among Colorvillians, so all roofs in Colorville have the same color.</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL2ljcGMudXBjLmVkdS5jbi91cGxvYWQvaW1hZ2UvMjAxODEwMTAvMjAxODEwMTAyMDE2MjJfNDgyNTIucG5n" alt></p>
+<p>Of course, Alan wants to follow this custom to make sure he fits right in. However, there are so many possible designs to choose from. Can you tell Alan how many possible house designs there are? (Two house designs are obviously the same if they can be translated into each other just by rotation.)</p>
+<h2 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h2><p>The input consists of:<br>• one line with three integers n, m, and c, where<br>– n (1 ≤ n ≤ 500) is the side length of every wall, i.e. every wall consists of n × n squares;<br>– m (3 ≤ m ≤ 500) is the number of corners of the regular polygon;<br>– c (1 ≤ c ≤ 500) the number of different colors.</p>
+<h2 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h2><p>Output s where s is the number of possible different house designs. Since s can be very large, output s mod (10 ^ 9 + 7).</p>
+<h2 id="样例输入"><a href="#样例输入" class="headerlink" title="样例输入"></a>样例输入</h2><pre><code>1 3 1</code></pre><h2 id="样例输出"><a href="#样例输出" class="headerlink" title="样例输出"></a>样例输出</h2><pre><code>1</code></pre><h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><p>这是一道经典的手镯问题，可转化为“用c^(n^2)种不同颜色的珠子穿成有m颗珠子的手镯，有多少种方案”。</p>
+<p>由组合数学Polya定理易知答案为 $\frac{1}{m}\sum_{i=1}^{m}c^{n^{2}\cdot gcd(i,m)}$。由于求和过程涉及模运算，最后需要计算m的乘法逆元。</p>
+<pre><code class="cpp">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+typedef long long ll;
+
+const int mod = 1e9 + 7;
+
+int gcd(int a, int b)
+{
+    return b ? gcd(b, a % b) : a;
+}
+
+ll quick_pow(ll x, ll n)
+{
+    ll res = 1;
+    while (n)
+    {
+        if (n &amp; 1) res = res * x % mod;
+        n &gt;&gt;= 1; x = x * x % mod;
+    }
+    return res;
+}
+
+int main()
+{
+    int n, m, c;
+    ll ans = 0;
+    scanf(&quot;%d%d%d&quot;, &amp;n, &amp;m, &amp;c);
+    for (int i = 1; i &lt;= m; i++)
+        ans = (ans + quick_pow(c, n * n * gcd(i, m))) % mod;
+    ans = ans * quick_pow(m, mod - 2) % mod;
+    printf(&quot;%lld\n&quot;, ans);
+    return 0;
+}</code></pre>
+
         
                 <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
                     <p><strong>
@@ -422,7 +541,7 @@
                             <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"></a>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
                         </strong>
                         <br>
-                        <strong>Link to this article: </strong><a href="https://www.singularity2u.top/categories/index.html">https://www.singularity2u.top/categories/index.html</a>
+                        <strong>Link to this article: </strong><a href="https://www.singularity2u.top/2019/08/26/题解-Gym101873B-Buildings/">https://www.singularity2u.top/2019/08/26/题解-Gym101873B-Buildings/</a>
                     </p>
                 </blockquote>
         
@@ -474,6 +593,14 @@
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
+    
+        <a href="/2019/08/26/Polya定理/" id="post_nav-older" class="next-content">
+            Older
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
     
 </nav>
 
@@ -674,6 +801,14 @@ It will not impact the appearance and can give developers a lot of support :)
                     
 
                     
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
 
                     <!--Footer-->
 <footer class="mdl-mini-footer" id="bottom">
@@ -867,6 +1002,10 @@ It will not impact the appearance and can give developers a lot of support :)
 <!-- Import prettify js  -->
 
     
+        
+            <script>lsloader.load("prettify_js","https://cdn.bootcss.com/prettify/r298/prettify.js", true)</script>
+        
+    
 
 
 
@@ -880,11 +1019,36 @@ It will not impact the appearance and can give developers a lot of support :)
 
     
         
+            $(function() {
+                $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+                prettyPrint();
+                })
+        
     
     
 </script>
 
 <!-- MathJax Load-->
+
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+        tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno",skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']},
+        TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, Macros: { href: "{}" } },
+        messageStyle: "none"
+    });
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
 
 
 <!-- Bing Background -->
