@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[题解 洛谷P4980 【模板】Polya定理]]></title>
+    <url>%2F2019%2F08%2F28%2F%E9%A2%98%E8%A7%A3-%E6%B4%9B%E8%B0%B7P4980-%E3%80%90%E6%A8%A1%E6%9D%BF%E3%80%91Polya%E5%AE%9A%E7%90%86%2F</url>
+    <content type="text"><![CDATA[题目描述给定一个n个点，n条边的环，有n种颜色，给每个顶点染色，问有多少种本质不同的染色方案，答案对10^9+7取模 注意本题的本质不同，定义为：只需要不能通过旋转与别的染色方案相同。 输入格式第一行输入一个t，表示有t组数据 第二行开始，一共t行，每行一个整数n，意思如题所示。 输出格式共t行，每行一个数字，表示染色方案数对10^9+7取模后的结果 输入输出样例输入 #1 5 1 2 3 4 5 输出 #1 1 3 11 70 629说明/提示n≤10^9 t≤10^3 题解根据Polya定理易知答案为 $\frac{1}{n}\sum_{i=1}^{n}n^{gcd\left(i,n\right)}$ 。 考虑优化：设g(i)为gcd(i, n)，显然所有的g都是n的因数，故可枚举n的因数。 当枚举到n的第i个因数时，总存在 $g=\frac{n}{p_{i}}$ 。 设有x个g值相同，不难发现 $x=\varphi\left(\frac{n}{g}\right)=\varphi\left(p\right)$ 。 故答案可化简： $\frac{1}{n}\sum_{i=1}^{n}n^{gcd\left(i,n\right)}=\frac{1}{n}\sum_{p|n}\varphi \left(p\right)\cdot n^{\frac{n}{p}}=\sum_{p|n}\varphi \left(p\right)\cdot n^{\frac{n}{p}-1}$ 。 #include &lt;bits/stdc++.h&gt; using namespace std; typedef long long ll; const int mod = 1e9 + 7; inline const int read() { int x = 0, f = 1; char ch = getchar(); while (ch &lt; &#39;0&#39; || ch &gt; &#39;9&#39;) { if (ch == &#39;-&#39;) f = -1; ch = getchar(); } while (ch &gt;= &#39;0&#39; &amp;&amp; ch &lt;= &#39;9&#39;) { x = (x &lt;&lt; 3) + (x &lt;&lt; 1) + ch - &#39;0&#39;; ch = getchar(); } return x * f; } ll quick_pow(ll x, ll n) { ll res = 1; while (n) { if (n &amp; 1) res = res * x % mod; n &gt;&gt;= 1; x = x * x % mod; } return res; } ll euler(int n) { ll res = 1; for (int i = 2; i &lt;= sqrt(n); i++) { if (n % i == 0) { n /= i; res *= i - 1; while (n % i == 0) { n /= i; res *= i; } } } if (n &gt; 1) res *= n - 1; return res; } ll polya(int n) { ll res = 0; for (int i = 1; i &lt;= sqrt(n); i++) if (n % i == 0) res = i * i == n ? (res + euler(i) * quick_pow(n, n / i - 1)) % mod : (res + euler(i) * quick_pow(n, n / i - 1) + euler(n / i) * quick_pow(n, i - 1)) % mod; return res; } int main() { int t = read(); while (t--) { int n = read(); printf(&quot;%lld\n&quot;, polya(n)); } return 0; }]]></content>
+      <categories>
+        <category>DS&amp;A</category>
+      </categories>
+      <tags>
+        <tag>数论</tag>
+        <tag>组合数学</tag>
+        <tag>Polya定理</tag>
+        <tag>欧拉函数</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[题解 Gym101873B Buildings]]></title>
     <url>%2F2019%2F08%2F26%2F%E9%A2%98%E8%A7%A3-Gym101873B-Buildings%2F</url>
     <content type="text"><![CDATA[题目描述As a traveling salesman in a globalized world, Alan has always moved a lot. He almost never lived in the same town for more than a few years until his heart yearned for a different place. However, this newest town is his favorite yet - it is just so colorful. Alan has recently moved to Colorville, a smallish city in between some really nice mountains. Here, Alan has finally decided to settle down and build himself a home - a nice big house to call his own. In Colorville, many people have their own houses - each painted with a distinct pattern of colors such that no two houses look the same. Every wall consists of exactly n × n squares, each painted with a given color (windows and doors are also seen as unique “colors”). The walls of the houses are arranged in the shape of a regular m-gon, with a roof on top. According to the deep traditions of Colorville, the roofs should show the unity among Colorvillians, so all roofs in Colorville have the same color. Of course, Alan wants to follow this custom to make sure he fits right in. However, there are so many possible designs to choose from. Can you tell Alan how many possible house designs there are? (Two house designs are obviously the same if they can be translated into each other just by rotation.) 输入The input consists of:• one line with three integers n, m, and c, where– n (1 ≤ n ≤ 500) is the side length of every wall, i.e. every wall consists of n × n squares;– m (3 ≤ m ≤ 500) is the number of corners of the regular polygon;– c (1 ≤ c ≤ 500) the number of different colors. 输出Output s where s is the number of possible different house designs. Since s can be very large, output s mod (10 ^ 9 + 7). 样例输入1 3 1样例输出1题解这是一道经典的手镯问题，可转化为“用c^(n^2)种不同颜色的珠子穿成有m颗珠子的手镯，有多少种方案”。 由组合数学Polya定理易知答案为 $\frac{1}{m}\sum_{i=1}^{m}c^{n^{2}\cdot gcd(i,m)}$。由于求和过程涉及模运算，最后需要计算m的乘法逆元。 #include &lt;bits/stdc++.h&gt; using namespace std; typedef long long ll; const int mod = 1e9 + 7; int gcd(int a, int b) { return b ? gcd(b, a % b) : a; } ll quick_pow(ll x, ll n) { ll res = 1; while (n) { if (n &amp; 1) res = res * x % mod; n &gt;&gt;= 1; x = x * x % mod; } return res; } int main() { int n, m, c; ll ans = 0; scanf(&quot;%d%d%d&quot;, &amp;n, &amp;m, &amp;c); for (int i = 1; i &lt;= m; i++) ans = (ans + quick_pow(c, n * n * gcd(i, m))) % mod; ans = ans * quick_pow(m, mod - 2) % mod; printf(&quot;%lld\n&quot;, ans); return 0; }]]></content>
@@ -8,8 +22,8 @@
         <category>DS&amp;A</category>
       </categories>
       <tags>
-        <tag>Polya定理</tag>
         <tag>组合数学</tag>
+        <tag>Polya定理</tag>
       </tags>
   </entry>
   <entry>
@@ -21,6 +35,7 @@
       </categories>
       <tags>
         <tag>数论</tag>
+        <tag>组合数学</tag>
         <tag>Polya定理</tag>
       </tags>
   </entry>
