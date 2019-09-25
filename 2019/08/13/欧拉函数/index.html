@@ -59,7 +59,7 @@
     </title>
 
     <!-- Favicons -->
-    <link rel="icon shortcut" type="image/ico" href="https://s2.ax1x.com/2019/08/27/m4dVL6.png">
+    <link rel="icon shortcut" type="image/ico" href="https://s2.ax1x.com/2019/06/15/VoA9df.th.jpg">
     <link rel="icon" href="https://s2.ax1x.com/2019/08/27/m4dVL6.png">
 
     <meta name="format-detection" content="telephone=no">
@@ -90,11 +90,6 @@
         <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
         <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?NKhlKQkXw/c66TR5p4wO+w==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
 
-        
-            
-                <style id="prettify_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_css","/css/prettify.min.css?zp8STOU9v89XWFEnN+6YmQ==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
-                <style id="prettify_theme"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_theme","/css/prettify/tranquil-heart.min.css?ul3p9I9MsbOxK0L+BHzDDg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
-            
         
 
     
@@ -306,7 +301,7 @@
     <!-- Custom Head -->
     
 
-</head>
+<link rel="stylesheet" href="/css/prism-atom-dark.css" type="text/css"></head>
 
 
     
@@ -467,7 +462,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=欧拉函数&url=https://www.singularity2u.top/2019/08/13/欧拉函数/index.html&pic=https://www.singularity2u.tophttps://s2.ax1x.com/2019/08/27/m4dVL6.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=欧拉函数&url=https://www.singularity2u.top/2019/08/13/欧拉函数/index.html&pic=https://www.singularity2u.tophttps://s2.ax1x.com/2019/06/15/VoA9df.th.jpg&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 Share to Weibo
             </li>
@@ -488,7 +483,7 @@
 
     <!-- Share QQ -->
     
-        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Singularity&title=欧拉函数&summary=An ACMer&#39;s blog&pics=https://www.singularity2u.tophttps://s2.ax1x.com/2019/08/27/m4dVL6.png&url=https://www.singularity2u.top/2019/08/13/欧拉函数/index.html" target="_blank">
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Singularity&title=欧拉函数&summary=An ACMer&#39;s blog&pics=https://www.singularity2u.tophttps://s2.ax1x.com/2019/06/15/VoA9df.th.jpg&url=https://www.singularity2u.top/2019/08/13/欧拉函数/index.html" target="_blank">
             <li class="mdl-menu__item">
                 Share to QQ
             </li>
@@ -540,30 +535,30 @@
 <p>当m是质数p时，此式则为：</p>
 <p>${\displaystyle a^{p-1}\equiv 1{\pmod {p}}}$</p>
 <p>即费马小定理。</p>
-<pre><code class="cpp">void get_euler() //Version 1 打表
-{
-    for (int i = 1; i &lt; maxn; i++)
-        phi[i] = i;
-    for (int i = 2; i &lt; maxn; i++)
-        if (phi[i] == i)
-            for (int j = i; j &lt; maxn; j += i)
-                phi[j] = phi[j] / i * (i - 1);
-}
+<pre class=" language-cpp"><code class="language-cpp"><span class="token keyword">void</span> <span class="token function">get_euler</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">//Version 1 打表</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> maxn<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+        phi<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> i<span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> maxn<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>phi<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> i<span class="token punctuation">)</span>
+            <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> i<span class="token punctuation">;</span> j <span class="token operator">&lt;</span> maxn<span class="token punctuation">;</span> j <span class="token operator">+</span><span class="token operator">=</span> i<span class="token punctuation">)</span>
+                phi<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> phi<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">/</span> i <span class="token operator">*</span> <span class="token punctuation">(</span>i <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-ll euler(int n) //Version 2
-{
-    ll res = 1;
-    for (int i = 2; i &lt;= sqrt(n); i++)
-    {
-        if (n % i == 0)
-        {
-            n /= i; res *= i - 1;
-            while (n % i == 0) { n /= i; res *= i; }
-        }
-    }
-    if (n &gt; 1) res *= n - 1;
-    return res;
-}</code></pre>
+ll <span class="token function">euler</span><span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">//Version 2</span>
+<span class="token punctuation">{</span>
+    ll res <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> <span class="token function">sqrt</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>n <span class="token operator">%</span> i <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            n <span class="token operator">/</span><span class="token operator">=</span> i<span class="token punctuation">;</span> res <span class="token operator">*</span><span class="token operator">=</span> i <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span>
+            <span class="token keyword">while</span> <span class="token punctuation">(</span>n <span class="token operator">%</span> i <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> n <span class="token operator">/</span><span class="token operator">=</span> i<span class="token punctuation">;</span> res <span class="token operator">*</span><span class="token operator">=</span> i<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>n <span class="token operator">></span> <span class="token number">1</span><span class="token punctuation">)</span> res <span class="token operator">*</span><span class="token operator">=</span> n <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> res<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
 
         
                 <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
@@ -1043,12 +1038,6 @@ It will not impact the appearance and can give developers a lot of support :)
 
 <!-- Import prettify js  -->
 
-    
-        
-            <script>lsloader.load("prettify_js","https://cdn.bootcss.com/prettify/r298/prettify.js", true)</script>
-        
-    
-
 
 
 <!-- Window Load -->
@@ -1059,13 +1048,6 @@ It will not impact the appearance and can give developers a lot of support :)
         $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
     });
 
-    
-        
-            $(function() {
-                $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
-                prettyPrint();
-                })
-        
     
     
 </script>
