@@ -1,9 +1,10 @@
 @charset "UTF-8";
 
 /* for color-themes-for-google-code-prettify */
-/* Automatically add a scroll bar instead of a newline */
 pre{
-    white-space: pre;
+    white-space: pre-wrap;
+    word-break: break-all;
+    word-wrap: break-word;
 }
 
 #post-content .prettyprint{
@@ -12,14 +13,9 @@ pre{
 }
 
 #post-content ol,#post-content ul{
-    padding-left: 32px;
+    padding-left: 51px;
     font-size: 1rem;
     margin: 0;
-    overflow: initial;
-}
-
-#post-content pre code, #post-content pre tt {
-    padding-right: 2em;
 }
 
 #post-content .prettyprint li.L0, #post-content .prettyprint li.L1,
@@ -27,5 +23,5 @@ pre{
 #post-content .prettyprint li.L4, #post-content .prettyprint li.L5,
 #post-content .prettyprint li.L6, #post-content .prettyprint li.L7,
 #post-content .prettyprint li.L8, #post-content .prettyprint li.L9 {
-    padding-left: 0.5em;
+    padding-left: 0.8em;
 }
