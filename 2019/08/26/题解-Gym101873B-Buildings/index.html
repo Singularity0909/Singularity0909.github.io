@@ -301,7 +301,7 @@
     <!-- Custom Head -->
     
 
-<link rel="stylesheet" href="/css/prism-ghcolors.css" type="text/css"></head>
+</head>
 
 
     
@@ -520,39 +520,39 @@
 <h2 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h2><p>Output s where s is the number of possible different house designs. Since s can be very large, output s mod (10 ^ 9 + 7).</p>
 <h2 id="样例输入"><a href="#样例输入" class="headerlink" title="样例输入"></a>样例输入</h2><pre><code>1 3 1</code></pre><h2 id="样例输出"><a href="#样例输出" class="headerlink" title="样例输出"></a>样例输出</h2><pre><code>1</code></pre><h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><p>这是一道经典的手镯问题，可转化为“用c^(n^2)种不同颜色的珠子穿成有m颗珠子的手镯，有多少种方案”。</p>
 <p>由组合数学Polya定理易知答案为 $\frac{1}{m}\sum_{i=1}^{m}c^{n^{2}\cdot gcd(i,m)}$。由于求和过程涉及模运算，最后需要计算m的乘法逆元。</p>
-<pre class=" language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;bits/stdc++.h></span></span>
-<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
-<span class="token keyword">typedef</span> <span class="token keyword">long</span> <span class="token keyword">long</span> ll<span class="token punctuation">;</span>
+<pre><code class="cpp">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+typedef long long ll;
 
-<span class="token keyword">const</span> <span class="token keyword">int</span> mod <span class="token operator">=</span> <span class="token number">1e9</span> <span class="token operator">+</span> <span class="token number">7</span><span class="token punctuation">;</span>
+const int mod = 1e9 + 7;
 
-<span class="token keyword">int</span> <span class="token function">gcd</span><span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">,</span> <span class="token keyword">int</span> b<span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    <span class="token keyword">return</span> b <span class="token operator">?</span> <span class="token function">gcd</span><span class="token punctuation">(</span>b<span class="token punctuation">,</span> a <span class="token operator">%</span> b<span class="token punctuation">)</span> <span class="token operator">:</span> a<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
+int gcd(int a, int b)
+{
+    return b ? gcd(b, a % b) : a;
+}
 
-ll <span class="token function">quick_pow</span><span class="token punctuation">(</span>ll x<span class="token punctuation">,</span> ll n<span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    ll res <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
-    <span class="token keyword">while</span> <span class="token punctuation">(</span>n<span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>n <span class="token operator">&amp;</span> <span class="token number">1</span><span class="token punctuation">)</span> res <span class="token operator">=</span> res <span class="token operator">*</span> x <span class="token operator">%</span> mod<span class="token punctuation">;</span>
-        n <span class="token operator">>>=</span> <span class="token number">1</span><span class="token punctuation">;</span> x <span class="token operator">=</span> x <span class="token operator">*</span> x <span class="token operator">%</span> mod<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">return</span> res<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
+ll quick_pow(ll x, ll n)
+{
+    ll res = 1;
+    while (n)
+    {
+        if (n &amp; 1) res = res * x % mod;
+        n &gt;&gt;= 1; x = x * x % mod;
+    }
+    return res;
+}
 
-<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    <span class="token keyword">int</span> n<span class="token punctuation">,</span> m<span class="token punctuation">,</span> c<span class="token punctuation">;</span>
-    ll ans <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-    <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d%d%d"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>n<span class="token punctuation">,</span> <span class="token operator">&amp;</span>m<span class="token punctuation">,</span> <span class="token operator">&amp;</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> m<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
-        ans <span class="token operator">=</span> <span class="token punctuation">(</span>ans <span class="token operator">+</span> <span class="token function">quick_pow</span><span class="token punctuation">(</span>c<span class="token punctuation">,</span> n <span class="token operator">*</span> n <span class="token operator">*</span> <span class="token function">gcd</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span> m<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">%</span> mod<span class="token punctuation">;</span>
-    ans <span class="token operator">=</span> ans <span class="token operator">*</span> <span class="token function">quick_pow</span><span class="token punctuation">(</span>m<span class="token punctuation">,</span> mod <span class="token operator">-</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token operator">%</span> mod<span class="token punctuation">;</span>
-    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%lld\n"</span><span class="token punctuation">,</span> ans<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre>
+int main()
+{
+    int n, m, c;
+    ll ans = 0;
+    scanf(&quot;%d%d%d&quot;, &amp;n, &amp;m, &amp;c);
+    for (int i = 1; i &lt;= m; i++)
+        ans = (ans + quick_pow(c, n * n * gcd(i, m))) % mod;
+    ans = ans * quick_pow(m, mod - 2) % mod;
+    printf(&quot;%lld\n&quot;, ans);
+    return 0;
+}</code></pre>
 
         
                 <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
@@ -1033,6 +1033,10 @@ It will not impact the appearance and can give developers a lot of support :)
 <!-- Import prettify js  -->
 
 
+    
+        <script>lsloader.load("hanabi","/js/hanabi-browser-bundle.js?Pki5+pzkluqu53g+ouMWpA==", true)</script>
+    
+
 
 <!-- Window Load -->
 <!-- add class for prettify -->
@@ -1043,6 +1047,10 @@ It will not impact the appearance and can give developers a lot of support :)
     });
 
     
+    
+        
+        
+        HanabiBrowser.start('pre code',true);
     
 </script>
 

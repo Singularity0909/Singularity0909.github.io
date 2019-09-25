@@ -64,7 +64,7 @@
 
     <meta name="format-detection" content="telephone=no">
     <meta name="description" itemprop="description" content="An ACMer&#39;s blog">
-    <meta name="keywords" content=",数论,组合数学,Polya定理,欧拉函数">
+    <meta name="keywords" content=",数论,欧拉函数,组合数学,Polya定理">
     <meta name="theme-color" content="#00bfff">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -240,7 +240,7 @@
     <meta property="og:title" content="题解 洛谷P4980 【模板】Polya定理 | Singularity">
     <meta property="og:image" content="https://s2.ax1x.com/2019/08/27/m4dVL6.png">
     <meta property="og:description" content="An ACMer&#39;s blog">
-    <meta property="og:article:tag" content="数论"> <meta property="og:article:tag" content="组合数学"> <meta property="og:article:tag" content="Polya定理"> <meta property="og:article:tag" content="欧拉函数"> 
+    <meta property="og:article:tag" content="数论"> <meta property="og:article:tag" content="欧拉函数"> <meta property="og:article:tag" content="组合数学"> <meta property="og:article:tag" content="Polya定理"> 
 
     
         <meta property="article:published_time" content="Wed Aug 28 2019 23:24:58 GMT+0800">
@@ -285,7 +285,7 @@
             "url": "https://s2.ax1x.com/2019/08/27/m4dVL6.png"
         }
     },
-    "keywords": ",数论,组合数学,Polya定理,欧拉函数",
+    "keywords": ",数论,欧拉函数,组合数学,Polya定理",
     "description": "An ACMer&#39;s blog",
 }
 </script>
@@ -301,7 +301,7 @@
     <!-- Custom Head -->
     
 
-<link rel="stylesheet" href="/css/prism-ghcolors.css" type="text/css"></head>
+</head>
 
 
     
@@ -534,66 +534,66 @@
 <p>当枚举到n的第i个因数时，总存在 $g=\frac{n}{p_{i}}$ 。</p>
 <p>设有x个g值相同，不难发现 $x=\varphi\left(\frac{n}{g}\right)=\varphi\left(p\right)$ 。</p>
 <p>故答案可化简： $\frac{1}{n}\sum_{i=1}^{n}n^{gcd\left(i,n\right)}=\frac{1}{n}\sum_{p|n}\varphi \left(p\right)\cdot n^{\frac{n}{p}}=\sum_{p|n}\varphi \left(p\right)\cdot n^{\frac{n}{p}-1}$ 。</p>
-<pre class=" language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;bits/stdc++.h></span></span>
-<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
-<span class="token keyword">typedef</span> <span class="token keyword">long</span> <span class="token keyword">long</span> ll<span class="token punctuation">;</span>
+<pre><code class="cpp">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+typedef long long ll;
 
-<span class="token keyword">const</span> <span class="token keyword">int</span> mod <span class="token operator">=</span> <span class="token number">1e9</span> <span class="token operator">+</span> <span class="token number">7</span><span class="token punctuation">;</span>
+const int mod = 1e9 + 7;
 
-<span class="token keyword">inline</span> <span class="token keyword">const</span> <span class="token keyword">int</span> <span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    <span class="token keyword">int</span> x <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> f <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
-    <span class="token keyword">char</span> ch <span class="token operator">=</span> <span class="token function">getchar</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">while</span> <span class="token punctuation">(</span>ch <span class="token operator">&lt;</span> <span class="token string">'0'</span> <span class="token operator">||</span> ch <span class="token operator">></span> <span class="token string">'9'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>ch <span class="token operator">==</span> <span class="token string">'-'</span><span class="token punctuation">)</span> f <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span> ch <span class="token operator">=</span> <span class="token function">getchar</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
-    <span class="token keyword">while</span> <span class="token punctuation">(</span>ch <span class="token operator">>=</span> <span class="token string">'0'</span> <span class="token operator">&amp;&amp;</span> ch <span class="token operator">&lt;=</span> <span class="token string">'9'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> x <span class="token operator">=</span> <span class="token punctuation">(</span>x <span class="token operator">&lt;&lt;</span> <span class="token number">3</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token punctuation">(</span>x <span class="token operator">&lt;&lt;</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">+</span> ch <span class="token operator">-</span> <span class="token string">'0'</span><span class="token punctuation">;</span> ch <span class="token operator">=</span> <span class="token function">getchar</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
-    <span class="token keyword">return</span> x <span class="token operator">*</span> f<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
+inline const int read()
+{
+    int x = 0, f = 1;
+    char ch = getchar();
+    while (ch &lt; &#39;0&#39; || ch &gt; &#39;9&#39;) { if (ch == &#39;-&#39;) f = -1; ch = getchar(); }
+    while (ch &gt;= &#39;0&#39; &amp;&amp; ch &lt;= &#39;9&#39;) { x = (x &lt;&lt; 3) + (x &lt;&lt; 1) + ch - &#39;0&#39;; ch = getchar(); }
+    return x * f;
+}
 
-ll <span class="token function">quick_pow</span><span class="token punctuation">(</span>ll x<span class="token punctuation">,</span> ll n<span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    ll res <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
-    <span class="token keyword">while</span> <span class="token punctuation">(</span>n<span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>n <span class="token operator">&amp;</span> <span class="token number">1</span><span class="token punctuation">)</span> res <span class="token operator">=</span> res <span class="token operator">*</span> x <span class="token operator">%</span> mod<span class="token punctuation">;</span>
-        n <span class="token operator">>>=</span> <span class="token number">1</span><span class="token punctuation">;</span> x <span class="token operator">=</span> x <span class="token operator">*</span> x <span class="token operator">%</span> mod<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">return</span> res<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
+ll quick_pow(ll x, ll n)
+{
+    ll res = 1;
+    while (n)
+    {
+        if (n &amp; 1) res = res * x % mod;
+        n &gt;&gt;= 1; x = x * x % mod;
+    }
+    return res;
+}
 
-ll <span class="token function">euler</span><span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    ll res <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> <span class="token function">sqrt</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>n <span class="token operator">%</span> i <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span>
-        <span class="token punctuation">{</span>
-            n <span class="token operator">/</span><span class="token operator">=</span> i<span class="token punctuation">;</span> res <span class="token operator">*</span><span class="token operator">=</span> i <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span>
-            <span class="token keyword">while</span> <span class="token punctuation">(</span>n <span class="token operator">%</span> i <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> n <span class="token operator">/</span><span class="token operator">=</span> i<span class="token punctuation">;</span> res <span class="token operator">*</span><span class="token operator">=</span> i<span class="token punctuation">;</span> <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>n <span class="token operator">></span> <span class="token number">1</span><span class="token punctuation">)</span> res <span class="token operator">*</span><span class="token operator">=</span> n <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span>
-    <span class="token keyword">return</span> res<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
+ll euler(int n)
+{
+    ll res = 1;
+    for (int i = 2; i &lt;= sqrt(n); i++)
+    {
+        if (n % i == 0)
+        {
+            n /= i; res *= i - 1;
+            while (n % i == 0) { n /= i; res *= i; }
+        }
+    }
+    if (n &gt; 1) res *= n - 1;
+    return res;
+}
 
-ll <span class="token function">polya</span><span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    ll res <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> <span class="token function">sqrt</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>n <span class="token operator">%</span> i <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span>
-            res <span class="token operator">=</span> i <span class="token operator">*</span> i <span class="token operator">==</span> n <span class="token operator">?</span> <span class="token punctuation">(</span>res <span class="token operator">+</span> <span class="token function">euler</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token function">quick_pow</span><span class="token punctuation">(</span>n<span class="token punctuation">,</span> n <span class="token operator">/</span> i <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">%</span> mod <span class="token operator">:</span> <span class="token punctuation">(</span>res <span class="token operator">+</span> <span class="token function">euler</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token function">quick_pow</span><span class="token punctuation">(</span>n<span class="token punctuation">,</span> n <span class="token operator">/</span> i <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token function">euler</span><span class="token punctuation">(</span>n <span class="token operator">/</span> i<span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token function">quick_pow</span><span class="token punctuation">(</span>n<span class="token punctuation">,</span> i <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">%</span> mod<span class="token punctuation">;</span>
-    <span class="token keyword">return</span> res<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
+ll polya(int n)
+{
+    ll res = 0;
+    for (int i = 1; i &lt;= sqrt(n); i++)
+        if (n % i == 0)
+            res = i * i == n ? (res + euler(i) * quick_pow(n, n / i - 1)) % mod : (res + euler(i) * quick_pow(n, n / i - 1) + euler(n / i) * quick_pow(n, i - 1)) % mod;
+    return res;
+}
 
-<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    <span class="token keyword">int</span> t <span class="token operator">=</span> <span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">while</span> <span class="token punctuation">(</span>t<span class="token operator">--</span><span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        <span class="token keyword">int</span> n <span class="token operator">=</span> <span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%lld\n"</span><span class="token punctuation">,</span> <span class="token function">polya</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre>
+int main()
+{
+    int t = read();
+    while (t--)
+    {
+        int n = read();
+        printf(&quot;%lld\n&quot;, polya(n));
+    }
+    return 0;
+}</code></pre>
 
         
                 <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
@@ -1066,6 +1066,10 @@ It will not impact the appearance and can give developers a lot of support :)
 <!-- Import prettify js  -->
 
 
+    
+        <script>lsloader.load("hanabi","/js/hanabi-browser-bundle.js?Pki5+pzkluqu53g+ouMWpA==", true)</script>
+    
+
 
 <!-- Window Load -->
 <!-- add class for prettify -->
@@ -1076,6 +1080,10 @@ It will not impact the appearance and can give developers a lot of support :)
     });
 
     
+    
+        
+        
+        HanabiBrowser.start('pre code',true);
     
 </script>
 
