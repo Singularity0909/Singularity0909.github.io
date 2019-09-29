@@ -89,5 +89,5 @@ backup:
   theme: material
   message:
   repository:
-    github: git@github.com:Singularity0909/Singularity0909.github.io.git
-    coding: git@e.coding.net:Singularity/singularity.git
+    github: git@github.com:Singularity0909/Singularity0909.github.io.git,backup
+    coding: git@e.coding.net:Singularity/singularity.git,backup
