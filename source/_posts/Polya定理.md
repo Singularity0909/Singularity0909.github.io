@@ -6,7 +6,7 @@ tags:
 - 数论
 - 组合数学
 - Polya定理
-thumbnail: https://s2.ax1x.com/2019/08/26/mWry0f.jpg
+thumbnail: https://cdn.jsdelivr.net/gh/singularity0909/cdn/img/macbook-3.jpg
 mathjax: true
 ---
 

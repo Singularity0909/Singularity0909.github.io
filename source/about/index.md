@@ -1,7 +1,7 @@
 ---
 title: About me
 date: 2019-06-13 20:58:19
-thumbnail: https://s2.ax1x.com/2019/08/26/mWZDL8.jpg
+thumbnail: https://cdn.jsdelivr.net/gh/singularity0909/cdn/macbook-1.jpg
 ---
 
 ```
