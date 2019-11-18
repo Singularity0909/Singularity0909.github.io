@@ -5,6 +5,7 @@ categories: DS&A
 tags:
 - 线段树
 - 离散化
+thumbnail: https://cdn.jsdelivr.net/gh/singularity0909/cdn/img/gallery/icpc.jpg
 ---
 
 {% pdf https://uva.onlinejudge.org/external/105/p10587.pdf %}

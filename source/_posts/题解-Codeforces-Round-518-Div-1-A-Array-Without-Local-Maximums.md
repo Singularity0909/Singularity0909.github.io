@@ -3,6 +3,7 @@ title: '题解 Codeforces Round #518 (Div. 1) A. Array Without Local Maximums'
 date: 2019-08-12 12:41:27
 categories: DS&A
 tags: 数位DP
+thumbnail: https://cdn.jsdelivr.net/gh/singularity0909/cdn/img/gallery/icpc.jpg
 mathjax: true
 ---
 

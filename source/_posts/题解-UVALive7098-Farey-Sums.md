@@ -5,6 +5,7 @@ categories: DS&A
 tags:
 - 数论
 - 欧拉函数
+thumbnail: https://cdn.jsdelivr.net/gh/singularity0909/cdn/img/gallery/icpc.jpg
 mathjax: true
 ---
 

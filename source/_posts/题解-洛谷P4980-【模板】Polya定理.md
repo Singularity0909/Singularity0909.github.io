@@ -7,6 +7,7 @@ tags:
 - 组合数学
 - Polya定理
 - 欧拉函数
+thumbnail: https://cdn.jsdelivr.net/gh/singularity0909/cdn/img/gallery/icpc.jpg
 mathjax: true
 ---
 

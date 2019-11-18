@@ -5,6 +5,7 @@ categories: DS&A
 tags:
 - 组合数学
 - Polya定理
+thumbnail: https://cdn.jsdelivr.net/gh/singularity0909/cdn/img/gallery/icpc.jpg
 mathjax: true
 ---
 
