@@ -53,7 +53,7 @@
     
     <title>
         
-            Tag: 课程设计 | 
+            题解 The Contest for ICPC Asia Nanjing 2018 I. Magic Potion | 
         
         Singularity
     </title>
@@ -64,7 +64,7 @@
 
     <meta name="format-detection" content="telephone=no">
     <meta name="description" itemprop="description" content="An ACMer&#39;s blog">
-    <meta name="keywords" content>
+    <meta name="keywords" content=",网络流,最大流,Dinic">
     <meta name="theme-color" content="#00bfff">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -91,6 +91,9 @@
         <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","https://cdn.jsdelivr.net/gh/singularity0909/cdn/css/style.min.css",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
 
         
+            
+                <style id="prettify_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_css","https://cdn.jsdelivr.net/gh/singularity0909/cdn/css/prettify.min.css",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+                <style id="prettify_theme"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_theme","https://cdn.jsdelivr.net/gh/singularity0909/cdn/css/prettify/tranquil-heart.min.css",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
             
         
 
@@ -222,7 +225,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Singularity">
-    <meta name="msapplication-starturl" content="https://www.singularity2u.top/tags/课程设计/">
+    <meta name="msapplication-starturl" content="https://www.singularity2u.top/2019/11/21/题解-The-Contest-for-ICPC-Asia-Nanjing-2018-I-Magic-Potion/">
     <meta name="msapplication-navbutton-color" content="#00bfff">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Singularity">
@@ -237,13 +240,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="https://www.singularity2u.top/tags/课程设计/">
+    <meta property="og:url" content="https://www.singularity2u.top/2019/11/21/题解-The-Contest-for-ICPC-Asia-Nanjing-2018-I-Magic-Potion/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Tag: 课程设计 | Singularity">
+    <meta property="og:title" content="题解 The Contest for ICPC Asia Nanjing 2018 I. Magic Potion | Singularity">
     <meta property="og:image" content="https://cdn.jsdelivr.net/gh/singularity0909/cdn/img/avatar/lks.png">
     <meta property="og:description" content="An ACMer&#39;s blog">
-    
+    <meta property="og:article:tag" content="网络流"> <meta property="og:article:tag" content="最大流"> <meta property="og:article:tag" content="Dinic"> 
 
+    
+        <meta property="article:published_time" content="Thu Nov 21 2019 21:19:01 GMT+0800">
+        <meta property="article:modified_time" content="Thu Nov 21 2019 21:38:05 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -251,13 +257,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="https://www.singularity2u.top/tags/课程设计/index.html">
+        <link rel="canonical" href="https://www.singularity2u.top/2019/11/21/题解-The-Contest-for-ICPC-Asia-Nanjing-2018-I-Magic-Potion/index.html">
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "https://www.singularity2u.top/2019/11/21/题解-The-Contest-for-ICPC-Asia-Nanjing-2018-I-Magic-Potion/index.html",
+    "headline": "题解 The Contest for ICPC Asia Nanjing 2018 I. Magic Potion",
+    "datePublished": "Thu Nov 21 2019 21:19:01 GMT+0800",
+    "dateModified": "Thu Nov 21 2019 21:38:05 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "2U",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://cdn.jsdelivr.net/gh/singularity0909/cdn/img/avatar/lks.png"
+        },
+        "description": "IT = intelligent + tough"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Singularity",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "https://cdn.jsdelivr.net/gh/singularity0909/cdn/img/avatar/lks.png"
+        }
+    },
+    "keywords": ",网络流,最大流,Dinic",
+    "description": "An ACMer&#39;s blog",
+}
+</script>
 
 
     
@@ -297,98 +333,368 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
     
-        
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn" class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Magic-Potion"><span class="post-toc-number">1.</span> <span class="post-toc-text">Magic Potion</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Input"><span class="post-toc-number">1.0.1.</span> <span class="post-toc-text">Input</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Output"><span class="post-toc-number">1.0.2.</span> <span class="post-toc-text">Output</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#样例输入1"><span class="post-toc-number">1.0.3.</span> <span class="post-toc-text">样例输入1</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#样例输出1"><span class="post-toc-number">1.0.4.</span> <span class="post-toc-text">样例输出1</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#样例输入2"><span class="post-toc-number">1.0.5.</span> <span class="post-toc-text">样例输入2</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#样例输出2"><span class="post-toc-number">1.0.6.</span> <span class="post-toc-text">样例输出2</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#题目来源"><span class="post-toc-number">1.0.7.</span> <span class="post-toc-text">题目来源</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#题解"><span class="post-toc-number">1.0.8.</span> <span class="post-toc-text">题解</span></a></li></ol></li></ol>
+    </ul>
     
 
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50 lazy" data-original="https://cdn.jsdelivr.net/gh/singularity0909/cdn/img/gallery/code-2.jpg">
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(https://cdn.jsdelivr.net/gh/singularity0909/cdn/img/gallery/icpc.jpg)">
+    
+            <p class="article-headline-p">
+                题解 The Contest for ICPC Asia Nanjing 2018 I. Magic Potion
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="https://cdn.jsdelivr.net/gh/singularity0909/cdn/img/avatar/lks.png" width="44px" height="44px" alt="Author Avatar">
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>2U</strong>
+        <span>Nov 21, 2019</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">devices other</i>
+    <span class="visuallyhidden">devices other</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+    <li class="mdl-menu__item">Read this article on other devices</li>
+    
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASYAAAEmCAAAAADqr2IGAAAEDklEQVR42u3aS3LjMAwFQN//0pntVKVG8wAwjgQ3Vyk7osnWgvjw9WUE44UAEyZMmDBhMjBhwoTp9kyveERTf/vP5NnkV6qr+vvb3h4xYcKECdMmpt7mrz9PtnT9nz3iyavChAkTJky7mZLlJhtL+PLNV+e8Zio8hQkTJkyYPp7pep48RDgbBFRfMyZMmDBhwpQsYn7YJy8gT8gxYcKECROmXgF0knDON5/P/8u1cEyYMGHCdDOm/JB+7t9vvd+ECRMmTJhuw1Qdr9ZIDvg8UJhf04l2igkTJkyYVjBVW4/VizW947laxq1eG0pK0pgwYcKEaQdTddvVbfRS0OuwIF9Dr2CNCRMmTJj2MfXSzknanDdBq2THknBMmDBhwrSCaTJplS9HmWCdeuWYMGHChGkTU968TL5Nyrv5J71V5Vj//AQTJkyYMK1g6i23mnZWU+JJYHHsAhAmTJgwYVrKdKolmS86DyYmIUsZFBMmTJgwLWLKj8xkY3mSXKXPW5LzQAQTJkyYMO1gqkJUU+UkvOilwZNno9kwYcKECdMKprwR2EsgT5V0eyFC76oQJkyYMGHaxDRpDeaLmyTAyRryXy+UjzFhwoQJ08cwJYlxr1CbF5R7Jea3BgSYMGHChOnGTNXN99LmCWIvOR81RDFhwoQJ0yKmwnWWVmo6mb/anuzNjwkTJkyYtjJVC6z5t/lxPuHurT8qHGPChAkTpo9huj5uJ09NNp8j9gIaTJgwYcK0j6naSsz5Tv1KnrQfmB8TJkyYMK1gyh8+FS6cvdBTDQUKzVFMmDBhwrSC6ecSzutl5WvI267Vazr/4caECRMmTCuYJhd3ehdiJvP0XsOBdiYmTJgwYXosU7UFmP98LyA4G4Lka8OECRMmTLuZmkdmsdial2vzF1BlKnyCCRMmTJhWMF0nlpMUdI6Sj2qbs1nkxYQJEyZMD2RKsHrJbVLGrSbek2tA5cYnJkyYMGFaxNRLTXuXTXsF3HnokPBhwoQJE6atTPkhXb2a0ws4qludNDjLtXBMmDBhwvRApupll2ppuNeYzBPaKJWdF3kxYcKECdNjmSbHfK+hmKe71VCjWuRtxk2YMGHChOkhTPm1m+pTp5qRvSLvgd/ChAkTJkwrmKqjWg6eBBx5QJCsMA8gMGHChAnTJqZTx3M1Aa5e7jl7eSgKKTBhwoQJ0yKmSWszOXR7B3b+/28KCDBhwoQJ08OZqgdqDj1Z7qk582YnJkyYMGHClBz5SYgwP857YU1UtsaECRMmTB/PlH+bH/m94KBapB7db8KECRMmTI9lqh6l8wT17HFeJf7BdiYmTJgwYboZ0+QSTJ7K5uFC3sLMOfJEHRMmTJgwbWIyooDAwIQJEyZMmDAZmDBhusv4A8i8zq7xmk8BAAAAAElFTkSuQmCC">
+    
+</ul>
+
     
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2019/06/15/课程设计-学生成绩管理系统/">课程设计 学生成绩管理系统</a></p>
-    </div>
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/Dinic/">Dinic</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/最大流/">最大流</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/网络流/">网络流</a>
+    </li></ul>
+    
 
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            功能导图
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2019/06/15/课程设计-学生成绩管理系统/" target="_self">Read more</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="https://cdn.jsdelivr.net/gh/singularity0909/cdn/img/avatar/lks.png" width="44px" height="44px" alt="2U's avatar">
-            </div>
-            <div>
-                <strong>2U</strong>
-                <span>Jun 15, 2019</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/C-C/">C/C++</a>
-              </span>
-            
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
 
-            
+    
 
-            
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=题解 The Contest for ICPC Asia Nanjing 2018 I. Magic Potion&url=https://www.singularity2u.top/2019/11/21/题解-The-Contest-for-ICPC-Asia-Nanjing-2018-I-Magic-Potion/index.html&pic=https://www.singularity2u.tophttps://cdn.jsdelivr.net/gh/singularity0909/cdn/img/avatar/lks.th.jpg&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Weibo
+            </li>
+        </a>
+    
 
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
+    <!-- Share Twitter -->
+    
+
+    <!-- Share Facebook -->
+    
+
+    <!-- Share Google+ -->
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Singularity&title=题解 The Contest for ICPC Asia Nanjing 2018 I. Magic Potion&summary=An ACMer&#39;s blog&pics=https://www.singularity2u.tophttps://cdn.jsdelivr.net/gh/singularity0909/cdn/img/avatar/lks.th.jpg&url=https://www.singularity2u.top/2019/11/21/题解-The-Contest-for-ICPC-Asia-Nanjing-2018-I-Magic-Potion/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                Share to QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
 </div>
 
-            
-            
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="Magic-Potion"><a href="#Magic-Potion" class="headerlink" title="Magic Potion"></a>Magic Potion</h1><p><a href="https://nanti.jisuanke.com/t/A2146" target="_blank" rel="noopener">Portal1</a> <a href="https://vjudge.net/problem/Gym-101981I" target="_blank" rel="noopener">Portal2</a></p>
+<p>There are n heroes and mm monsters living in an island. The monsters became very vicious these days, so the heroes decided to diminish the monsters in the island. However, the i-th hero can only kill one monster belonging to the set Mi​. Joe, the strategist, has k bottles of magic potion, each of which can buff one hero’s power and let him be able to kill one more monster. Since the potion is very powerful, a hero can only take at most one bottle of potion.</p>
+<p>Please help Joe find out the maximum number of monsters that can be killed by the heroes if he uses the optimal strategy.</p>
+<h3 id="Input"><a href="#Input" class="headerlink" title="Input"></a>Input</h3><p>The first line contains three integers n,m,k (1≤n,m,k≤500) —— the number of heroes, the number of monsters and the number of bottles of potion.</p>
+<p>Each of the next n lines contains one integer ti​, the size of Mi​, and the following ti​ integers Mi,j​ (1≤j≤ti​), the indices (1-based) of monsters that can be killed by the i-th hero (1≤ti​≤m,1≤Mi,j​≤m).</p>
+<h3 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h3><p>Print the maximum number of monsters that can be killed by the heroes.</p>
+<h3 id="样例输入1"><a href="#样例输入1" class="headerlink" title="样例输入1"></a>样例输入1</h3><pre><code>3 5 2
+4 1 2 3 5
+2 2 5
+2 1 2</code></pre><h3 id="样例输出1"><a href="#样例输出1" class="headerlink" title="样例输出1"></a>样例输出1</h3><pre><code>4</code></pre><h3 id="样例输入2"><a href="#样例输入2" class="headerlink" title="样例输入2"></a>样例输入2</h3><pre><code>5 10 2
+2 3 10
+5 1 3 4 6 10
+5 3 4 6 8 9
+3 1 9 10
+5 1 3 6 7 10</code></pre><h3 id="样例输出2"><a href="#样例输出2" class="headerlink" title="样例输出2"></a>样例输出2</h3><pre><code>7</code></pre><h3 id="题目来源"><a href="#题目来源" class="headerlink" title="题目来源"></a>题目来源</h3><p><a href="https://nanti.jisuanke.com/acm?kw=ACM-ICPC%20Nanjing%20Onsite%202018" target="_blank" rel="noopener">ACM-ICPC Nanjing Onsite 2018</a></p>
+<h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h3><p>这两天认真看了看网络流，时隔一个月补题。</p>
+<p>建图如下：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/singularity0909/cdn/img/screenshot/graph-dinic.jpg" alt></p>
+<pre><code class="cpp">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+typedef long long ll;
+const int maxn = 1e6 + 10;
+const int maxm = 1e6 + 10;
+const int inf = 0x3f3f3f3f;
+int cnt, head[maxn], dep[maxn], cur[maxn];
+struct edge { int to, flow, next; } e[maxm];
+
+inline const int read()
+{
+    int x = 0, f = 1; char ch = getchar();
+    while (ch &lt; &#39;0&#39; || ch &gt; &#39;9&#39;) { if (ch == &#39;-&#39;) f = -1; ch = getchar(); }
+    while (ch &gt;= &#39;0&#39; &amp;&amp; ch &lt;= &#39;9&#39;) { x = (x &lt;&lt; 3) + (x &lt;&lt; 1) + ch - &#39;0&#39;; ch = getchar(); }
+    return x * f;
+}
+
+void addEdge(int u, int v, int w)
+{
+    e[cnt].to = v;
+    e[cnt].flow = w;
+    e[cnt].next = head[u];
+    head[u] = cnt++;
+}
+
+bool bfs(int s, int t)
+{
+    queue&lt;int&gt; q;
+    memset(dep, -1, sizeof(dep));
+    dep[s] = 0;
+    q.push(s);
+    while (!q.empty())
+    {
+        int u = q.front();
+        q.pop();
+        for (int i = head[u]; ~i; i = e[i].next)
+        {
+            int v = e[i].to;
+            if (dep[v] == -1 &amp;&amp; e[i].flow)
+            {
+                q.push(v);
+                dep[v] = dep[u] + 1;
+            }
+        }
+    }
+    return ~dep[t];
+}
+
+int dfs(int u, int t, int rflow)
+{
+    if (u == t) return rflow;
+    int res = 0;
+    for (int i = cur[u]; ~i &amp;&amp; rflow; i = e[i].next)
+    {
+        int v = e[i].to;
+        if (dep[v] != dep[u] + 1 || !e[i].flow) continue;
+        cur[u] = i;
+        int flow = dfs(v, t, min(e[i].flow, rflow));
+        e[i].flow -= flow;
+        e[i ^ 1].flow += flow;
+        rflow -= flow;
+        res += flow;
+    }
+    if (!res) dep[u] = -1;
+    return res;
+}
+
+int dinic(int s, int t)
+{
+    int res = 0;
+    while (bfs(s, t))
+    {
+        memcpy(cur, head, sizeof(head));
+        res += dfs(s, t, inf);
+    }
+    return res;
+}
+
+int main()
+{
+    int n = read(), m = read(), k = read();
+    memset(head, -1, sizeof(head));
+    addEdge(n + m + 2, n + m + 1, k);
+    addEdge(n + m + 1, n + m + 2, 0);
+    for (int i = 1; i &lt;= n; i++)
+    {
+        addEdge(n + m + 2, i, 1);
+        addEdge(i, n + m + 2, 0);
+        addEdge(n + m + 1, i, 1);
+        addEdge(i, n + m + 1, 0);
+        int t = read();
+        while (t--)
+        {
+            int j = read();
+            addEdge(i, n + j, 1);
+            addEdge(n + j, i, 0);
+        }
+    }
+    for (int i = n + 1; i &lt;= n + m; i++)
+    {
+        addEdge(i, n + m + 3, 1);
+        addEdge(n + m + 3, i, 0);
+    }
+    printf(&quot;%d\n&quot;, dinic(n + m + 2, n + m + 3));
+    return 0;
+}</code></pre>
+
+        
+                <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
+                    <p><strong>
+                         
+                            <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"></a>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
+                        </strong>
+                        <br>
+                        <strong>Link to this article: </strong><a href="https://www.singularity2u.top/2019/11/21/题解-The-Contest-for-ICPC-Asia-Nanjing-2018-I-Magic-Potion/">https://www.singularity2u.top/2019/11/21/题解-The-Contest-for-ICPC-Asia-Nanjing-2018-I-Magic-Potion/</a>
+                    </p>
+                </blockquote>
         
     
 
     
+</div>
 
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
 
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 6 + 1);
+                
 
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', 'https://cdn.jsdelivr.net/gh/singularity0909/cdn/img/random/material-' + randomNum + '.png');
-    $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
+                <!-- Post Comments -->
+                
+                    
+    <div id="comment" style="padding:10px;" class="vcomment"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+    var GUEST_INFO = ['nick','mail','link'];
+    var guest_info = 'nick,mail'.split(',').filter(function(item){
+        return GUEST_INFO.indexOf(item) > -1
+    });
+    var notify = 'false' === 'true';
+    var verify = 'false' === 'true';
+    new Valine({
+        el: '.vcomment',
+        notify: true,
+        verify: true,
+        appId: "mOOKmHvlqSdTda1XFQsJF2nJ-gzGzoHsz",
+        appKey: "flsKmTlNp3xOJvegXy3eQ5pW",
+        placeholder: "Don&#39;t forget to leave your e-mail address!",
+        pageSize:'10',
+        avatar:'identicon',
+        lang:'en',
+        guest_info: guest_info
+    });
 </script>
 
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
     
-</div>
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2019/11/21/题解-The-Preliminary-Contest-for-ICPC-Asia-Nanjing-2019-A-The-beautiful-values-of-the-palace/" id="post_nav-older" class="next-content">
+            Older
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
@@ -593,6 +899,14 @@ It will not impact the appearance and can give developers a lot of support :)
                     
 
                     
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
 
                     <!--Footer-->
 <footer class="mdl-mini-footer" id="bottom">
@@ -786,6 +1100,10 @@ It will not impact the appearance and can give developers a lot of support :)
 <!-- Import prettify js  -->
 
     
+        
+            <script>lsloader.load("prettify_js","https://cdn.bootcss.com/prettify/r298/prettify.js", true)</script>
+        
+    
 
 
 
@@ -798,6 +1116,11 @@ It will not impact the appearance and can give developers a lot of support :)
     });
 
     
+        
+            $(function() {
+                $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+                prettyPrint();
+                })
         
     
     
