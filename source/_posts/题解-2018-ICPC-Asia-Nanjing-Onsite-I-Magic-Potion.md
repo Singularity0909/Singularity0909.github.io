@@ -1,5 +1,5 @@
 ---
-title: '题解 The Contest for ICPC Asia Nanjing 2018 I. Magic Potion'
+title: '题解 2018 ICPC Asia Nanjing Onsite I. Magic Potion'
 date: 2019-11-21 21:19:01
 tags:
 - 网络流
