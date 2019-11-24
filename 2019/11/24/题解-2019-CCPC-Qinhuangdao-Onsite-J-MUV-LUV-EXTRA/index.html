@@ -53,7 +53,7 @@
     
     <title>
         
-            Tag: 离散化 | 
+            题解 2019 CCPC Qinhuangdao Onsite J. MUV LUV EXTRA | 
         
         Singularity
     </title>
@@ -64,7 +64,7 @@
 
     <meta name="format-detection" content="telephone=no">
     <meta name="description" itemprop="description" content="An ACMer&#39;s blog">
-    <meta name="keywords" content>
+    <meta name="keywords" content=",最小循环节,KMP">
     <meta name="theme-color" content="#00bfff">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -91,6 +91,9 @@
         <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","https://cdn.jsdelivr.net/gh/singularity0909/cdn/css/style.min.css",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
 
         
+            
+                <style id="prettify_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_css","https://cdn.jsdelivr.net/gh/singularity0909/cdn/css/prettify.min.css",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+                <style id="prettify_theme"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_theme","https://cdn.jsdelivr.net/gh/singularity0909/cdn/css/prettify/tranquil-heart.min.css",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
             
         
 
@@ -222,7 +225,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Singularity">
-    <meta name="msapplication-starturl" content="https://www.singularity2u.top/tags/离散化/">
+    <meta name="msapplication-starturl" content="https://www.singularity2u.top/2019/11/24/题解-2019-CCPC-Qinhuangdao-Onsite-J-MUV-LUV-EXTRA/">
     <meta name="msapplication-navbutton-color" content="#00bfff">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Singularity">
@@ -237,13 +240,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="https://www.singularity2u.top/tags/离散化/">
+    <meta property="og:url" content="https://www.singularity2u.top/2019/11/24/题解-2019-CCPC-Qinhuangdao-Onsite-J-MUV-LUV-EXTRA/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Tag: 离散化 | Singularity">
+    <meta property="og:title" content="题解 2019 CCPC Qinhuangdao Onsite J. MUV LUV EXTRA | Singularity">
     <meta property="og:image" content="https://cdn.jsdelivr.net/gh/singularity0909/cdn/img/avatar/lks.png">
     <meta property="og:description" content="An ACMer&#39;s blog">
-    
+    <meta property="og:article:tag" content="最小循环节"> <meta property="og:article:tag" content="KMP"> 
 
+    
+        <meta property="article:published_time" content="Sun Nov 24 2019 10:46:18 GMT+0800">
+        <meta property="article:modified_time" content="Sun Nov 24 2019 10:47:46 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -251,13 +257,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="https://www.singularity2u.top/tags/离散化/index.html">
+        <link rel="canonical" href="https://www.singularity2u.top/2019/11/24/题解-2019-CCPC-Qinhuangdao-Onsite-J-MUV-LUV-EXTRA/index.html">
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "https://www.singularity2u.top/2019/11/24/题解-2019-CCPC-Qinhuangdao-Onsite-J-MUV-LUV-EXTRA/index.html",
+    "headline": "题解 2019 CCPC Qinhuangdao Onsite J. MUV LUV EXTRA",
+    "datePublished": "Sun Nov 24 2019 10:46:18 GMT+0800",
+    "dateModified": "Sun Nov 24 2019 10:47:46 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "2U",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://cdn.jsdelivr.net/gh/singularity0909/cdn/img/avatar/lks.png"
+        },
+        "description": "IT = intelligent + tough"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Singularity",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "https://cdn.jsdelivr.net/gh/singularity0909/cdn/img/avatar/lks.png"
+        }
+    },
+    "keywords": ",最小循环节,KMP",
+    "description": "An ACMer&#39;s blog",
+}
+</script>
 
 
     
@@ -297,101 +333,284 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
     
-        
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
     
 
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50 lazy" data-original="https://cdn.jsdelivr.net/gh/singularity0909/cdn/img/gallery/icpc.jpg">
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(https://cdn.jsdelivr.net/gh/singularity0909/cdn/img/gallery/icpc.jpg)">
+    
+            <p class="article-headline-p">
+                题解 2019 CCPC Qinhuangdao Onsite J. MUV LUV EXTRA
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="https://cdn.jsdelivr.net/gh/singularity0909/cdn/img/avatar/lks.png" width="44px" height="44px" alt="Author Avatar">
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>2U</strong>
+        <span>Nov 24, 2019</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">devices other</i>
+    <span class="visuallyhidden">devices other</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+    <li class="mdl-menu__item">Read this article on other devices</li>
+    
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQ4AAAEOCAAAAABd2qZ5AAADgUlEQVR42u3awW7rMAwEwP7/T793LdAm3SWlwIfRKXCcWBwfCFL8+md9W18IcODAgQMHDhw4cOB4MMdXvJJfff/21f0/79n8w6srRSw4cODAgeMCxx+p6MU97zmS8N5/zq9sYsGBAwcOHPc4ksQ5S5YbsuTOWSw4cODAgeOZHEl6y4uxpOhqXwAOHDhw4Hg+R1687QMoijEcOHDgwPEwjuTBScAJXP7Psybjh3qlOHDgwIFjPdDw/M8fne/AgQMHDhw/ONo1G5JLDpbaom7WmvwlIhw4cODAcZQjT1SzINvirU3zs/3jwIEDB47Pc8xGEy4eDsWJNh+tw4EDBw4cNziSbbXja3l5Nkv2bVlYV7Q4cODAgWPBMSx7RsNwbTJO9nBgxAEHDhw4cFzj2Lf28sOq/EDr+t5w4MCBA8dRjlnyy5t6+fW8OGxT/h//jAMHDhw4jnLsG3b5wc+Ncm7zLQ4cOHDguMfRHvDM0ls7ytCm8OQF/HIFBw4cOHBc5miPdnKI5Cl5469FKUo4HDhw4MCx5pi14WYjbm1IbZKuXy0OHDhw4LjAkQ+cbR7f0mxG94rf4sCBAweOoxyzdNsGkxwI5QFvjr5w4MCBA8cTOGZbOTswsdnhHyMUOHDgwIHjKEdeYiXNuFkYbdLdH33hwIEDB47bHG2QszZcEl4S0qa5WfdKceDAgQPHiCNp3s2agJvBhQ1rkZ5x4MCBA8dRjtmm28fnww15mp+9gKhXigMHDhw4Fhxt2psVdW14+U7yViYOHDhw4PgkRzumdqp8mqXJs0UgDhw4cOD4DMdszDpvF+5HqGfjCzhw4MCB4zZHnlw3QW6OpmatxoIVBw4cOHAc5WgHpmdl3mw4e/Oq8tIOBw4cOHDc4EjSXj6unafSPKG2wxCr5iAOHDhw4DjE0Q40zO7My8JZ0YgDBw4cOJ7G0ZZD+4GDvJ3Xjm5H+8GBAwcOHEc52jUrvfKtt83H9ztJruPAgQMHjrMcs+22SW5WpLXtyPzgCgcOHDhw3OaYJbk2vZ0anps1Fl++Whw4cODAcY1j2FwbBZk0BPNSLS8LceDAgQPHMzmSsYZZcm1H92ZHUzhw4MCB48kc+/biZ9qUdXMQBw4cOHCsOTbJrx4j2I+4jbhx4MCBA8dnONoBhfZQavaf+fX2Hhw4cODAcY/DwoEDBw4cOHDgwIEDx8PWfwaFm3TgRVOOAAAAAElFTkSuQmCC">
+    
+</ul>
+
     
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2019/08/15/题解-POJ2528-UVA10587-Mayor-s-posters/">题解 POJ2528 / UVA10587 Mayor&#39;s posters</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-
-	
+    <!-- Tags (bookmark) -->
     
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2019/08/15/题解-POJ2528-UVA10587-Mayor-s-posters/" target="_self">Read more</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="https://cdn.jsdelivr.net/gh/singularity0909/cdn/img/avatar/lks.png" width="44px" height="44px" alt="2U's avatar">
-            </div>
-            <div>
-                <strong>2U</strong>
-                <span>Aug 15, 2019</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/DS-A/">DS&A</a>
-              </span>
-            
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/KMP/">KMP</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/最小循环节/">最小循环节</a>
+    </li></ul>
+    
 
-            
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
 
-            
+    
 
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=题解 2019 CCPC Qinhuangdao Onsite J. MUV LUV EXTRA&url=https://www.singularity2u.top/2019/11/24/题解-2019-CCPC-Qinhuangdao-Onsite-J-MUV-LUV-EXTRA/index.html&pic=https://www.singularity2u.tophttps://cdn.jsdelivr.net/gh/singularity0909/cdn/img/avatar/lks.th.jpg&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Weibo
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+
+    <!-- Share Facebook -->
+    
+
+    <!-- Share Google+ -->
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Singularity&title=题解 2019 CCPC Qinhuangdao Onsite J. MUV LUV EXTRA&summary=An ACMer&#39;s blog&pics=https://www.singularity2u.tophttps://cdn.jsdelivr.net/gh/singularity0909/cdn/img/avatar/lks.th.jpg&url=https://www.singularity2u.top/2019/11/24/题解-2019-CCPC-Qinhuangdao-Onsite-J-MUV-LUV-EXTRA/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                Share to QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
 </div>
 
-            
-            
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        
+
+	<div class="row">
+    <embed src="https://codeforces.com/gym/102361/problem/J" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+
+
+<p>观察样例不难发现，在最优解中，p为后缀循环节出现的总长度（可能包含不完整循环节），l为后缀最小循环节长度。</p>
+<p>将序列逆序后枚举前缀，则p == i, l == i - next[i]，维护上式最大值即为答案。</p>
+<pre><code class="cpp">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+typedef long long ll;
+const int inf = 0x3f3f3f3f;
+const int maxn = 1e7 + 10;
+int num[maxn], nxt[maxn];
+char s[maxn];
+
+inline const int read()
+{
+    int x = 0, f = 1; char ch = getchar();
+    while (ch &lt; &#39;0&#39; || ch &gt; &#39;9&#39;) { if (ch == &#39;-&#39;) f = -1; ch = getchar(); }
+    while (ch &gt;= &#39;0&#39; &amp;&amp; ch &lt;= &#39;9&#39;) { x = (x &lt;&lt; 3) + (x &lt;&lt; 1) + ch - &#39;0&#39;; ch = getchar(); }
+    return x * f;
+}
+
+void getNext(int* v, int n)
+{
+    for (int i = 2, j = 0; i &lt;= n; i++)
+    {
+        while (j &amp;&amp; v[i] != v[j + 1]) j = nxt[j];
+        if (v[i] == v[j + 1]) j++;
+        nxt[i] = j;
+    }
+}
+
+int main()
+{
+    int len = 0;
+    ll a = read(), b = read(), ans = -inf;
+    scanf(&quot;%s&quot;, s);
+    for (int i = (int)strlen(s) - 1; s[i] != &#39;.&#39;; i--) num[++len] = s[i] - &#39;0&#39;;
+    getNext(num, len);
+    for (int i = 1; i &lt;= len; i++) ans = max(ans, i * a - (i - nxt[i]) * b);
+    printf(&quot;%lld\n&quot;, ans);
+    return 0;
+}</code></pre>
+
+        
+                <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
+                    <p><strong>
+                         
+                            <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"></a>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
+                        </strong>
+                        <br>
+                        <strong>Link to this article: </strong><a href="https://www.singularity2u.top/2019/11/24/题解-2019-CCPC-Qinhuangdao-Onsite-J-MUV-LUV-EXTRA/">https://www.singularity2u.top/2019/11/24/题解-2019-CCPC-Qinhuangdao-Onsite-J-MUV-LUV-EXTRA/</a>
+                    </p>
+                </blockquote>
         
     
 
     
+</div>
 
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
 
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 6 + 1);
+                
 
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', 'https://cdn.jsdelivr.net/gh/singularity0909/cdn/img/random/material-' + randomNum + '.png');
-    $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
+                <!-- Post Comments -->
+                
+                    
+    <div id="comment" style="padding:10px;" class="vcomment"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+    var GUEST_INFO = ['nick','mail','link'];
+    var guest_info = 'nick,mail'.split(',').filter(function(item){
+        return GUEST_INFO.indexOf(item) > -1
+    });
+    var notify = 'false' === 'true';
+    var verify = 'false' === 'true';
+    new Valine({
+        el: '.vcomment',
+        notify: true,
+        verify: true,
+        appId: "mOOKmHvlqSdTda1XFQsJF2nJ-gzGzoHsz",
+        appKey: "flsKmTlNp3xOJvegXy3eQ5pW",
+        placeholder: "Don&#39;t forget to leave your e-mail address!",
+        pageSize:'10',
+        avatar:'identicon',
+        lang:'en',
+        guest_info: guest_info
+    });
 </script>
 
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
     
-</div>
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2019/11/21/题解-The-Preliminary-Contest-for-ICPC-Asia-Nanjing-2019-A-The-beautiful-values-of-the-palace/" id="post_nav-older" class="next-content">
+            Older
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
@@ -596,6 +815,14 @@ It will not impact the appearance and can give developers a lot of support :)
                     
 
                     
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
 
                     <!--Footer-->
 <footer class="mdl-mini-footer" id="bottom">
@@ -789,6 +1016,10 @@ It will not impact the appearance and can give developers a lot of support :)
 <!-- Import prettify js  -->
 
     
+        
+            <script>lsloader.load("prettify_js","https://cdn.bootcss.com/prettify/r298/prettify.js", true)</script>
+        
+    
 
 
 
@@ -801,6 +1032,11 @@ It will not impact the appearance and can give developers a lot of support :)
     });
 
     
+        
+            $(function() {
+                $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+                prettyPrint();
+                })
         
     
     
