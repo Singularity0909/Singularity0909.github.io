@@ -197,7 +197,7 @@ sns_share:
 sidebar:
     dropdown:
         QQ:
-            link: "http://wpa.qq.com/msgrd?v=3&uin=904854724&site=qq&menu=yes"
+            link: "http://qq.macrohard.cn"
             icon: chat
         Typecho:
             link: "https://www.macrohard.cn"
