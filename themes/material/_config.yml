@@ -203,7 +203,7 @@ sidebar:
             link: "https://www.macrohard.cn"
             icon: fingerprint
         CSDN:
-            link: "https://csdn.macrohard.cn"
+            link: "http://csdn.macrohard.cn"
             icon: code
     homepage:
         use: true
