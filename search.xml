@@ -4,6 +4,9 @@
     <title><![CDATA[Hexo + Webhooks 部署至阿里云]]></title>
     <url>%2F2020%2F04%2F05%2FHexo%20%2B%20Webhooks%20%E9%83%A8%E7%BD%B2%E8%87%B3%E9%98%BF%E9%87%8C%E4%BA%91%2F</url>
     <content type="text"><![CDATA[解决了 Hexo 部署在 GitHub Pages 时解析龟速的尴尬问题。 绑定至主站下的二级域名 hexo.macrohard.cn，等待 SSL 证书生效。]]></content>
+      <categories>
+        <category>Daily</category>
+      </categories>
   </entry>
   <entry>
     <title><![CDATA[我的 Typecho 博客正式上线]]></title>
