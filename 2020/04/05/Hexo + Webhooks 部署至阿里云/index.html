@@ -53,7 +53,7 @@
     
     <title>
         
-            我的Typecho博客正式上线 | 
+            Hexo + Webhooks 部署至阿里云 | 
         
         Singularity - 2U&#39;s Blog
     </title>
@@ -64,7 +64,7 @@
 
     <meta name="format-detection" content="telephone=no">
     <meta name="description" itemprop="description" content="An ACMer&#39;s Blog">
-    <meta name="keywords" content=",Typecho">
+    <meta name="keywords" content>
     <meta name="theme-color" content="#00bfff">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -225,7 +225,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Singularity - 2U&#39;s Blog">
-    <meta name="msapplication-starturl" content="https://hexo.macrohard.cn/2019/11/28/我的Typecho博客正式上线/">
+    <meta name="msapplication-starturl" content="https://hexo.macrohard.cn/2020/04/05/Hexo + Webhooks 部署至阿里云/">
     <meta name="msapplication-navbutton-color" content="#00bfff">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Singularity - 2U&#39;s Blog">
@@ -240,16 +240,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="https://hexo.macrohard.cn/2019/11/28/我的Typecho博客正式上线/">
+    <meta property="og:url" content="https://hexo.macrohard.cn/2020/04/05/Hexo + Webhooks 部署至阿里云/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="我的Typecho博客正式上线 | Singularity - 2U&#39;s Blog">
+    <meta property="og:title" content="Hexo + Webhooks 部署至阿里云 | Singularity - 2U&#39;s Blog">
     <meta property="og:image" content="https://cdn.jsdelivr.net/gh/singularity0909/cdn/img/avatar/lks.png">
     <meta property="og:description" content="An ACMer&#39;s Blog">
-    <meta property="og:article:tag" content="Typecho"> 
+    
 
     
-        <meta property="article:published_time" content="Thu Nov 28 2019 21:25:10 GMT+0800">
-        <meta property="article:modified_time" content="Thu Nov 28 2019 21:32:08 GMT+0800">
+        <meta property="article:published_time" content="Sun Apr 05 2020 20:58:02 GMT+0800">
+        <meta property="article:modified_time" content="Sun Apr 05 2020 21:04:01 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -257,7 +257,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="https://hexo.macrohard.cn/2019/11/28/我的Typecho博客正式上线/index.html">
+        <link rel="canonical" href="https://hexo.macrohard.cn/2020/04/05/Hexo + Webhooks 部署至阿里云/index.html">
     
 
     <!-- Structured-data for SEO -->
@@ -269,10 +269,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "https://hexo.macrohard.cn/2019/11/28/我的Typecho博客正式上线/index.html",
-    "headline": "我的Typecho博客正式上线",
-    "datePublished": "Thu Nov 28 2019 21:25:10 GMT+0800",
-    "dateModified": "Thu Nov 28 2019 21:32:08 GMT+0800",
+    "mainEntityOfPage": "https://hexo.macrohard.cn/2020/04/05/Hexo + Webhooks 部署至阿里云/index.html",
+    "headline": "Hexo + Webhooks 部署至阿里云",
+    "datePublished": "Sun Apr 05 2020 20:58:02 GMT+0800",
+    "dateModified": "Sun Apr 05 2020 21:04:01 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "2U",
@@ -290,7 +290,7 @@
             "url": "https://cdn.jsdelivr.net/gh/singularity0909/cdn/img/avatar/lks.png"
         }
     },
-    "keywords": ",Typecho",
+    "keywords": "",
     "description": "An ACMer&#39;s Blog",
 }
 </script>
@@ -377,11 +377,20 @@
                 
     <!-- Paradox Post Header -->
     
-        <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(https://cdn.jsdelivr.net/gh/singularity0909/cdn/img/gallery/light.jpg)">
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 6 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', 'https://cdn.jsdelivr.net/gh/singularity0909/cdn/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
     
             <p class="article-headline-p">
-                我的Typecho博客正式上线
+                Hexo + Webhooks 部署至阿里云
             </p>
         </div>
 
@@ -400,7 +409,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>2U</strong>
-        <span>Nov 28, 2019</span>
+        <span>Apr 05, 2020</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -422,22 +431,13 @@
 <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
     <li class="mdl-menu__item">Read this article on other devices</li>
     
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAAC1klEQVR42u3aQXLbQAwEQP3/08k1h4ieAeiyvGyeXBLF3aYPqMXg9eeR1wsbGxsbGxsbGxv7I9mv+Pr3/v889M09757w7pN3z9/sGRsbG/sJ7GSZ6yWv8clzEthsz9jY2NjPYefLXBekvHS1d672jI2NjY19ucXrF5QcNto7sbGxsbE3j9gUs+QQkpQ3bGxsbOxVgyZo+syK2Ww/395Lw8bGxv549izo/dm/fyzfxsbGxv4wdnu1EUJSqGZlrN45NjY29qHsu8YiX+XVhg03BM/Y2NjYD2DPCthsECe5vw0kvoiHsbGxsQ9ltxudlaL2SNN+G70sbGxs7AewZ82gWSnKm1B5SftiRWxsbOxD2W37vi1abcnZN6HqfBsbGxv7CHZeDPLm0awhNRvNSaJibGxs7LPZ7aEij4fz4pSvmxdUbGxs7CewN7w8YLgrJGhfHDY2NvYT2DNG0kjKG1JtVDAMJLCxsbEPZedBbBsVzMre/hVH8QA2Njb2QezkZ3eN0bT4WWyMjY2N/WR2/vkmTshf3KaUDk9g2NjY2L+cvR+IvDf0ncXJdTyAjY2N/cvZ1wVmM5qzP2Dkzan6KIKNjY19EPuuQZm2sOVHjvwg9MVvsbGxsQ9l7w8kyVFk1irah7vY2NjYT2DPotN9eNA29/evABsbG/tU9qw9dG9BygG3jexgY2NjH83ODwNJsdkXyDaoiEZ2sLGxsQ9it4vVrZwyuM3LW10gsbGxsQ9lJ+2bvPWfRwWzEZz2+djY2NhPZrdDM22h+o6mVZ1vY2NjYx/Bno3gtEOQSfAwC4OxsbGxsdtN78duoi2Omk1F0IuNjY19KLttHrWxQfvJrLUUNZWwsbGxH8xeNehHQ5ObZhY2NjY29oy9bwAlRSspmdjY2NhPY7cNoHbrm0LV/gOwsbGxn8aeBb0Jbzhesw6eo6MINjY29hHs51zY2NjY2NjY2NjYH3P9Bc0gFUf8W4vQAAAAAElFTkSuQmCC">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAAC7UlEQVR42u3aQXLbMBAEQP3/08k1VY7omQXtooDmKRVJIBqHbHYWrz9HPi9sbGxsbGxsbGzsR7Jf8fN2uX8+/frNrytcr3m92sqesbGxsfdmf/NPf4mJNnF5EMn36z1jY2NjH8B+t9HkO8mnycElq7V7xsbGxsbOX5l/mhxH3q5gY2NjY88KRtu6JFFR8itsbGxs7JVQKd/0bHgwi5x+PEvDxsbGfjw7D/ef8+dfnW9jY2NjP5jdPrNQqS1mbbmKdo6NjY29KTsvDEnZa78z28Pwkig2Njb2puw83Em+n6yWH8HN8RY2Njb21uzr18zi+7ypyC9iJr+6IVTCxsbG/ih2u5U2vs9bjtnAuLgAhI2Njb0pOyldRZGIDyIPodpiuVS3sbGxsT+QvTJevfc4Zq1I0T5hY2Njb83OY/08rM+HAfk6s6tC2NjY2CewZ7HOShjUxkY5r8jSsLGxsbdgr4RBbXswGyrPRgXY2NjY57DzMCgfIcyi/HtDpf/8PTY2Nvam7FlRySOe9l15vFVHYNjY2Nibsu+6BDmL++8dDAyzNGxsbOyN2PnLZtF/XnhW2pu3e8DGxsbemt0GSbOmIge3w4NoV9jY2NjHsGeLtsOGhLde6rCxsbHPYQ//c9/GOgsr5zus59vY2NjYH85eiYFmR9AOIfLGqQiVsLGxsTdizwa9+UHkMdPsoJdCJWxsbOyN2MkRJNdr8m0lb2kbm29aFGxsbOwD2LP2INlEPnjIxxXJ+tjY2NinsfPrMiuH1Y54Z61LXbexsbGxP5bdPm2hSlqa9WuXdaiEjY2NvRF7Paa/a4RwzUhGxXXdxsbGxt6InTCSgjRrYFaOPr+CiY2NjX0COwlo8k20V2rWj2MpS8PGxsY+jJ0XqvpizehAf/CmEjY2NvbW7Ly1yH+bx0/5EAIbGxv7HHYb4uflKvm0bXuSgoeNjY19DrsNbvIBbVFgRg3MUiuCjY2NvQX7nAcbGxsbGxsbGxv7Mc9fje3Yu71+JCgAAAAASUVORK5CYII=">
     
 </ul>
 
     
 
     <!-- Tags (bookmark) -->
-    
-    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-        <i class="material-icons" role="presentation">bookmark</i>
-        <span class="visuallyhidden">bookmark</span>
-    </button>
-    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
-        <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/Typecho/">Typecho</a>
-    </li></ul>
     
 
     <!-- Share -->
@@ -453,7 +453,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=我的Typecho博客正式上线&url=https://hexo.macrohard.cn/2019/11/28/我的Typecho博客正式上线/index.html&pic=https://hexo.macrohard.cnhttps://cdn.jsdelivr.net/gh/singularity0909/cdn/img/avatar/lks.th.jpg&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Hexo + Webhooks 部署至阿里云&url=https://hexo.macrohard.cn/2020/04/05/Hexo + Webhooks 部署至阿里云/index.html&pic=https://hexo.macrohard.cnhttps://cdn.jsdelivr.net/gh/singularity0909/cdn/img/avatar/lks.th.jpg&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 Share to Weibo
             </li>
@@ -474,7 +474,7 @@
 
     <!-- Share QQ -->
     
-        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Singularity - 2U&#39;s Blog&title=我的Typecho博客正式上线&summary=An ACMer&#39;s Blog&pics=https://hexo.macrohard.cnhttps://cdn.jsdelivr.net/gh/singularity0909/cdn/img/avatar/lks.th.jpg&url=https://hexo.macrohard.cn/2019/11/28/我的Typecho博客正式上线/index.html" target="_blank">
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Singularity - 2U&#39;s Blog&title=Hexo + Webhooks 部署至阿里云&summary=An ACMer&#39;s Blog&pics=https://hexo.macrohard.cnhttps://cdn.jsdelivr.net/gh/singularity0909/cdn/img/avatar/lks.th.jpg&url=https://hexo.macrohard.cn/2020/04/05/Hexo + Webhooks 部署至阿里云/index.html" target="_blank">
             <li class="mdl-menu__item">
                 Share to QQ
             </li>
@@ -493,19 +493,8 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <p>前后提交了三次申请、耗时两周，网站域名备案总算通过了。至此，我的<a href="https://www.macrohard.cn" target="_blank" rel="noopener">Typecho博客</a>正式上线。</p>
-<p>没有打算把所有感想记录于此，计划每个阶段想一点写一点。</p>
-<p>大一时开通过CSDN博客，也鼓捣过Hexo，在此简要叙述一下个人的体验感受。</p>
-<p>CSDN博客具有易于操作的在线文本编辑器，支持Markdown、Mathjax等等。进行新增文章、分类等管理操作十分方便，还具有良好的SEO（不信你在百度搜索 <code>sduwh</code> ）。</p>
-<p>但它的缺陷明显：<strong>广告太多，可塑性几乎没有</strong>。</p>
-<p>Hexo是一款快速、简洁且高效的博客框架，通过Node.js框架快速渲染页面，再一键远程部署到GitHub、Coding等代码托管平台。它支持Markdown的所有功能，可以整合大量插件，可拓展性max。</p>
-<p>此外，因为它可部署到代码托管平台呈现静态页面，所以<strong>不依赖于服务器</strong>，对比WordPress等可节省一笔开销。</p>
-<p>缺点也有：由于所有的维护、管理操作都是在本地命令行或文件中进行的，所以在配置博客外观细节的过程中，没有经验的童鞋会被弄得晕头转向，它更适合<strong>有Web开发技术</strong>的童鞋玩耍。博客中的图片资源通常通过GitHub或图床存储，加载缓慢（简直龟速==）。</p>
-<p>就个人而言，我更偏好采用Hexo一类的框架搭建博客，最重要的原因就是能够<strong>在实践中学习</strong>。</p>
-<p>这次采用Typecho，是在参观<a href="https://pasteme.cn" target="_blank" rel="noopener">PasteMe</a>项目作者<a href="https://blog.lucien.ink" target="_blank" rel="noopener">Lucien姐姐的博客</a>之后决定的。</p>
-<p>当时发现阿里云服务器学生套餐<del>仅需110+r/y</del>，就毫不犹豫地下单了。</p>
-<p>Typecho与WordPress相似，但更加轻量。通过采用社区dalao写好的主题，可以在人性化的外观管理页面下配置外观，也能够像Hexo那样通过修改配置文件实现高度自定义。</p>
-<p>总而言之，在我看来Typecho弥补了Hexo博客网站解析和图片加载速度慢的缺陷，管理方便也不失可塑性，爱了爱了。</p>
+        <p>解决了 Hexo 部署在 GitHub Pages 时解析龟速的尴尬问题。</p>
+<p>绑定至主站下的二级域名 hexo.macrohard.cn，等待 SSL 证书生效。</p>
 
         
                 <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
@@ -514,7 +503,7 @@
                             <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"></a>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
                         </strong>
                         <br>
-                        <strong>Link to this article: </strong><a href="https://hexo.macrohard.cn/2019/11/28/我的Typecho博客正式上线/">https://hexo.macrohard.cn/2019/11/28/我的Typecho博客正式上线/</a>
+                        <strong>Link to this article: </strong><a href="https://hexo.macrohard.cn/2020/04/05/Hexo + Webhooks 部署至阿里云/">https://hexo.macrohard.cn/2020/04/05/Hexo + Webhooks 部署至阿里云/</a>
                     </p>
                 </blockquote>
         
@@ -561,21 +550,13 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2020/04/05/Test/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            Newer
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
     
-        <a href="/2019/11/24/题解-2019-CCPC-Qinhuangdao-Onsite-J-MUV-LUV-EXTRA/" id="post_nav-older" class="next-content">
+        <a href="/2019/11/28/我的 Typecho 博客正式上线/" id="post_nav-older" class="next-content">
             Older
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
