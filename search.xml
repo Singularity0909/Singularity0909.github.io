@@ -28,20 +28,6 @@
       </categories>
   </entry>
   <entry>
-    <title><![CDATA[题解 洛谷P4980 【模板】Polya定理]]></title>
-    <url>%2F2019%2F08%2F28%2F%E9%A2%98%E8%A7%A3-%E6%B4%9B%E8%B0%B7P4980-%E3%80%90%E6%A8%A1%E6%9D%BF%E3%80%91Polya%E5%AE%9A%E7%90%86%2F</url>
-    <content type="text"><![CDATA[题目描述给定一个n个点，n条边的环，有n种颜色，给每个顶点染色，问有多少种本质不同的染色方案，答案对10^9+7取模 注意本题的本质不同，定义为：只需要不能通过旋转与别的染色方案相同。 输入格式第一行输入一个t，表示有t组数据 第二行开始，一共t行，每行一个整数n，意思如题所示。 输出格式共t行，每行一个数字，表示染色方案数对10^9+7取模后的结果 输入输出样例输入 #1 5 1 2 3 4 5 输出 #1 1 3 11 70 629说明/提示n≤10^9 t≤10^3 题解根据Polya定理易知答案为 $\frac{1}{n}\sum_{i=1}^{n}n^{gcd\left(i,n\right)}$ 。 考虑优化：设g(i)为gcd(i, n)，显然所有的g都是n的因数，故可枚举n的因数。 当枚举到n的第i个因数时，总存在 $g=\frac{n}{p_{i}}$ 。 设有x个g值相同，不难发现 $x=\varphi\left(\frac{n}{g}\right)=\varphi\left(p\right)$ 。 故答案可化简： $\frac{1}{n}\sum_{i=1}^{n}n^{gcd\left(i,n\right)}=\frac{1}{n}\sum_{p|n}\varphi \left(p\right)\cdot n^{\frac{n}{p}}=\sum_{p|n}\varphi \left(p\right)\cdot n^{\frac{n}{p}-1}$ 。 #include &lt;bits/stdc++.h&gt; using namespace std; typedef long long ll; const int mod = 1e9 + 7; inline const int read() { int x = 0, f = 1; char ch = getchar(); while (ch &lt; &#39;0&#39; || ch &gt; &#39;9&#39;) { if (ch == &#39;-&#39;) f = -1; ch = getchar(); } while (ch &gt;= &#39;0&#39; &amp;&amp; ch &lt;= &#39;9&#39;) { x = (x &lt;&lt; 3) + (x &lt;&lt; 1) + ch - &#39;0&#39;; ch = getchar(); } return x * f; } ll quick_pow(ll x, ll n) { ll res = 1; while (n) { if (n &amp; 1) res = res * x % mod; n &gt;&gt;= 1; x = x * x % mod; } return res; } ll euler(int n) { ll res = 1; for (int i = 2; i &lt;= sqrt(n); i++) { if (n % i == 0) { n /= i; res *= i - 1; while (n % i == 0) { n /= i; res *= i; } } } if (n &gt; 1) res *= n - 1; return res; } ll polya(int n) { ll res = 0; for (int i = 1; i &lt;= sqrt(n); i++) if (n % i == 0) res = i * i == n ? (res + euler(i) * quick_pow(n, n / i - 1)) % mod : (res + euler(i) * quick_pow(n, n / i - 1) + euler(n / i) * quick_pow(n, i - 1)) % mod; return res; } int main() { int t = read(); while (t--) { int n = read(); printf(&quot;%lld\n&quot;, polya(n)); } return 0; }]]></content>
-      <categories>
-        <category>DS&amp;A</category>
-      </categories>
-      <tags>
-        <tag>数论</tag>
-        <tag>组合数学</tag>
-        <tag>Polya定理</tag>
-        <tag>欧拉函数</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[Polya定理]]></title>
     <url>%2F2019%2F08%2F26%2FPolya%E5%AE%9A%E7%90%86%2F</url>
     <content type="text"><![CDATA[Polya定理 本文转载自 博客园 Burnside和Polya定理都是高级计数的工具。对于一般计数问题，可以用排列组合来统计，但是对于更复杂的问题，比如对n个点用m种颜色染色，并且认为这n个点可以相互转移，即第一个点的位置可以与第二个点互换等等，求最多有多少种不同的染色（两种染色不同，当且仅当两者在空间上存在相同位置的两点颜色，且无法通过允许的转移从前者转移到后者）。 组合数学提供了强悍的Burnside和Polya定理来对这种复杂情况的可能数进行计数。 基础知识我们将允许的转移以下列方程表示出来： (1 2 3 4 5) (2 3 4 5 1) 对于任意输入值，我们先在上面方框里找到对应的下标（如果值未上方标识出来，那么返回值就是输入值，即等值转换），并用该下标在下面方框里找到映射值。实际上可以发现置换是一个函数，因为每个输入值通过转移可以转换为另外一个确定的值。 对于定义域和值域均落在集合V上的所有置换的集合，称为V上的置换类。（事实上这个类是一个群，但是我们不细讲） 可以发现上面的输入值x转移得到的值均为上方括号该值出现的后一位（最后一位后面就认为是首位），其构成了一个循环，我们用(1 2 3 4 5)来简单标记，称这样的置换为循环。 由于置换是函数，因此我们可以进行复合操作，即对于置换f与g，我们记fg为二者的复合函数（转移），而(fg)(x)=f(g(x))。若f与g是循环，其也可以写作(f1 f2 … fn)(g1 g2 … gm)。 定理：任意一个置换都可以拆解成为若干个不相交循环。比如(1 2 3)(4 5)等价于下面的置换： (1 2 3 4 5) (2 3 1 5 4) 对于指定值x，若置换f满足f(x)=x，那么称f是x不动置换，相应的称x是f的不动点，由所有x的不动置换组成的集合称为x不动置换类。 置换可以直接作用于向量，对于向量(a1,a2,…,an)，我们记f(a1,a2,…,an)=(af(1),af(2),…,af(n))。 核心定理现在来描述问题。有n个点和m种颜色，问有多少种不同的染色的可能。并且提供一个[1,n]上的置换类G，当且仅当两个染色方案a与b，对于所有G中的置换g，都满足g(a)&lt;&gt;b，才认为两个染色方案不同。而每个染色方案可以用向量来表示(c1,c2,…,cn)。其中ci表示第i个点所上的颜色。并且我们称相同的染色方案（向量）为等价类。 Polya定理：记置换G={a1,…,ak}，在[1,m]^n上，不同的向量数目 $L=\frac{1}{\left|G\right|}\sum_{i=1}^{k} m^{l(a_{i})}$ 。其中l(ai)表示置换ai可以展开为循环的节数，比如(1 2)(3 4)(5)就是3节循环。 注意使用这两个定理，要保证G中不含重复的置换。（两个置换相同与函数相同的定义一致）。]]></content>
