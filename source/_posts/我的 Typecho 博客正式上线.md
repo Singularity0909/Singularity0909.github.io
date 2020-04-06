@@ -1,5 +1,5 @@
 ---
-title: 我的Typecho博客正式上线
+title: 我的 Typecho 博客正式上线
 date: 2019-11-28 21:25:10
 categories: Daily
 tags: Typecho
@@ -32,5 +32,5 @@ Typecho与WordPress相似，但更加轻量。通过采用社区dalao写好的�
 
 总而言之，在我看来Typecho弥补了Hexo博客网站解析和图片加载速度慢的缺陷，管理方便也不失可塑性，爱了爱了。
 
-  [1]: https://pasteme.cn
-  [2]: https://blog.lucien.ink
+[1]: https://pasteme.cn
+[2]: https://blog.lucien.ink
