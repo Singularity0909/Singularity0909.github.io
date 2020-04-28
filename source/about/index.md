@@ -23,8 +23,8 @@ thumbnail: https://cdn.jsdelivr.net/gh/singularity0909/cdn/img/gallery/amazing-l
 ---
 玛珈山职业技术学院计算机科学与技术专业在读二年级学生
 
-INTJ一生黑 是个完美主义者 信仰唯物主义决定论
+INTJ 一生黑 是个完美主义者 信仰唯物主义决定论
 
-喜欢ACM-ICPC、鼓捣新科技、玩音乐、打CSGO
+喜欢 ACM-ICPC、鼓捣新科技、玩音乐、打 CSGO
 
 没有女朋友
