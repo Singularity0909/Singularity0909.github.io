@@ -100,8 +100,10 @@ nav:
     use: local
     link: /search
   pages:
-    #About:
-      #link: /about/
+    主站:
+      link: https://www.macrohard.cn
+    简历:
+      link: https://cv.2u.engineer
     #Friends:
       #link: /links/
 
