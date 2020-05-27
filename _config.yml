@@ -39,7 +39,7 @@ post_asset_folder: false
 relative_link: false
 future: true
 highlight:
-  enable: true
+  enable: false
   line_number: true
   auto_detect: true
   tab_replace:
@@ -73,7 +73,17 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: next
+theme: suka
+
+suka_theme:
+  search:
+    enable: true
+    path: search.json
+    field: post # Page | Post | All. Default post
+  prism:
+    enable: false
+    line_number: true
+    theme: 
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -86,7 +96,7 @@ deploy:
 
 backup:
   type: git
-  theme: material
+  theme: suka
   message:
   repository:
     github: git@github.com:Singularity0909/Singularity0909.github.io.git,backup

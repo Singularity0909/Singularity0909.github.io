@@ -123,7 +123,8 @@ qrcode:
 #        theme: # Available value in /source/css/prettify/[theme].min.css
 prettify:
     enable: true
-    theme: "tranquil-heart"
+    linenumber: true
+    theme: tomorrow
 
 #    Hanabi (https://github.com/egoist/hanabi)
 #        line_number: [true/false] # Show line number for code block
