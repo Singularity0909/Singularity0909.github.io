@@ -3,12 +3,12 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Singularity - 2U's Blog
+title: Singularity
 subtitle: 2U's Blog
-description: An ACMer's Blog
-keywords: Singularity
+description: 2U's Blog
+keywords:
 author: 2U
-language: en
+language: zh-Hans
 timezone:
 
 # URL
@@ -39,7 +39,7 @@ post_asset_folder: false
 relative_link: false
 future: true
 highlight:
-  enable: false
+  enable: true
   line_number: true
   auto_detect: true
   tab_replace:
