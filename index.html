@@ -1,1373 +1,2888 @@
 <!DOCTYPE html>
-<html style="display: none;" lang="en">
-    <head><meta name="generator" content="Hexo 3.8.0">
-    <meta charset="utf-8">
-    <!--
-        © Material Theme
-        https://github.com/viosey/hexo-theme-material
-        Version: 1.5.6 -->
-    <script>
-        window.materialVersion = "1.5.6"
-        // Delete localstorage with these tags
-        window.oldVersion = [
-            'codestartv1',
-            '1.3.4',
-            '1.4.0',
-            '1.4.0b1',
-            '1.5.0',
-            '1.5.2',
-            '1.5.5'
-        ]
-    </script>
-
-    <!-- dns prefetch -->
-    <meta http-equiv="x-dns-prefetch-control" content="on">
-
-    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net/gh/singularity0909/cdn">
-
-
-    <link rel="dns-prefetch" href="https://cdn1.lncld.net">
 
 
 
-
-    <link rel="dns-prefetch" href="https://cdn1.lncld.net">
-    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
-
-
-
-
-
-    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
-
-
-
-
-
-    <!-- Meta & Info -->
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-    <meta name="renderer" content="webkit">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
-    <!-- Title -->
-    
-    <title>
-        
-        Singularity - 2U&#39;s Blog
-    </title>
-
-    <!-- Favicons -->
-    <link rel="icon shortcut" type="image/ico" href="https://cdn.jsdelivr.net/gh/singularity0909/cdn/img/avatar/lks.th.jpg">
-    <link rel="icon" href="https://cdn.jsdelivr.net/gh/singularity0909/cdn/img/avatar/lks.png">
-
-    <meta name="format-detection" content="telephone=no">
-    <meta name="description" itemprop="description" content="An ACMer&#39;s Blog">
-    <meta name="keywords" content>
-    <meta name="theme-color" content="#00bfff">
-
-    <!-- Disable Fucking Bloody Baidu Tranformation -->
-    <meta http-equiv="Cache-Control" content="no-transform">
-    <meta http-equiv="Cache-Control" content="no-siteapp">
-
-    <!--[if lte IE 9]>
-        <link rel="stylesheet" href="/css/ie-blocker.css">
-
-        
-            <script src="/js/ie-blocker.en.js"></script>
-        
-    <![endif]-->
-
-    <!-- Import lsloader -->
-    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
-
-    <!-- Import queue -->
-    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
-
-    <!-- Import CSS -->
-    
-        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","https://cdn.jsdelivr.net/gh/singularity0909/cdn/css/material.min.css",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
-        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","https://cdn.jsdelivr.net/gh/singularity0909/cdn/css/style.min.css",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
-
-        
-            
-        
-
-    
-
-    
-
-    <!-- Config CSS -->
-
-<!-- Other Styles -->
-<style>
-  body, html {
-    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
-    overflow-x: hidden !important;
-  }
   
-  code {
-    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-  }
-
-  a {
-    color: #00838F;
-  }
-
-  .mdl-card__media,
-  #search-label,
-  #search-form-label:after,
-  #scheme-Paradox .hot_tags-count,
-  #scheme-Paradox .sidebar_archives-count,
-  #scheme-Paradox .sidebar-colored .sidebar-header,
-  #scheme-Paradox .sidebar-colored .sidebar-badge{
-    background-color: #00bfff !important;
-  }
-
-  /* Sidebar User Drop Down Menu Text Color */
-  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
-  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
-    color: #00bfff !important;
-  }
-
-  #post_entry-right-info,
-  .sidebar-colored .sidebar-nav li:hover > a,
-  .sidebar-colored .sidebar-nav li:hover > a i,
-  .sidebar-colored .sidebar-nav li > a:hover,
-  .sidebar-colored .sidebar-nav li > a:hover i,
-  .sidebar-colored .sidebar-nav li > a:focus i,
-  .sidebar-colored .sidebar-nav > .open > a,
-  .sidebar-colored .sidebar-nav > .open > a:hover,
-  .sidebar-colored .sidebar-nav > .open > a:focus,
-  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
-    color: #00bfff !important;
-  }
-
-  .toTop {
-    background: #757575 !important;
-  }
-
-  .material-layout .material-post>.material-nav,
-  .material-layout .material-index>.material-nav,
-  .material-nav a {
-    color: #757575;
-  }
-
-  #scheme-Paradox .MD-burger-layer {
-    background-color: #757575;
-  }
-
-  #scheme-Paradox #post-toc-trigger-btn {
-    color: #757575;
-  }
-
-  .post-toc a:hover {
-    color: #00838F;
-    text-decoration: underline;
-  }
-
-</style>
 
 
-<!-- Theme Background Related-->
-
-    <style>
-      body{
-        background-image: url(https://cdn.jsdelivr.net/gh/singularity0909/cdn/img/gallery/amazing-landscape-2.jpg);
-      }
-    </style>
+<html class="theme-next pisces use-motion" lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
 
 
 
 
-<!-- Fade Effect -->
-
-    <style>
-      .fade {
-        transition: all 800ms linear;
-        -webkit-transform: translate3d(0,0,0);
-        -moz-transform: translate3d(0,0,0);
-        -ms-transform: translate3d(0,0,0);
-        -o-transform: translate3d(0,0,0);
-        transform: translate3d(0,0,0);
-        opacity: 1;
-      }
-
-      .fade.out{
-        opacity: 0;
-      }
-    </style>
-
-
-<!-- Import Font -->
-<!-- Import Roboto -->
-
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
-
-
-<!-- Import Material Icons -->
-
-
-    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","https://cdn.jsdelivr.net/gh/singularity0909/cdn/css/material-icons.css",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
 
 
 
 
-    <!-- Import jQuery -->
-    
-        <script>lsloader.load("jq_js","https://cdn.bootcss.com/jquery/2.2.1/jquery.js", true)</script>
-    
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
 
-    <!-- WebAPP Icons -->
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="application-name" content="Singularity - 2U&#39;s Blog">
-    <meta name="msapplication-starturl" content="https://hexo.macrohard.cn/">
-    <meta name="msapplication-navbutton-color" content="#00bfff">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-title" content="Singularity - 2U&#39;s Blog">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/singularity0909/cdn/img/avatar/lks.png">
 
-    <!-- Site Verification -->
-    
-    
 
-    <!-- RSS -->
-    
 
-    <!-- The Open Graph protocol -->
-    <meta property="og:url" content="https://hexo.macrohard.cn/">
-    <meta property="og:type" content="blog">
-    <meta property="og:title" content="Singularity - 2U&#39;s Blog">
-    <meta property="og:image" content="https://cdn.jsdelivr.net/gh/singularity0909/cdn/img/avatar/lks.png">
-    <meta property="og:description" content="An ACMer&#39;s Blog">
-    
 
-    
 
-    <!-- The Twitter Card protocol -->
-    <meta name="twitter:card" content="summary_large_image">
 
-    <!-- Add canonical link for SEO -->
-    
-        <link rel="canonical" href="https://hexo.macrohard.cn">
-    
 
-    <!-- Structured-data for SEO -->
-    
-        
-<script type="application/ld+json">
-{
-    "@context": "http://schema.org",
-    "@type": "Website",
-    "publisher": {
-        "@type": "Organization",
-        "name": "Singularity - 2U&#39;s Blog",
-        "logo": "https://cdn.jsdelivr.net/gh/singularity0909/cdn/img/avatar/lks.png"
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.jsdelivr.net/gh/singularity0909/cdn/img/avatar/lks-2.jpg?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.jsdelivr.net/gh/singularity0909/cdn/img/avatar/lks-2.jpg?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="https://cdn.jsdelivr.net/gh/singularity0909/cdn/img/avatar/lks-2.jpg?v=5.1.4">
+
+
+  <link rel="mask-icon" href="https://cdn.jsdelivr.net/gh/singularity0909/cdn/img/avatar/lks-2.jpg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="IT = intelligent + tough">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="An ACMer&apos;s Blog">
+<meta name="keywords" content="Singularity">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Singularity - 2U&#39;s Blog">
+<meta property="og:url" content="https://hexo.macrohard.cn/index.html">
+<meta property="og:site_name" content="Singularity - 2U&#39;s Blog">
+<meta property="og:description" content="An ACMer&apos;s Blog">
+<meta property="og:locale" content="en">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Singularity - 2U&#39;s Blog">
+<meta name="twitter:description" content="An ACMer&apos;s Blog">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
     },
-    "url": "https://hexo.macrohard.cn",
-    "image": {
-        "@type": "ImageObject",
-        "url": "https://cdn.jsdelivr.net/gh/singularity0909/cdn/img/avatar/lks.png"
-    },
-    "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://hexo.macrohard.cn"
-    },
-    "description": "An ACMer&#39;s Blog"
-}
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
 </script>
 
 
 
+  <link rel="canonical" href="https://hexo.macrohard.cn/">
 
-    
 
-    <!-- Analytics -->
-    
-    
-    
 
-    <!-- Custom Head -->
-    
+
+
+  <title>Singularity - 2U's Blog</title>
+  
+
+
+
+
+
+
+
 
 </head>
 
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
 
+  
+  
     
-        <head>
-            <style type="text/css">
-            body {
-                cursor: url("/cur/finger.cur"), auto!important;
-            }
-            </style>
-            <script type="text/javascript" src="/js/love.js"></script>
-            <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
-            <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
-            <script type="text/javascript" src="/js/firework.js"></script>
-        </head>
-        <body id="scheme-Paradox" class="lazy">
-            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
-                
+  
 
-                <!-- Main Container -->
-                <main class="material-layout__content" id="main">
+  <div class="container sidebar-position-left 
+  page-home">
+    <div class="headband"></div>
 
-                    <!-- Top Anchor -->
-                    <div id="top"></div>
-
-                    
-                        <!-- Hamburger Button -->
-                        <button class="MD-burger-icon sidebar-toggle">
-                            <span id="MD-burger-id" class="MD-burger-layer"></span>
-                        </button>
-                    
-
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
     
-        <!-- Paradox Header -->
-        <!-- Daily pic -->
-<div class="mdl-card mdl-shadow--2dp daily-pic mdl-cell mdl-cell--8-col index-top-block">
 
-    <!-- Pic & Slogan -->
-    <div class="mdl-card__media mdl-color-text--grey-50" style="background-image:url(https://cdn.jsdelivr.net/gh/singularity0909/cdn/img/gallery/amazing-landscape-2.jpg)">
-        <p class="index-top-block-slogan"><a href>
-        
-            
-                IT = intelligent + tough
-            
-        
-        </a></p>
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Singularity - 2U's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
     </div>
-
-    <!-- Avatar & Name -->
-    <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
-        <!-- Author Avatar -->
-        <div id="author-avatar">
-            <img src="https://cdn.jsdelivr.net/gh/singularity0909/cdn/img/avatar/lks.png" width="32px" height="32px" alt="avatar">
-        </div>
-        <div>
-            <strong>2U</strong>
-        </div>
-    </div>
-</div>
-
-        <!-- Blog info -->
-<div class="mdl-card mdl-shadow--2dp something-else mdl-cell mdl-cell--8-col mdl-cell--4-col-desktop index-top-block">
-
-    <!-- Search -->
-    
-
-
-
-
-    <!-- Local -->
-    <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable" method="post" action>
-        <label id="search-label" class="mdl-button mdl-js-ripple-effect mdl-js-button mdl-button--fab mdl-color--accent mdl-shadow--4dp" for="search">
-            <i class="material-icons mdl-color-text--white" role="presentation">search</i>
-        </label>
-
-        <form autocomplete="off" id="search-form" class="mdl-textfield__expandable-holder">
-            <input type="text" id="search" class="form-control mdl-textfield__input search-input" name="q" results="0" placeholder>
-            <label id="search-form-label" class="mdl-textfield__label" for="search"></label>
-        </form>
-    </div>
-    <div id="local-search-result"></div>
-
-
-
-    <!-- LOGO -->
-    <div class="something-else-logo mdl-color--white mdl-color-text--grey-600">
-        <a href="/about" target="_blank">
-            <img src="https://cdn.jsdelivr.net/gh/singularity0909/cdn/img/avatar/lks.png" alt="logo">
-        </a>
-    </div>
-
-    <!-- Infomation -->
-    <div class="mdl-card__supporting-text meta meta--fill mdl-color-text--grey-600">
-        <!-- Blog Title -->
-        <div>
-            <strong>Singularity - 2U&#39;s Blog</strong>
-        </div>
-        <div class="section-spacer"></div>
-
-        <!-- Pages -->
-        <button id="show-pages-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-            <i class="material-icons" role="presentation">view_carousel</i>
-            <span class="visuallyhidden">Pages</span>
-        </button>
-        <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="show-pages-button">
-            
-                <a class="index_share-link" href="/tags" title="Tags">
-                    <li class="mdl-menu__item mdl-js-ripple-effect">
-                        Tags
-                    </li>
-                </a>
-            
-                <a class="index_share-link" href="/links" title="Friends">
-                    <li class="mdl-menu__item mdl-js-ripple-effect">
-                        Friends
-                    </li>
-                </a>
-            
-                <a class="index_share-link" href="/about" title="About me">
-                    <li class="mdl-menu__item mdl-js-ripple-effect">
-                        About me
-                    </li>
-                </a>
-            
-        </ul>
-
-        <!-- Menu -->
-        <button id="menubtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-            <i class="material-icons" role="presentation">more_vert</i>
-            <span class="visuallyhidden">show menu</span>
-        </button>
-        <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="menubtn">
-            
-                <!-- All Site UV -->
-                <a class="index_share-link" href="#">
-                    <li class="mdl-menu__item mdl-js-ripple-effect">
-                        <span id="busuanzi_container_site_uv">
-                            <span id="busuanzi_value_site_uv"></span>&nbsp;Views
-                        </span>
-                    </li>
-                </a>
-            
-
-            
-
-            
-                <a class="index_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Singularity - 2U&#39;s Blog&url=https://hexo.macrohard.cn&pic=https://hexo.macrohard.cnhttps://cdn.jsdelivr.net/gh/singularity0909/cdn/img/avatar/lks.th.jpg&searchPic=false&style=simple" target="_blank">
-                    <li class="mdl-menu__item mdl-js-ripple-effect">
-                        Share to Weibo
-                    </li>
-                </a>
-            
-
-            
-
-            
-
-            
-
-            
-
-            
-                <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Singularity - 2U&#39;s Blog&title=Singularity - 2U&#39;s Blog&summary=An ACMer&#39;s Blog&pics=https://hexo.macrohard.cnhttps://cdn.jsdelivr.net/gh/singularity0909/cdn/img/avatar/lks.th.jpg&url=https://hexo.macrohard.cn" target="_blank">
-                    <li class="mdl-menu__item">
-                        Share to QQ
-                    </li>
-                </a>
-            
-
-            
-        </ul>
-    </div>
-</div>
-
-    
-    <div class="locate-thumbnail-symbol"></div>
-
-    <!-- Pin on top -->
-    
-        
-    
-
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50 lazy" data-original="https://cdn.jsdelivr.net/gh/singularity0909/cdn/img/screenshot/hexo.jpg">
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2020/04/05/Hexo + Webhooks 部署至阿里云/">Hexo + Webhooks 部署至阿里云</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            解决了 Hexo 部署在 GitHub Pages 时解析龟速的尴尬问题。
-绑定至主站下的二级域名 hexo.macroh...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2020/04/05/Hexo + Webhooks 部署至阿里云/" target="_self">Read more</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="https://cdn.jsdelivr.net/gh/singularity0909/cdn/img/avatar/lks.png" width="44px" height="44px" alt="2U's avatar">
-            </div>
-            <div>
-                <strong>2U</strong>
-                <span>Apr 05, 2020</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/Daily/">Daily</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50 lazy" data-original="https://cdn.jsdelivr.net/gh/singularity0909/cdn/img/gallery/light.jpg">
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2019/11/28/我的 Typecho 博客正式上线/">我的 Typecho 博客正式上线</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            前后提交了三次申请、耗时两周，网站域名备案总算通过了。至此，我的
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2019/11/28/我的 Typecho 博客正式上线/" target="_self">Read more</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="https://cdn.jsdelivr.net/gh/singularity0909/cdn/img/avatar/lks.png" width="44px" height="44px" alt="2U's avatar">
-            </div>
-            <div>
-                <strong>2U</strong>
-                <span>Nov 28, 2019</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/Daily/">Daily</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50 lazy" data-original="https://cdn.jsdelivr.net/gh/singularity0909/cdn/img/gallery/code-1.jpg">
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2019/10/23/时隔两个月发布新博客/">时隔两个月发布新博客</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            这个周末就要去南京参加第一次区域赛，为了平复激动的心情才来博客里唠嗑一下。
-开学以来忙忙碌碌，难以顾及博客的维护更新。
-...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2019/10/23/时隔两个月发布新博客/" target="_self">Read more</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="https://cdn.jsdelivr.net/gh/singularity0909/cdn/img/avatar/lks.png" width="44px" height="44px" alt="2U's avatar">
-            </div>
-            <div>
-                <strong>2U</strong>
-                <span>Oct 23, 2019</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/Daily/">Daily</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50 lazy" data-original="https://cdn.jsdelivr.net/gh/singularity0909/cdn/img/gallery/impossible.jpg">
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2019/06/15/课程设计-学生成绩管理系统/">课程设计 学生成绩管理系统</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            功能导图
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2019/06/15/课程设计-学生成绩管理系统/" target="_self">Read more</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="https://cdn.jsdelivr.net/gh/singularity0909/cdn/img/avatar/lks.png" width="44px" height="44px" alt="2U's avatar">
-            </div>
-            <div>
-                <strong>2U</strong>
-                <span>Jun 15, 2019</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/DS-A/">DS&A</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50 lazy" data-original="https://cdn.jsdelivr.net/gh/singularity0909/cdn/img/gallery/amazing-landscape-2.jpg">
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2019/06/13/2018-2019-大学一年级总结/">2018-2019 大学一年级总结</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-比成功更重要的是要有内在的丰富和自己喜欢做的事情
-
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2019/06/13/2018-2019-大学一年级总结/" target="_self">Read more</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="https://cdn.jsdelivr.net/gh/singularity0909/cdn/img/avatar/lks.png" width="44px" height="44px" alt="2U's avatar">
-            </div>
-            <div>
-                <strong>2U</strong>
-                <span>Jun 13, 2019</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/Daily/">Daily</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50 lazy" data-original="https://cdn.jsdelivr.net/gh/singularity0909/cdn/img/gallery/yellow-and-pink.jpg">
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2019/06/13/Hello-World/">Hello World</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            ...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2019/06/13/Hello-World/" target="_self">Read more</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="https://cdn.jsdelivr.net/gh/singularity0909/cdn/img/avatar/lks.png" width="44px" height="44px" alt="2U's avatar">
-            </div>
-            <div>
-                <strong>2U</strong>
-                <span>Jun 13, 2019</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/Daily/">Daily</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 6 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', 'https://cdn.jsdelivr.net/gh/singularity0909/cdn/img/random/material-' + randomNum + '.png');
-    $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
-</script>
-
-    
-</div>
-
-
-                    
-                        <!-- Overlay For Active Sidebar -->
-<div class="sidebar-overlay"></div>
-
-<!-- Material sidebar -->
-<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
-    <div id="sidebar-main">
-        <!-- Sidebar Header -->
-        <div class="sidebar-header header-cover" style="background-image: url(https://cdn.jsdelivr.net/gh/singularity0909/cdn/img/gallery/hello.md.jpg);">
-    <!-- Top bar -->
-    <div class="top-bar"></div>
-
-    <!-- Sidebar toggle button -->
-    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
-        <i class="material-icons">clear_all</i>
-        <span class="mdl-button__ripple-container">
-            <span class="mdl-ripple">
-            </span>
-        </span>
+      
+        <h1 class="site-subtitle" itemprop="description">2U's Blog</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
     </button>
+  </div>
+</div>
 
-    <!-- Sidebar Avatar -->
-    <div class="sidebar-image">
-        <img src="https://cdn.jsdelivr.net/gh/singularity0909/cdn/img/avatar/lks.png" alt="2U's avatar">
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="Searching..." spellcheck="false" type="text" id="local-search-input">
     </div>
-
-    <!-- Sidebar Email -->
-    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
-        904854724@qq.com
-        <b class="caret"></b>
-    </a>
+  </div>
+  <div id="local-search-result"></div>
 </div>
 
 
-        <!-- Sidebar Navigation  -->
-        <ul class="nav sidebar-nav">
-    <!-- User dropdown  -->
-    <li class="dropdown">
-        <ul id="settings-dropdown" class="dropdown-menu">
-            
-                <li>
-                    <a href="http://qq.macrohard.cn" target="_blank" title="QQ">
-                        
-                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">chat</i>
-                        
-                        QQ
-                    </a>
-                </li>
-            
-                <li>
-                    <a href="https://www.macrohard.cn" target="_blank" title="Typecho">
-                        
-                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">fingerprint</i>
-                        
-                        Typecho
-                    </a>
-                </li>
-            
-                <li>
-                    <a href="http://csdn.macrohard.cn" target="_blank" title="CSDN">
-                        
-                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">code</i>
-                        
-                        CSDN
-                    </a>
-                </li>
-            
-        </ul>
-    </li>
 
-    <!-- Homepage -->
-    
-        <li id="sidebar-first-li">
-            <a href="/">
-                
-                    <i class="material-icons sidebar-material-icons">home</i>
-                
-                Home
-            </a>
-        </li>
-        
-    
-
-    <!-- Archives  -->
-    
-        <li class="dropdown">
-            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
-                
-                    <i class="material-icons sidebar-material-icons">inbox</i>
-                
-                    Archives
-                <b class="caret"></b>
-            </a>
-            <ul class="dropdown-menu">
-            <li>
-                <a class="sidebar_archives-link" href="/archives/2020/04/">April 2020<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/11/">November 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/10/">October 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/06/">June 2019<span class="sidebar_archives-count">3</span></a>
-            </li></ul>
-        </li>
-        
-    
-
-    <!-- Categories  -->
-    
-        <li class="dropdown">
-            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
-                
-                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
-                
-                Categories
-                <b class="caret"></b>
-            </a>
-            <ul class="dropdown-menu">
-                <li>
-                <a class="sidebar_archives-link" href="/categories/DS-A/">DS&A<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Daily/">Daily<span class="sidebar_archives-count">5</span></a>
-            </li></ul>
-        </li>
-        
-    
-
-    <!-- Pages  -->
-    
-        <li>
-            <a href="/tags" title="Tags">
-                
-                    <i class="material-icons sidebar-material-icons">tab</i>
-                
-                Tags
-            </a>
-        </li>
-        
-    
-        <li>
-            <a href="/links" title="Friends">
-                
-                    <i class="material-icons sidebar-material-icons">people</i>
-                
-                Friends
-            </a>
-        </li>
-        
-    
-        <li>
-            <a href="/about" title="About me">
-                
-                    <i class="material-icons sidebar-material-icons">person</i>
-                
-                About me
-            </a>
-        </li>
-        
-    
-
-    <!-- Article Number  -->
-    
-        <li>
-            <a href="/archives">
-                Number of articles
-                <span class="sidebar-badge">6</span>
-            </a>
-        </li>
-        
-    
-</ul>
-
-
-        <!-- Sidebar Footer -->
-        <!--
-I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
-If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
-It will not impact the appearance and can give developers a lot of support :)
-
-很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
-如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
-它不会影响美观并可以给开发者很大的支持和动力。 :)
--->
-
-<!-- Sidebar Divider -->
-
-    <div class="sidebar-divider"></div>
-
-
-<!-- Theme Material -->
-
-
-<!-- Help & Support -->
-<!--
-
--->
-
-<!-- Feedback -->
-<!--
-
--->
-
-<!-- About Theme -->
-<!--
-
--->
-
-
-        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=865820919&auto=0&height=66"></iframe>
     </div>
-
-    <!-- Sidebar Image -->
-    
-
-</aside>
-
-                    
-
-                    
-                        <!-- Footer Top Button -->
-                        <div id="back-to-top" class="toTop-wrap">
-    <a href="#top" class="toTop">
-        <i class="material-icons footer_top-i">expand_less</i>
-    </a>
-</div>
-
-                    
-
-                    <!--Footer-->
-<footer class="mdl-mini-footer" id="bottom">
-    
-        <!-- Paradox Footer Left Section -->
-        <div class="mdl-mini-footer--left-section sns-list">
-    <!-- Twitter -->
-    
-        <a href="https://twitter.com/Singularity0909" target="_blank">
-            <button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter">
-                <span class="visuallyhidden">Twitter</span>
-            </button><!--
-     --></a>
-    
-
-    <!-- Facebook -->
-    
-        <a href="https://www.facebook.com/2U0909" target="_blank">
-            <button class="mdl-mini-footer--social-btn social-btn footer-sns-facebook">
-                <span class="visuallyhidden">Facebook</span>
-            </button><!--
-     --></a>
-    
-
-    <!-- Google + -->
-    
-
-    <!-- Weibo -->
-    
-        <a href="https://www.weibo.com/u/3194536504" target="_blank">
-            <button class="mdl-mini-footer--social-btn social-btn footer-sns-weibo">
-                <span class="visuallyhidden">Weibo</span>
-            </button><!--
-     --></a>
-    
-
-    <!-- Instagram -->
-    
-        <a href="https://www.instagram.com/singularity2u/" target="_blank">
-            <button class="mdl-mini-footer--social-btn social-btn footer-sns-instagram">
-                <span class="visuallyhidden">Instagram</span>
-            </button><!--
-     --></a>
-    
-
-    <!-- Tumblr -->
-    
-        <a href="https://www.tumblr.com/blog/singularity0812" target="_blank">
-            <button class="mdl-mini-footer--social-btn social-btn footer-sns-tumblr">
-                <span class="visuallyhidden">Tumblr</span>
-            </button><!--
-     --></a>
-    
-
-    <!-- Github -->
-    
-        <a href="https://github.com/Singularity0909" target="_blank">
-            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
-                <span class="visuallyhidden">Github</span>
-            </button><!--
-     --></a>
-    
-
-    <!-- LinkedIn -->
-    
-        <a href="https://www.linkedin.com/in/%E5%90%8C%E6%9C%89-%E4%BB%98-8b77b2183" target="_blank">
-            <button class="mdl-mini-footer--social-btn social-btn footer-sns-linkedin">
-                <span class="visuallyhidden">LinkedIn</span>
-            </button><!--
-     --></a>
-    
-
-    <!-- Zhihu -->
-    
-        <a href="https://www.zhihu.com/people/singularity0909-83/activities" target="_blank">
-            <button class="mdl-mini-footer--social-btn social-btn footer-sns-zhihu">
-                <span class="visuallyhidden">Zhihu</span>
-            </button><!--
-     --></a>
-    
-
-    <!-- Bilibili -->
-    
-        <a href="https://space.bilibili.com/342589499" target="_blank">
-            <button class="mdl-mini-footer--social-btn social-btn footer-sns-bilibili">
-                <span class="visuallyhidden">Bilibili</span>
-            </button><!--
-     --></a>
-    
-
-    <!-- Telegram -->
-    
-        <a href="https://telegram.org/Singularity0909" target="_blank">
-            <button class="mdl-mini-footer--social-btn social-btn footer-sns-telegram">
-                <span class="visuallyhidden">Telegram</span>
-            </button><!--
-     --></a>
-    
-
-    <!-- V2EX -->
-    
-
-    <!-- Segmentfault -->
-    
-</div>
+  
+</nav>
 
 
-        <!--Copyright-->
-        <div id="copyright">
-            Copyright&nbsp;©&nbsp;<span year></span>&nbsp;Singularity - 2U's Blog
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
             
-        </div>
+  <section id="posts" class="posts-expand">
+    
+      
 
-        <!-- Paradox Footer Right Section -->
+  
 
-        <!--
-        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
-        It will not impact the appearance and can give developers a lot of support :)
+  
+  
+  
 
-        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
-        它不会影响美观并可以给开发者很大的支持。 :)
-        -->
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://hexo.macrohard.cn/2020/04/05/Hexo + Webhooks 部署至阿里云/">
 
-        <div class="mdl-mini-footer--right-section">
-            <div>
-                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
-                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="2U">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/singularity0909/cdn/img/avatar/lks-2.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Singularity - 2U's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/04/05/Hexo + Webhooks 部署至阿里云/" itemprop="url">Hexo + Webhooks 部署至阿里云</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-04-05T20:58:02+08:00">
+                2020-04-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Daily/" itemprop="url" rel="index">
+                    <span itemprop="name">Daily</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  
+                </span>
+              
             </div>
+          
+
+          
+
         </div>
-    
-</footer>
-
-
-                    <!-- Import JS File -->
-
-    <script>lsloader.load("lazyload_js","https://cdn.jsdelivr.net/gh/singularity0909/cdn/js/lazyload.min.js", true)</script>
-
-
-
-    <script>lsloader.load("js_js","https://cdn.jsdelivr.net/gh/singularity0909/cdn/js/js.min.js", true)</script>
-
-
-
-    <script>lsloader.load("np_js","https://cdn.jsdelivr.net/gh/singularity0909/cdn/js/nprogress.js", true)</script>
-
-
-<script type="text/ls-javascript" id="NProgress-script">
-    NProgress.configure({
-        showSpinner: true
-    });
-    NProgress.start();
-    $('#nprogress .bar').css({
-        'background': '#29d'
-    });
-    $('#nprogress .peg').css({
-        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
-    });
-    $('#nprogress .spinner-icon').css({
-        'border-top-color': '#29d',
-        'border-left-color': '#29d'
-    });
-    setTimeout(function() {
-        NProgress.done();
-        $('.fade').removeClass('out');
-    }, 800);
-</script>
-
-
-
-
-
-
-
-
-
-   
-
-
-
-
-    <!-- Swiftye -->
+      </header>
     
 
-    <!-- Local Search-->
     
-        <script type="text/ls-javascript" id="search-local-js-script">
-    var searchFunc=function(c,a,b){$.ajax({url:c,dataType:"xml",success:function(e){var d=$("entry",e).map(function(){return{title:$("title",this).text(),content:$("content",this).text(),url:$("url",this).text()}}).get();var g=document.getElementById(a);var f=document.getElementById(b);g.addEventListener("input",function(){var i='<ul class="search-result-list">';var h=this.value.trim().toLowerCase().split(/[\s\-]+/);f.innerHTML="";if(this.value.trim().length<=0){return}d.forEach(function(o){var n=true;var s=[];var t=o.title.trim().toLowerCase();var m=o.content.trim().replace(/<[^>]+>/g,"").toLowerCase();var j=o.url;var u=-1;var q=-1;var p=-1;if(t!==""&&m!==""){h.forEach(function(w,x){u=t.indexOf(w);q=m.indexOf(w);if(u<0&&q<0){n=false}else{if(q<0){q=0}if(x===0){p=q}}})}if(n){i+='<li><a href="'+j+'" class="search-result-title" target="_blank">'+t;var r=o.content.trim().replace(/<[^>]+>/g,"");if(p>=0){var k=p-6;var l=p+6;if(k<0){k=0}if(k===0){l=10}if(l>r.length){l=r.length}var v=r.substr(k,l);h.forEach(function(w){var x=new RegExp(w,"gi");v=v.replace(x,'<em class="search-keyword">'+w+"</em>")});i+='<p class="search-result">'+v+"...</p></a>"}}});f.innerHTML=i})}})};
-</script>
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>解决了 Hexo 部署在 GitHub Pages 时解析龟速的尴尬问题。</p>
+<p>绑定至主站下的二级域名 <code>hexo.macrohard.cn</code>，等待 SSL 证书生效。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
 
 
-        <script type="text/ls-javascript" id="search-input-script">
-            var inputArea = document.querySelector('#search');
-            var getSearchFile = function() {
-                var path = 'search.xml';
-                searchFunc(path, 'search', 'local-search-result');
-            }
+    
+      
 
-            if(inputArea) {
-                inputArea.onfocus = function() {
-                    getSearchFile();
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://hexo.macrohard.cn/2019/11/28/我的 Typecho 博客正式上线/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="2U">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/singularity0909/cdn/img/avatar/lks-2.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Singularity - 2U's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/11/28/我的 Typecho 博客正式上线/" itemprop="url">我的 Typecho 博客正式上线</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-28T21:25:10+08:00">
+                2019-11-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Daily/" itemprop="url" rel="index">
+                    <span itemprop="name">Daily</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>前后提交了三次申请、耗时两周，网站域名备案总算通过了。至此，我的<a href="https://www.macrohard.cn" target="_blank" rel="noopener">Typecho博客</a>正式上线。</p>
+<p>没有打算把所有感想记录于此，计划每个阶段想一点写一点。</p>
+<p>大一时开通过CSDN博客，也鼓捣过Hexo，在此简要叙述一下个人的体验感受。</p>
+<p>CSDN博客具有易于操作的在线文本编辑器，支持Markdown、Mathjax等等。进行新增文章、分类等管理操作十分方便，还具有良好的SEO（不信你在百度搜索 <code>sduwh</code> ）。</p>
+<p>但它的缺陷明显：<strong>广告太多，可塑性几乎没有</strong>。</p>
+<p>Hexo是一款快速、简洁且高效的博客框架，通过Node.js框架快速渲染页面，再一键远程部署到GitHub、Coding等代码托管平台。它支持Markdown的所有功能，可以整合大量插件，可拓展性max。</p>
+<p>此外，因为它可部署到代码托管平台呈现静态页面，所以<strong>不依赖于服务器</strong>，对比WordPress等可节省一笔开销。</p>
+<p>缺点也有：由于所有的维护、管理操作都是在本地命令行或文件中进行的，所以在配置博客外观细节的过程中，没有经验的童鞋会被弄得晕头转向，它更适合<strong>有Web开发技术</strong>的童鞋玩耍。博客中的图片资源通常通过GitHub或图床存储，加载缓慢（简直龟速==）。</p>
+<p>就个人而言，我更偏好采用Hexo一类的框架搭建博客，最重要的原因就是能够<strong>在实践中学习</strong>。</p>
+<p>这次采用Typecho，是在参观<a href="https://pasteme.cn" target="_blank" rel="noopener">PasteMe</a>项目作者<a href="https://blog.lucien.ink" target="_blank" rel="noopener">Lucien姐姐的博客</a>之后决定的。</p>
+<p>当时发现阿里云服务器学生套餐<del>仅需110+r/y</del>，就毫不犹豫地下单了。</p>
+<p>Typecho与WordPress相似，但更加轻量。通过采用社区dalao写好的主题，可以在人性化的外观管理页面下配置外观，也能够像Hexo那样通过修改配置文件实现高度自定义。</p>
+<p>总而言之，在我看来Typecho弥补了Hexo博客网站解析和图片加载速度慢的缺陷，管理方便也不失可塑性，爱了爱了。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://hexo.macrohard.cn/2019/10/23/时隔两个月发布新博客/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="2U">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/singularity0909/cdn/img/avatar/lks-2.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Singularity - 2U's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/10/23/时隔两个月发布新博客/" itemprop="url">时隔两个月发布新博客</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-10-23T21:18:53+08:00">
+                2019-10-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Daily/" itemprop="url" rel="index">
+                    <span itemprop="name">Daily</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>这个周末就要去南京参加第一次区域赛，为了平复激动的心情才来博客里唠嗑一下。</p>
+<p>开学以来忙忙碌碌，难以顾及博客的维护更新。</p>
+<p>只做了一点小小的改动，修复了Prettify代码高亮JS的一个小BUG：</p>
+<p>代码过长时没有水平滚动条而是直接换行，影响阅读体验。</p>
+<p>此外我尝试了Hanabi，这也是Material主题内置的代码高亮插件之一，我很喜欢它的配色。</p>
+<p>美中不足是它无法解析”&amp;”运算符，在代码块中会显示成转义字符<code>&amp;amp;</code>。</p>
+<p>后来在Material主题的代码仓库Issues里意外地发现曾经有人<a href="https://github.com/viosey/hexo-theme-material/issues/616" target="_blank" rel="noopener">提出了相同的问题</a>（包括Prettify增加水平滚动条）。</p>
+<p>根据社区dalao提供的解决方案调试一波之后修复了Hanabi字符解析问题，但它还存在一个致命BUG：代码行数过多时显示不全。遂放弃Hanabi重用Prettify。</p>
+<p>一个多月前得知要参加10月底的区域赛，之后包括国庆假期在内的每周都做了3-4场训练赛。</p>
+<p>这次比赛队友涵哥不参加，袁老师给我们安排了一位大三学长做队友。学长不仅ACM👍，还是个学霸。</p>
+<p>庄大仙也很🐂，CF持续上分，已经突破蓝名了。</p>
+<p>还天天装弱，真是可恶啊:(</p>
+<p><img src="https://cdn.jsdelivr.net/gh/singularity0909/cdn/img/screenshot/zhl.png" alt></p>
+<p>自从暑假以来我的状态就一直低迷，之前立的flag也忘了。</p>
+<p>现在常常觉得时间不够用。日子一天天过去，学校课程我没有好好学，ACM也还是那么菜。</p>
+<p>好多好多需要学习的数据结构和算法在To do清单里等着我，也许要等鸡吃完了米、狗舔完了面、我睡足了觉。</p>
+<p>都是瞎熬夜惹的祸，叹气Orz。</p>
+<p>最后希望不要打铁，虽然八成没戏。嗯就这样。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://hexo.macrohard.cn/2019/06/15/课程设计-学生成绩管理系统/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="2U">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/singularity0909/cdn/img/avatar/lks-2.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Singularity - 2U's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/06/15/课程设计-学生成绩管理系统/" itemprop="url">课程设计 学生成绩管理系统</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-06-15T23:12:58+08:00">
+                2019-06-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/DS-A/" itemprop="url" rel="index">
+                    <span itemprop="name">DS&A</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="功能导图"><a href="#功能导图" class="headerlink" title="功能导图"></a>功能导图</h3><p><img src="https://cdn.jsdelivr.net/gh/singularity0909/cdn/img/screenshot/sams.png" alt="思维导图"></p>
+<hr>
+<h3 id="数据文件"><a href="#数据文件" class="headerlink" title="数据文件"></a>数据文件</h3><ol>
+<li><p><strong>password.txt</strong></p>
+</li>
+<li><p><strong>student.txt</strong></p>
+</li>
+<li><p><strong>subject.txt</strong></p>
+</li>
+</ol>
+<hr>
+<h3 id="源文件"><a href="#源文件" class="headerlink" title="源文件"></a>源文件</h3><p><strong>main.cpp</strong></p>
+<pre><code class="cpp">#include &lt;cstdio&gt;
+#include &lt;cstdlib&gt;
+#include &lt;cstring&gt;
+#include &lt;iostream&gt;
+#include &lt;iomanip&gt;
+#include &lt;fstream&gt;
+#include &lt;vector&gt;
+#include &lt;map&gt;
+#include &lt;string&gt;
+#include &lt;algorithm&gt;
+#include &lt;windows.h&gt;
+#include &quot;data.h&quot;
+#include &quot;student.h&quot;
+#include &quot;subject.h&quot;
+#include &quot;system.h&quot;
+
+int main()
+{
+    welcome();
+    login();
+    load();
+    do showMenu();
+    while (chooseFunc());
+    save();
+    system(&quot;pause&quot;);
+    return 0;
+}</code></pre>
+<hr>
+<h3 id="头文件"><a href="#头文件" class="headerlink" title="头文件"></a>头文件</h3><p><strong>data.h</strong></p>
+<pre><code class="cpp">#pragma once
+
+using namespace std;
+
+struct Sub
+{
+    string name;
+    double weight;
+};
+map&lt;int, Sub&gt; sub; //存储所有科目信息
+
+struct Stu
+{
+    string name, id;
+    int claz;
+    map&lt;int, int&gt; m;
+    double gpa()
+    {
+        double suma = 0, sumb = 0;
+        for (auto it = m.begin(); it != m.end(); it++)
+        {
+            suma += it-&gt;second * sub[it-&gt;first].weight;
+            sumb += sub[it-&gt;first].weight;
+        }
+        return suma / sumb;
+    }
+    int sum()
+    {
+        int res = 0;
+        for (auto it = m.begin(); it != m.end(); it++)
+            res += it-&gt;second;
+        return res;
+    }
+};
+vector&lt;Stu&gt; stu; //存储所有学生信息
+vector&lt;Stu&gt; temp; //存储某次查询得到的学生信息</code></pre>
+<p><strong>student.h</strong></p>
+<pre><code class="cpp">#pragma once
+
+using namespace std;
+
+void stuInsert()
+{
+    string name, id; char c;
+    int claz, score;
+    map&lt;int, int&gt; m;
+    cout &lt;&lt; &quot;请输入学生信息，按回车键开始&quot; &lt;&lt; endl;
+    getchar();
+    while ((c = getchar()) != &#39;0&#39;)
+    {
+        system(&quot;cls&quot;);
+        m.clear();
+        cout &lt;&lt; &quot;姓名：&quot;; cin &gt;&gt; name;
+        cout &lt;&lt; &quot;学号：&quot;; cin &gt;&gt; id;
+        cout &lt;&lt; &quot;班级：&quot;; cin &gt;&gt; claz;
+        for (auto it = sub.begin(); it != sub.end(); it++)
+        {
+            cout &lt;&lt; it-&gt;second.name &lt;&lt; &quot;成绩：&quot;; cin &gt;&gt; score;
+            m[it-&gt;first] = score;
+        }
+        stu.push_back(Stu{ name, id, claz, m });
+        cout &lt;&lt; endl &lt;&lt; &quot;按回车键继续输入，输入0返回根目录&quot; &lt;&lt; endl;
+        getchar();
+    }
+}
+
+void stuDelete()
+{
+menu:
+    system(&quot;cls&quot;);
+    cout &lt;&lt; &quot;请输入您需要进行的操作标号&quot; &lt;&lt; endl;
+    cout &lt;&lt; &quot;------------------------------&quot; &lt;&lt; endl;
+    cout &lt;&lt; endl &lt;&lt; &quot;0\t返回根目录&quot; &lt;&lt; endl;
+    cout &lt;&lt; endl &lt;&lt; &quot;1\t按指定学生编号逐个删除&quot; &lt;&lt; endl;
+    cout &lt;&lt; endl &lt;&lt; &quot;2\t按指定班级编号批量删除&quot; &lt;&lt; endl &lt;&lt; endl;
+    cout &lt;&lt; &quot;------------------------------&quot; &lt;&lt; endl;
+    string id; int claz, ope; cin &gt;&gt; ope;
+    switch (ope)
+    {
+    case 0: break;
+    case 1:
+        system(&quot;cls&quot;);
+        cout &lt;&lt; &quot;请输入需要删除信息的学生编号：&quot;;
+        while (cin &gt;&gt; id &amp;&amp; id != &quot;0&quot;)
+        {
+            bool flag = false; //标记是否查询到对象
+            for (int i = 0; i &lt; (int)stu.size(); i++) //遍历vector，逐个检验学生是否与指定编号匹配
+            {
+                if (stu[i].id == id)
+                {
+                    system(&quot;cls&quot;);
+                    flag = true; //查询到对象
+                    cout &lt;&lt; &quot;请确认是否删除该学生的信息[Y/N]&quot; &lt;&lt; endl &lt;&lt; endl;
+                    cout &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; &quot;姓名&quot; &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; &quot;学号&quot; &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; &quot;班级&quot;;
+                    for (auto it = sub.begin(); it != sub.end(); it++)
+                        cout &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; it-&gt;second.name;
+                    cout &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; &quot;总成绩&quot; &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; &quot;平均学分绩点&quot;;
+                    cout &lt;&lt; endl &lt;&lt; endl;
+                    cout &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; stu[i].name &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; stu[i].id &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; stu[i].claz;
+                    for (auto it = sub.begin(); it != sub.end(); it++)
+                    {
+                        if (stu[i].m.count(it-&gt;first)) cout &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; stu[i].m[it-&gt;first];
+                        else cout &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; &quot;尚未录入&quot;;
+                    }
+                    cout &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; stu[i].sum() &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; stu[i].gpa();
+                    cout &lt;&lt; endl;
+                    string ope; cin &gt;&gt; ope;
+                    if (ope == &quot;Y&quot; || ope == &quot;y&quot;)
+                    {
+                        stu.erase(stu.begin() + i);
+                        cout &lt;&lt; endl &lt;&lt; &quot;成功删除&quot; &lt;&lt; endl;
+                    }
+                    else cout &lt;&lt; endl &lt;&lt; &quot;取消删除&quot; &lt;&lt; endl;
+                    break;
                 }
             }
-        </script>
-    
+            if (!flag) //未查询到对象
+                cout &lt;&lt; endl &lt;&lt; &quot;不存在该学生编号！&quot; &lt;&lt; endl;
+            system(&quot;pause&quot;);
+            system(&quot;cls&quot;);
+            cout &lt;&lt; &quot;（输入0返回上级目录）&quot; &lt;&lt; endl &lt;&lt; endl;
+            cout &lt;&lt; &quot;请继续输入需要删除信息的学生编号：&quot;;
+        }
+        goto menu;
+    case 2:
+        system(&quot;cls&quot;);
+        cout &lt;&lt; &quot;请输入需要删除信息的班级编号：&quot;;
+        while (cin &gt;&gt; claz &amp;&amp; claz)
+        {
+            bool flag = false; //标记是否查询到对象
+            for (auto it = stu.begin(); it != stu.end();) //遍历vector，逐个检验学生是否属于指定班级
+            {
+                if (it-&gt;claz == claz)
+                {
+                    system(&quot;pause&quot;);
+                    system(&quot;cls&quot;);
+                    flag = true; //查询到对象
+                    cout &lt;&lt; &quot;请确认是否删除该学生的信息[Y/N]&quot; &lt;&lt; endl &lt;&lt; endl;
+                    cout &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; &quot;姓名&quot; &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; &quot;学号&quot; &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; &quot;班级&quot;;
+                    for (auto iter = sub.begin(); iter != sub.end(); iter++)
+                        cout &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; iter-&gt;second.name;
+                    cout &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; &quot;总成绩&quot; &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; &quot;平均学分绩点&quot;;
+                    cout &lt;&lt; endl &lt;&lt; endl;
+                    cout &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; it-&gt;name &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; it-&gt;id &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; it-&gt;claz;
+                    for (auto iter = sub.begin(); iter != sub.end(); iter++)
+                    {
+                        if (it-&gt;m.count(iter-&gt;first)) cout &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; it-&gt;m[iter-&gt;first];
+                        else cout &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; &quot;尚未录入&quot;;
+                    }
+                    cout &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; it-&gt;sum() &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; it-&gt;gpa();
+                    cout &lt;&lt; endl;
+                    string ope; cin &gt;&gt; ope;
+                    if (ope == &quot;Y&quot; || ope == &quot;y&quot;)
+                    {
+                        it = stu.erase(it); //迭代器stu.erase(it)指向被删除元素的下一个，利用其返回值避免当前迭代器失效
+                        cout &lt;&lt; endl &lt;&lt; &quot;成功删除&quot; &lt;&lt; endl;
+                    }
+                    else
+                    {
+                        cout &lt;&lt; endl &lt;&lt; &quot;取消删除&quot; &lt;&lt; endl;
+                        it++;
+                    }
+                }
+                else it++;
+            }
+            if (!flag) //未查询到对象
+                cout &lt;&lt; endl &lt;&lt; &quot;不存在该班级编号！&quot; &lt;&lt; endl;
+            system(&quot;pause&quot;);
+            system(&quot;cls&quot;);
+            cout &lt;&lt; &quot;（输入0返回上级目录）&quot; &lt;&lt; endl &lt;&lt; endl;
+            cout &lt;&lt; &quot;请继续输入需要删除信息的班级编号：&quot;;
+        }
+        goto menu;
+    default:
+        cout &lt;&lt; &quot;指令无效，请重新输入！&quot; &lt;&lt; endl;
+        system(&quot;pause&quot;);
+        goto menu;
+    }
+}
 
+int suborder; //存储某次按指定科目排序的科目次序
 
-<!-- UC Browser Compatible -->
-<script>
-	var agent = navigator.userAgent.toLowerCase();
-	if(agent.indexOf('ucbrowser')>0) {
-		document.write('<link rel="stylesheet" href="/css/uc.css">');
-	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
-	}
-</script>
+//以下为各种条件下的排序规则函数
+bool cmp_nameAsc(const Stu &amp;a, const Stu &amp;b) { return a.name != b.name ? a.name &lt; b.name : a.id &lt; b.id; }
+bool cmp_nameDes(const Stu &amp;a, const Stu &amp;b) { return a.name != b.name ? a.name &gt; b.name : a.id &lt; b.id; }
+bool cmp_idAsc(const Stu &amp;a, const Stu &amp;b) { return a.id &lt; b.id; }
+bool cmp_idDes(const Stu &amp;a, const Stu &amp;b) { return a.id &gt; b.id; }
+bool cmp_sumAsc(Stu &amp;a, Stu &amp;b) { return a.sum() != b.sum() ? a.sum() &lt; b.sum() : a.id &lt; b.id; }
+bool cmp_sumDes(Stu &amp;a, Stu &amp;b) { return a.sum() != b.sum() ? a.sum() &gt; b.sum() : a.id &lt; b.id; }
+bool cmp_gpaAsc(Stu &amp;a, Stu &amp;b) { return a.gpa() != b.gpa() ? a.gpa() &lt; b.gpa() : a.gpa() &lt; b.gpa(); }
+bool cmp_gpaDes(Stu &amp;a, Stu &amp;b) { return a.gpa() != b.gpa() ? a.gpa() &gt; b.gpa() : a.gpa() &lt; b.gpa(); }
+bool cmp_subAsc(Stu &amp;a, Stu &amp;b)
+{
+    int i = 0, sid;
+    for (auto it = sub.begin(); it != sub.end() &amp;&amp; i &lt; suborder; it++, i++)
+        sid = it-&gt;first;
+    if (a.m.count(sid) &amp;&amp; b.m.count(sid)) return a.m[sid] != b.m[sid] ? a.m[sid] &lt; b.m[sid] : a.id &lt; b.id;
+    return a.m.count(sid) ? false : b.m.count(sid) ? true : a.id &lt; b.id;
+}
+bool cmp_subDes(Stu &amp;a, Stu &amp;b)
+{
+    int i = 0, sid;
+    for (auto it = sub.begin(); it != sub.end() &amp;&amp; i &lt; suborder; it++, i++)
+        sid = it-&gt;first;
+    if (a.m.count(sid) &amp;&amp; b.m.count(sid)) return a.m[sid] != b.m[sid] ? a.m[sid] &gt; b.m[sid] : a.id &lt; b.id;
+    return a.m.count(sid) ? true : b.m.count(sid) ? false : a.id &lt; b.id;
+}
 
-<!-- Import prettify js  -->
+void print() //打印某次查询得到的学生信息
+{
+    cout &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; &quot;姓名&quot; &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; &quot;学号&quot; &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; &quot;班级&quot;;
+    for (auto it = sub.begin(); it != sub.end(); it++)
+        cout &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; it-&gt;second.name;
+    cout &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; &quot;总成绩&quot; &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; &quot;平均学分绩点&quot;;
+    cout &lt;&lt; endl &lt;&lt; endl;
+    for (int i = 0; i &lt; (int)temp.size(); i++)
+    {
+        cout &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; temp[i].name &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; temp[i].id &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; temp[i].claz;
+        for (auto it = sub.begin(); it != sub.end(); it++)
+        {
+            if (temp[i].m.count(it-&gt;first)) cout &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; temp[i].m[it-&gt;first];
+            else cout &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; &quot;尚未录入&quot;;
+        }
+        cout &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; temp[i].sum() &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; temp[i].gpa() &lt;&lt; endl &lt;&lt; endl;
+    }
+}
 
-    
+void stuFind()
+{
+menu1:
+    system(&quot;cls&quot;);
+    cout &lt;&lt; &quot;请输入您需要进行的操作标号&quot; &lt;&lt; endl;
+    cout &lt;&lt; &quot;------------------------------&quot; &lt;&lt; endl;
+    cout &lt;&lt; endl &lt;&lt; &quot;0\t返回根目录&quot; &lt;&lt; endl &lt;&lt; endl;
+    cout &lt;&lt; &quot;1\t按指定学生姓名查询&quot; &lt;&lt; endl &lt;&lt; endl;
+    cout &lt;&lt; &quot;2\t按指定学生编号查询&quot; &lt;&lt; endl &lt;&lt; endl;
+    cout &lt;&lt; &quot;3\t按指定班级编号查询&quot; &lt;&lt; endl &lt;&lt; endl;
+    cout &lt;&lt; &quot;------------------------------&quot; &lt;&lt; endl;
+    string name, id; int claz, ope; cin &gt;&gt; ope;
+    switch (ope)
+    {
+    case 0: break;
+    case 1:
+        system(&quot;cls&quot;);
+        cout &lt;&lt; &quot;请输入学生姓名：&quot;;
+        while (cin &gt;&gt; name &amp;&amp; name != &quot;0&quot;)
+        {
+            temp.clear();
+            bool flag = false; //标记是否查询到对象
+            for (int i = 0; i &lt; (int)stu.size(); i++)
+            {
+                if (stu[i].name == name)
+                {
+                    flag = true; //查询到对象
+                    temp.push_back(stu[i]);
+                }
+            }
+            if (!flag) //未查询到对象
+                cout &lt;&lt; endl &lt;&lt; &quot;不存在该学生姓名！&quot; &lt;&lt; endl;
+            else
+            {
+                system(&quot;cls&quot;);
+                print();
+            }
+            system(&quot;pause&quot;);
+            system(&quot;cls&quot;);
+            cout &lt;&lt; &quot;（输入0返回上级目录）&quot; &lt;&lt; endl &lt;&lt; endl;
+            cout &lt;&lt; &quot;请继续输入需要查询的学生姓名：&quot;;
+        }
+        goto menu1;
+    case 2:
+        system(&quot;cls&quot;);
+        cout &lt;&lt; &quot;请输入学生编号：&quot;;
+        while (cin &gt;&gt; id &amp;&amp; id != &quot;0&quot;)
+        {
+            bool flag = false; //标记是否查询到对象
+            for (int i = 0; i &lt; (int)stu.size(); i++)
+            {
+                if (stu[i].id == id)
+                {
+                    system(&quot;cls&quot;);
+                    flag = true; //查询到对象
+                    cout &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; &quot;姓名&quot; &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; &quot;学号&quot; &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; &quot;班级&quot;;
+                    for (auto it = sub.begin(); it != sub.end(); it++)
+                        cout &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; it-&gt;second.name;
+                    cout &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; &quot;总成绩&quot; &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; &quot;平均学分绩点&quot;;
+                    cout &lt;&lt; endl &lt;&lt; endl;
+                    cout &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; stu[i].name &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; stu[i].id &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; stu[i].claz;
+                    for (auto it = sub.begin(); it != sub.end(); it++)
+                    {
+                        if (stu[i].m.count(it-&gt;first)) cout &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; stu[i].m[it-&gt;first];
+                        else cout &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; &quot;尚未录入&quot;;
+                    }
+                    cout &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; stu[i].sum() &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; stu[i].gpa();
+                    cout &lt;&lt; endl;
+                }
+            }
+            if (!flag) //未查询到对象
+                cout &lt;&lt; endl &lt;&lt; &quot;不存在该学生编号！&quot; &lt;&lt; endl;
+            system(&quot;pause&quot;);
+            system(&quot;cls&quot;);
+            cout &lt;&lt; &quot;（输入0返回上级目录）&quot; &lt;&lt; endl &lt;&lt; endl;
+            cout &lt;&lt; &quot;请继续输入需要查询的学生编号：&quot;;
+        }
+        goto menu1;
+    case 3:
+        system(&quot;cls&quot;);
+        cout &lt;&lt; &quot;请输入班级编号：&quot;;
+        while (cin &gt;&gt; claz &amp;&amp; claz)
+        {
+            temp.clear();
+            bool flag = false; //标记是否查询到对象
+            for (int i = 0; i &lt; (int)stu.size(); i++)
+            {
+                if (stu[i].claz == claz)
+                {
+                    flag = true; //查询到对象
+                    temp.push_back(stu[i]);
+                }
+            }
+            if (!flag) //未查询到对象
+            {
+                cout &lt;&lt; endl &lt;&lt; &quot;不存在该班级编号！&quot; &lt;&lt; endl;
+                system(&quot;pause&quot;);
+                system(&quot;cls&quot;);
+                cout &lt;&lt; &quot;（输入0返回上级目录）&quot; &lt;&lt; endl &lt;&lt; endl;
+                cout &lt;&lt; &quot;请继续输入需要查询的班级编号：&quot;;
+                continue;
+            }
+        menu2:
+            system(&quot;cls&quot;);
+            cout &lt;&lt; &quot;请输入您需要进行的操作标号&quot; &lt;&lt; endl;
+            cout &lt;&lt; &quot;--------------------------------------------------&quot; &lt;&lt; endl;
+            cout &lt;&lt; endl &lt;&lt; setw(5) &lt;&lt; 0 &lt;&lt; &quot; 重新输入班级编号&quot; &lt;&lt; endl &lt;&lt; endl;
+            cout &lt;&lt; setw(5) &lt;&lt; 1 &lt;&lt; &quot; 按学生姓名字典升序&quot; &lt;&lt; endl &lt;&lt; endl;
+            cout &lt;&lt; setw(5) &lt;&lt; 2 &lt;&lt; &quot; 按学生姓名字典降序&quot; &lt;&lt; endl &lt;&lt; endl;
+            cout &lt;&lt; setw(5) &lt;&lt; 3 &lt;&lt; &quot; 按学生编号升序&quot; &lt;&lt; endl &lt;&lt; endl;
+            cout &lt;&lt; setw(5) &lt;&lt; 4 &lt;&lt; &quot; 按学生编号降序&quot; &lt;&lt; endl &lt;&lt; endl;
+            cout &lt;&lt; setw(5) &lt;&lt; 5 &lt;&lt; &quot; 按总成绩升序&quot; &lt;&lt; endl &lt;&lt; endl;
+            cout &lt;&lt; setw(5) &lt;&lt; 6 &lt;&lt; &quot; 按总成绩降序&quot; &lt;&lt; endl &lt;&lt; endl;
+            cout &lt;&lt; setw(5) &lt;&lt; 7 &lt;&lt; &quot; 按平均学分绩点升序&quot; &lt;&lt; endl &lt;&lt; endl;
+            cout &lt;&lt; setw(5) &lt;&lt; 8 &lt;&lt; &quot; 按平均学分绩点降序&quot; &lt;&lt; endl &lt;&lt; endl;
+            int order = 9;
+            for (auto it = sub.begin(); it != sub.end(); it++, order += 2)
+            {
+                cout &lt;&lt; setw(5) &lt;&lt; order &lt;&lt; &quot; 按&quot; &lt;&lt; it-&gt;second.name &lt;&lt; &quot;成绩升序&quot; &lt;&lt; endl &lt;&lt; endl;
+                cout &lt;&lt; setw(5) &lt;&lt; order + 1 &lt;&lt; &quot; 按&quot; &lt;&lt; it-&gt;second.name &lt;&lt; &quot;成绩降序&quot; &lt;&lt; endl &lt;&lt; endl;
+            }
+            cout &lt;&lt; &quot;--------------------------------------------------&quot; &lt;&lt; endl;
+            int ope; cin &gt;&gt; ope;
+            switch (ope)
+            {
+            case 0: break;
+            case 1: sort(temp.begin(), temp.end(), cmp_nameAsc); system(&quot;cls&quot;); print(); system(&quot;pause&quot;); goto menu2;
+            case 2: sort(temp.begin(), temp.end(), cmp_nameDes); system(&quot;cls&quot;); print(); system(&quot;pause&quot;); goto menu2;
+            case 3: sort(temp.begin(), temp.end(), cmp_idAsc); system(&quot;cls&quot;); print(); system(&quot;pause&quot;); goto menu2;
+            case 4: sort(temp.begin(), temp.end(), cmp_idDes); system(&quot;cls&quot;); print(); system(&quot;pause&quot;); goto menu2;
+            case 5: sort(temp.begin(), temp.end(), cmp_sumAsc); system(&quot;cls&quot;); print(); system(&quot;pause&quot;); goto menu2;
+            case 6: sort(temp.begin(), temp.end(), cmp_sumDes); system(&quot;cls&quot;); print(); system(&quot;pause&quot;); goto menu2;
+            case 7: sort(temp.begin(), temp.end(), cmp_gpaAsc); system(&quot;cls&quot;); print(); system(&quot;pause&quot;); goto menu2;
+            case 8: sort(temp.begin(), temp.end(), cmp_gpaDes); system(&quot;cls&quot;); print(); system(&quot;pause&quot;); goto menu2;
+            default:
+                if (ope &gt;= 9 &amp;&amp; ope &lt;= (int)sub.size() * 2 + 7)
+                {
+                    if (ope &amp; 1) { suborder = (ope - 9) / 2 + 1; sort(temp.begin(), temp.end(), cmp_subAsc); }
+                    else { suborder = (ope - 10) / 2 + 1; sort(temp.begin(), temp.end(), cmp_subDes); }
+                    system(&quot;cls&quot;); print();
+                }
+                else cout &lt;&lt; &quot;指令无效，请重新输入&quot; &lt;&lt; endl; system(&quot;pause&quot;); goto menu2;
+            }
+            system(&quot;cls&quot;);
+            cout &lt;&lt; &quot;（输入0返回上级目录）&quot; &lt;&lt; endl &lt;&lt; endl;
+            cout &lt;&lt; &quot;请继续输入需要查询的班级编号：&quot;;
+        }
+        goto menu1;
+    default:
+        cout &lt;&lt; &quot;指令无效，请重新输入&quot; &lt;&lt; endl;
+        system(&quot;pause&quot;);
+        goto menu1;
+    }
+}
 
+void stuModify()
+{
+menu:
+    system(&quot;cls&quot;);
+    cout &lt;&lt; &quot;请输入您需要进行的操作标号&quot; &lt;&lt; endl;
+    cout &lt;&lt; &quot;-------------------------&quot; &lt;&lt; endl;
+    cout &lt;&lt; endl &lt;&lt; &quot;0\t返回根目录&quot; &lt;&lt; endl &lt;&lt; endl;
+    cout &lt;&lt; &quot;1\t修改指定学生编号&quot; &lt;&lt; endl &lt;&lt; endl;
+    cout &lt;&lt; &quot;2\t修改指定班级编号&quot; &lt;&lt; endl &lt;&lt; endl;
+    cout &lt;&lt; &quot;-------------------------&quot; &lt;&lt; endl;
+    string id; int ope, score; cin &gt;&gt; ope;
+    switch (ope)
+    {
+    case 0: break;
+    case 1:
+        system(&quot;cls&quot;);
+        cout &lt;&lt; &quot;请输入需要修改的学生编号：&quot;;
+        while (cin &gt;&gt; id &amp;&amp; id != &quot;0&quot;)
+        {
+            bool flag = false; //标记是否查询到对象
+            for (int i = 0; i &lt; (int)stu.size(); i++)
+            {
+                if (stu[i].id == id)
+                {
+                    system(&quot;cls&quot;);
+                    flag = true; //查询到对象
+                    cout &lt;&lt; &quot;该学生的当前信息如下：&quot; &lt;&lt; endl &lt;&lt; endl;
+                    cout &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; &quot;姓名&quot; &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; &quot;学号&quot; &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; &quot;班级&quot;;
+                    for (auto it = sub.begin(); it != sub.end(); it++)
+                        cout &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; it-&gt;second.name;
+                    cout &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; &quot;总成绩&quot; &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; &quot;平均学分绩点&quot;;
+                    cout &lt;&lt; endl &lt;&lt; endl;
+                    cout &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; stu[i].name &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; stu[i].id &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; stu[i].claz;
+                    for (auto it = sub.begin(); it != sub.end(); it++)
+                    {
+                        if (stu[i].m.count(it-&gt;first)) cout &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; stu[i].m[it-&gt;first];
+                        else cout &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; &quot;尚未录入&quot;;
+                    }
+                    cout &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; stu[i].sum() &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; stu[i].gpa();
+                    cout &lt;&lt; endl &lt;&lt; endl &lt;&lt; &quot;请输入修改后的学生信息：&quot; &lt;&lt; endl &lt;&lt; endl;
+                    string name; int claz;
+                    cout &lt;&lt; &quot;姓名：&quot;; cin &gt;&gt; name; stu[i].name = name;
+                    cout &lt;&lt; &quot;学号：&quot;; cin &gt;&gt; id; stu[i].id = id;
+                    cout &lt;&lt; &quot;班级：&quot;; cin &gt;&gt; claz; stu[i].claz = claz;
+                    for (auto it = sub.begin(); it != sub.end(); it++)
+                    {
+                        cout &lt;&lt; it-&gt;second.name &lt;&lt; &quot;成绩：&quot;; cin &gt;&gt; score;
+                        stu[i].m[it-&gt;first] = score;
+                    }
+                    cout &lt;&lt; endl &lt;&lt; &quot;成功修改&quot; &lt;&lt; endl;
+                    break;
+                }
+            }
+            if (!flag) //未查询到对象
+                cout &lt;&lt; endl &lt;&lt; &quot;不存在该学生编号！&quot; &lt;&lt; endl;
+            system(&quot;pause&quot;);
+            system(&quot;cls&quot;);
+            cout &lt;&lt; &quot;（输入0返回上级目录）&quot; &lt;&lt; endl &lt;&lt; endl;
+            cout &lt;&lt; &quot;请继续输入需要修改的学生编号：&quot;;
+        }
+        goto menu;
+    case 2:
+        int claz, newnum;
+        system(&quot;cls&quot;);
+        cout &lt;&lt; &quot;请输入需要修改的班级编号：&quot;;
+        while (cin &gt;&gt; claz &amp;&amp; claz)
+        {
+            bool flag = false; //标记是否查询到对象
+            for (int i = 0; i &lt; (int)stu.size(); i++)
+            {
+                if (stu[i].claz == claz)
+                {
+                    flag = true; //查询到对象
+                    cout &lt;&lt; &quot;请输入修改后的班级编号：&quot;;
+                    cin &gt;&gt; newnum;
+                    stu[i].claz = newnum;
+                    cout &lt;&lt; endl &lt;&lt; &quot;成功修改&quot; &lt;&lt; endl;
+                }
+            }
+            if (!flag) //未查询到对象
+                cout &lt;&lt; endl &lt;&lt; &quot;不存在该班级编号！&quot; &lt;&lt; endl;
+            system(&quot;pause&quot;);
+            system(&quot;cls&quot;);
+            cout &lt;&lt; &quot;（输入0返回上级目录）&quot; &lt;&lt; endl &lt;&lt; endl;
+            cout &lt;&lt; &quot;请继续输入需要修改的班级编号：&quot;;
+        }
+        goto menu;
+    default:
+        cout &lt;&lt; &quot;指令无效，请重新输入&quot; &lt;&lt; endl;
+        system(&quot;pause&quot;);
+        goto menu;
+    }
+}</code></pre>
+<p><strong>subject.h</strong></p>
+<pre><code class="cpp">#pragma once
 
+void subInsert()
+{
+    string name;
+    int sid;
+    double weight;
+    system(&quot;cls&quot;);
+    cout &lt;&lt; &quot;请输入新科目名称：&quot;;
+    cin &gt;&gt; name;
+    bool flag = false; //标记是否输入未重复编号
+    while (!flag)
+    {
+        flag = true;
+        cout &lt;&lt; &quot;请输入新科目编号：&quot;;
+        cin &gt;&gt; sid;
+        for (auto it = sub.begin(); it != sub.end(); it++)
+        {
+            if (it-&gt;first == sid)
+            {
+                flag = false;
+                cout &lt;&lt; &quot;该编号已存在！&quot; &lt;&lt; endl &lt;&lt; endl;
+                break;
+            }
+        }
+    }
+    cout &lt;&lt; &quot;请输入新科目学分：&quot;;
+    cin &gt;&gt; weight;
+    sub[sid].name = name;
+    sub[sid].weight = weight;
+    cout &lt;&lt; endl &lt;&lt; &quot;成功增添&quot; &lt;&lt; endl;
+    system(&quot;pause&quot;);
+}
 
-<!-- Window Load -->
-<!-- add class for prettify -->
-<script type="text/ls-javascript" id="window-load">
-    $(window).on('load', function() {
-        // Post_Toc parent position fixed
-        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
-    });
+void subDelete()
+{
+menu:
+    system(&quot;cls&quot;);
+    cout &lt;&lt; &quot;请输入您需要进行的操作标号&quot; &lt;&lt; endl;
+    cout &lt;&lt; &quot;------------------------------&quot; &lt;&lt; endl;
+    cout &lt;&lt; endl &lt;&lt; &quot;0\t返回根目录&quot; &lt;&lt; endl &lt;&lt; endl;
+    cout &lt;&lt; &quot;1\t按指定编号删除学科&quot; &lt;&lt; endl &lt;&lt; endl;
+    cout &lt;&lt; &quot;2\t按指定名称删除学科&quot; &lt;&lt; endl &lt;&lt; endl;
+    cout &lt;&lt; &quot;------------------------------&quot; &lt;&lt; endl;
+    string name; int ope, sid; cin &gt;&gt; ope;
+    bool flag = false;
+    switch (ope)
+    {
+    case 0: break;
+    case 1:
+        system(&quot;cls&quot;);
+        cout &lt;&lt; &quot;请输入需要删除信息的学科编号：&quot;;
+        cin &gt;&gt; sid;
+        flag = false; //标记是否查询到对象
+        for (auto it = sub.begin(); it != sub.end(); it++) //遍历map，逐个检验学科是否与指定编号匹配
+        {
+            if (it-&gt;first == sid)
+            {
+                flag = true; //查询到对象
+                sub.erase(it);
+                for (int i = 0; i &lt; (int)stu.size(); i++)
+                {
+                    if (stu[i].m.count(sid))
+                        stu[i].m.erase(sid);
+                }
+                cout &lt;&lt; endl &lt;&lt; &quot;成功删除&quot; &lt;&lt; endl;
+                break;
+            }
+        }
+        if (!flag) //未查询到对象
+            cout &lt;&lt; endl &lt;&lt; &quot;不存在该学科编号！&quot; &lt;&lt; endl;
+        system(&quot;pause&quot;);
+        system(&quot;cls&quot;);
+        goto menu;
+    case 2:
+        system(&quot;cls&quot;);
+        cout &lt;&lt; &quot;请输入需要删除信息的学科名称：&quot;;
+        cin &gt;&gt; name;
+        flag = false; //标记是否查询到对象
+        for (auto it = sub.begin(); it != sub.end(); it++) //遍历map，逐个检验学科是否与指定名称匹配
+        {
+            if (it-&gt;second.name == name)
+            {
+                flag = true; //查询到对象
+                for (int i = 0; i &lt; (int)stu.size(); i++)
+                {
+                    if (stu[i].m.count(it-&gt;first))
+                        stu[i].m.erase(it-&gt;first);
+                }
+                sub.erase(it);
+                cout &lt;&lt; endl &lt;&lt; &quot;成功删除&quot; &lt;&lt; endl;
+                break;
+            }
+        }
+        if (!flag) //未查询到对象
+            cout &lt;&lt; endl &lt;&lt; &quot;不存在该学科名称！&quot; &lt;&lt; endl;
+        system(&quot;pause&quot;);
+        system(&quot;cls&quot;);
+        goto menu;
+    default:
+        cout &lt;&lt; &quot;指令无效，请重新输入！&quot; &lt;&lt; endl;
+        system(&quot;pause&quot;);
+        goto menu;
+    }
+}
 
-    
+void subModify()
+{
+menu:
+    system(&quot;cls&quot;);
+    cout &lt;&lt; &quot;请输入您需要进行的操作标号&quot; &lt;&lt; endl;
+    cout &lt;&lt; &quot;------------------------------&quot; &lt;&lt; endl;
+    cout &lt;&lt; endl &lt;&lt; &quot;0\t返回根目录&quot; &lt;&lt; endl &lt;&lt; endl;
+    cout &lt;&lt; &quot;1\t按指定编号修改学科&quot; &lt;&lt; endl &lt;&lt; endl;
+    cout &lt;&lt; &quot;2\t按指定名称修改学科&quot; &lt;&lt; endl &lt;&lt; endl;
+    cout &lt;&lt; &quot;------------------------------&quot; &lt;&lt; endl;
+    string name; int ope, sid; cin &gt;&gt; ope;
+    double weight;
+    bool flag = false;
+    switch (ope)
+    {
+    case 0: break;
+    case 1:
+        system(&quot;cls&quot;);
+        cout &lt;&lt; &quot;请输入需要修改信息的学科编号：&quot;;
+        cin &gt;&gt; sid;
+        flag = false; //标记是否查询到对象
+        for (auto it = sub.begin(); it != sub.end(); it++) //遍历map，逐个检验学科是否与指定编号匹配
+        {
+            if (it-&gt;first == sid)
+            {
+                flag = true; //查询到对象
+                bool flagg = false; //标记是否输入未重复编号
+                while (!flagg)
+                {
+                    flagg = true;
+                    cout &lt;&lt; &quot;请输入修改后的科目编号：&quot;;
+                    cin &gt;&gt; sid;
+                    for (auto it = sub.begin(); it != sub.end(); it++)
+                    {
+                        if (it-&gt;first == sid)
+                        {
+                            flagg = false;
+                            cout &lt;&lt; &quot;该编号已存在！&quot; &lt;&lt; endl &lt;&lt; endl;
+                            break;
+                        }
+                    }
+                }
+                for (int i = 0; i &lt; (int)stu.size(); i++)
+                {
+                    if (stu[i].m.count(it-&gt;first))
+                    {
+                        stu[i].m[sid] = stu[i].m[it-&gt;first];
+                        stu[i].m.erase(it-&gt;first);
+                    }
+                }
+                cout &lt;&lt; &quot;请输入修改后的科目名称：&quot;;
+                cin &gt;&gt; name;
+                cout &lt;&lt; &quot;请输入修改后的科目学分：&quot;;
+                cin &gt;&gt; weight;
+                sub[sid] = Sub{ name, weight };
+                sub.erase(it);
+                cout &lt;&lt; endl &lt;&lt; &quot;成功修改&quot; &lt;&lt; endl;
+                break;
+            }
+        }
+        if (!flag) //未查询到对象
+            cout &lt;&lt; endl &lt;&lt; &quot;不存在该学科编号！&quot; &lt;&lt; endl;
+        system(&quot;pause&quot;);
+        system(&quot;cls&quot;);
+        goto menu;
+    case 2:
+        system(&quot;cls&quot;);
+        cout &lt;&lt; &quot;请输入需要修改信息的学科名称：&quot;;
+        cin &gt;&gt; name;
+        flag = false; //标记是否查询到对象
+        for (auto it = sub.begin(); it != sub.end(); it++) //遍历map，逐个检验学科是否与指定名称匹配
+        {
+            if (it-&gt;second.name == name)
+            {
+                flag = true; //查询到对象
+                bool flagg = false; //标记是否输入未重复编号
+                while (!flagg)
+                {
+                    flagg = true;
+                    cout &lt;&lt; &quot;请输入修改后的科目编号：&quot;;
+                    cin &gt;&gt; sid;
+                    for (auto it = sub.begin(); it != sub.end(); it++)
+                    {
+                        if (it-&gt;first == sid)
+                        {
+                            flagg = false;
+                            cout &lt;&lt; &quot;该编号已存在！&quot; &lt;&lt; endl &lt;&lt; endl;
+                            break;
+                        }
+                    }
+                }
+                for (int i = 0; i &lt; (int)stu.size(); i++)
+                {
+                    if (stu[i].m.count(it-&gt;first))
+                    {
+                        stu[i].m[sid] = stu[i].m[it-&gt;first];
+                        stu[i].m.erase(it-&gt;first);
+                    }
+                }
+                cout &lt;&lt; &quot;请输入修改后的科目名称：&quot;;
+                cin &gt;&gt; name;
+                cout &lt;&lt; &quot;请输入修改后的科目学分：&quot;;
+                cin &gt;&gt; weight;
+                sub[sid] = Sub{ name, weight };
+                sub.erase(it);
+                cout &lt;&lt; endl &lt;&lt; &quot;成功修改&quot; &lt;&lt; endl;
+                break;
+            }
+        }
+        if (!flag) //未查询到对象
+            cout &lt;&lt; endl &lt;&lt; &quot;不存在该学科名称！&quot; &lt;&lt; endl;
+        system(&quot;pause&quot;);
+        system(&quot;cls&quot;);
+        goto menu;
+    default:
+        cout &lt;&lt; &quot;指令无效，请重新输入！&quot; &lt;&lt; endl;
+        system(&quot;pause&quot;);
+        goto menu;
+    }
+}
+
+void subDisplay() //显示各项学科信息
+{
+    system(&quot;cls&quot;);
+    cout &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; &quot;科目编号&quot; &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; &quot;科目名称&quot; &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; &quot;科目学分&quot; &lt;&lt; endl &lt;&lt; endl;
+    for (auto it = sub.begin(); it != sub.end(); it++)
+        cout &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; it-&gt;first &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; it-&gt;second.name &lt;&lt; std::right &lt;&lt; setw(15) &lt;&lt; it-&gt;second.weight &lt;&lt; endl &lt;&lt; endl;
+    system(&quot;pause&quot;);
+}</code></pre>
+<p><strong>system.h</strong></p>
+<pre><code class="cpp">#pragma once
+
+using namespace std;
+
+void welcome()
+{
+    system(&quot;color 3f&quot;);
+    cout &lt;&lt; &quot;--------------------------&quot; &lt;&lt; endl;
+    cout &lt;&lt; &quot;欢迎使用学生信息管理系统！&quot; &lt;&lt; endl;
+    cout &lt;&lt; &quot;--------------------------&quot; &lt;&lt; endl;
+    cout &lt;&lt; &quot;正在加载，请稍后&quot; &lt;&lt; endl &lt;&lt; endl;
+    for (int i = 0; i &lt; 20; i++)
+    {
+        Sleep(100);
+        cout &lt;&lt; &quot;■&quot;;
+    }
+    cout &lt;&lt; endl;
+}
+
+void login() //实现登录功能
+{
+    system(&quot;pause&quot;);
+    system(&quot;cls&quot;);
+    ifstream file;
+    file.open(&quot;./src/password.txt&quot;);
+    if (!file)
+    {
+        cout &lt;&lt; &quot;数据异常，无法访问！&quot; &lt;&lt; endl;
+        system(&quot;pause&quot;);
+        exit(0);
+    }
+    string pass, input;
+    file &gt;&gt; pass;
+    file.close();
+    cout &lt;&lt; &quot;请输入密码：&quot;;
+    while (cin &gt;&gt; input &amp;&amp; pass != input) //检验输入串与密码是否匹配
+    {
+        if (input == &quot;0&quot;) //输入指令0，取消登录操作
+        {
+            system(&quot;pause&quot;);
+            exit(0);
+        }
+        system(&quot;cls&quot;);
+        cout &lt;&lt; &quot;（输入0退出系统）&quot; &lt;&lt; endl &lt;&lt; endl;
+        cout &lt;&lt; &quot;密码错误，请重试：&quot;;
+    }
+    cout &lt;&lt; endl &lt;&lt; &quot;登录成功！&quot; &lt;&lt; endl;
+    system(&quot;pause&quot;);
+}
+
+void load() //从文件中读取全部学生信息和科目信息
+{
+    ifstream file;
+    file.open(&quot;./src/subject.txt&quot;);
+    if (!file)
+    {
+        cout &lt;&lt; &quot;数据异常，无法访问！&quot; &lt;&lt; endl;
+        system(&quot;pause&quot;);
+        exit(0);
+    }
+    int sid;
+    while (file &gt;&gt; sid)
+        file &gt;&gt; sub[sid].name &gt;&gt; sub[sid].weight;
+    file.close();
+    file.open(&quot;./src/student.txt&quot;);
+    if (!file)
+    {
+        cout &lt;&lt; &quot;数据异常，无法访问！&quot; &lt;&lt; endl;
+        system(&quot;pause&quot;);
+        exit(0);
+    }
+    string name, id;
+    int claz, score, nsub;
+    map&lt;int, int&gt; m;
+    while (file &gt;&gt; name &gt;&gt; id &gt;&gt; claz &gt;&gt; nsub)
+    {
+        m.clear();
+        for (int i = 0; i &lt; nsub; i++)
+        {
+            file &gt;&gt; sid &gt;&gt; score;
+            m[sid] = score;
+        }
+        stu.push_back(Stu{ name, id, claz, m });
+    }
+}
+
+void save() //程序运行结束前，将学生信息和科目信息写入文件
+{
+    ofstream student(&quot;./src/student.txt&quot;);
+    for (int i = 0; i &lt; (int)stu.size(); i++)
+    {
+        student &lt;&lt; stu[i].name &lt;&lt; &quot; &quot; &lt;&lt; stu[i].id &lt;&lt; &quot; &quot; &lt;&lt; stu[i].claz &lt;&lt; &quot; &quot; &lt;&lt; (int)stu[i].m.size();
+        for (auto it = stu[i].m.begin(); it != stu[i].m.end(); it++)
+            student &lt;&lt; &quot; &quot; &lt;&lt; it-&gt;first &lt;&lt; &quot; &quot; &lt;&lt; it-&gt;second;
+        student &lt;&lt; endl;
+    }
+    student.close();
+    ofstream subject(&quot;./src/subject.txt&quot;);
+    for (auto it = sub.begin(); it != sub.end(); it++)
+        subject &lt;&lt; it-&gt;first &lt;&lt; &quot; &quot; &lt;&lt; it-&gt;second.name &lt;&lt; &quot; &quot; &lt;&lt; it-&gt;second.weight &lt;&lt; endl;
+}
+
+void showMenu()
+{
+    system(&quot;cls&quot;);
+    cout &lt;&lt; &quot;请输入您需要进行的操作标号&quot; &lt;&lt; endl;
+    cout &lt;&lt; &quot;---------------------&quot; &lt;&lt; endl;
+    cout &lt;&lt; endl &lt;&lt; &quot;0\t退出系统&quot; &lt;&lt; endl &lt;&lt; endl;
+    cout &lt;&lt; &quot;1\t修改密码&quot; &lt;&lt; endl &lt;&lt; endl;
+    cout &lt;&lt; &quot;2\t增添学生信息&quot; &lt;&lt; endl &lt;&lt; endl;
+    cout &lt;&lt; &quot;3\t删除学生信息&quot; &lt;&lt; endl &lt;&lt; endl;
+    cout &lt;&lt; &quot;4\t修改学生信息&quot; &lt;&lt; endl &lt;&lt; endl;
+    cout &lt;&lt; &quot;5\t查询学生信息&quot; &lt;&lt; endl &lt;&lt; endl;
+    cout &lt;&lt; &quot;6\t增添科目信息&quot; &lt;&lt; endl &lt;&lt; endl;
+    cout &lt;&lt; &quot;7\t删除科目信息&quot; &lt;&lt; endl &lt;&lt; endl;
+    cout &lt;&lt; &quot;8\t修改科目信息&quot; &lt;&lt; endl &lt;&lt; endl;
+    cout &lt;&lt; &quot;9\t显示科目信息&quot; &lt;&lt; endl &lt;&lt; endl;
+    cout &lt;&lt; &quot;---------------------&quot; &lt;&lt; endl;
+}
+
+void changePass()
+{
+    system(&quot;cls&quot;);
+    cout &lt;&lt; &quot;请输入3-10位新密码：&quot; &lt;&lt; endl;
+    string pass;
+    while (cin &gt;&gt; pass &amp;&amp; (pass.length() &lt; 3 || pass.length() &gt; 10)) //检验新密码长度是否符合要求
+    {
+        system(&quot;cls&quot;);
+        cout &lt;&lt; &quot;密码不符合要求，请重新输入：&quot; &lt;&lt; endl;
+    }
+    ofstream file(&quot;./src/password.txt&quot;);
+    file &lt;&lt; pass;
+    file.close();
+    system(&quot;cls&quot;);
+    cout &lt;&lt; &quot;密码修改成功，新密码为：&quot; &lt;&lt; pass &lt;&lt; endl;
+    system(&quot;pause&quot;);
+}
+
+bool chooseFunc()
+{
+    int ope; cin &gt;&gt; ope;
+    switch (ope)
+    {
+    case 0: return false;
+    case 1: changePass(); break;
+    case 2: stuInsert(); break;
+    case 3: stuDelete(); break;
+    case 4: stuModify(); break;
+    case 5: stuFind(); break;
+    case 6: subInsert(); break;
+    case 7: subDelete(); break;
+    case 8: subModify(); break;
+    case 9: subDisplay(); break;
+    default: cout &lt;&lt; &quot;指令无效，请重新输入！&quot; &lt;&lt; endl; system(&quot;pause&quot;);
+    }
+    return true;
+}</code></pre>
+
+          
         
+      
+    </div>
     
     
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://hexo.macrohard.cn/2019/06/13/2018-2019-大学一年级总结/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="2U">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/singularity0909/cdn/img/avatar/lks-2.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Singularity - 2U's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/06/13/2018-2019-大学一年级总结/" itemprop="url">2018-2019 大学一年级总结</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-06-13T21:53:08+08:00">
+                2019-06-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Daily/" itemprop="url" rel="index">
+                    <span itemprop="name">Daily</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <blockquote>
+<p><strong>比成功更重要的是要有内在的丰富和自己喜欢做的事情</strong></p>
+</blockquote>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/06/13/2018-2019-大学一年级总结/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://hexo.macrohard.cn/2019/06/13/Hello-World/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="2U">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/singularity0909/cdn/img/avatar/lks-2.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Singularity - 2U's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/06/13/Hello-World/" itemprop="url">Hello World</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-06-13T11:02:50+08:00">
+                2019-06-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Daily/" itemprop="url" rel="index">
+                    <span itemprop="name">Daily</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="这是我的第一篇博文"><a href="#这是我的第一篇博文" class="headerlink" title="这是我的第一篇博文"></a>这是我的第一篇博文</h3><p>入坑Github，成功搭建Hexo博客！<br>在此要感谢hwr dalao</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
+
+
+          </div>
+          
+
+
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="https://cdn.jsdelivr.net/gh/singularity0909/cdn/img/avatar/lks-2.jpg" alt="2U">
+            
+              <p class="site-author-name" itemprop="name">2U</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">tags</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">2U</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count"></span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
 </script>
 
-<!-- MathJax Load-->
-
-
-<!-- Bing Background -->
-
-
-<script type="text/ls-javascript" id="lazy-load">
-    // Offer LazyLoad
-    queue.offer(function(){
-        $('.lazy').lazyload({
-            effect : 'show'
-        });
-    });
-
-    // Start Queue
-    $(document).ready(function(){
-        setInterval(function(){
-            queue.execNext();
-        },200);
-    });
-</script>
-
-<!-- Custom Footer -->
 
 
 
-<script>
-    var copyrightNow = new Date().getFullYear();
-    var textContent = document.querySelector('span[year]')
 
-    copyrightSince = 2019;
-    if (copyrightSince === copyrightNow||copyrightSince === 0000) {
-        textContent.textContent = copyrightNow
-    } else {
-        textContent.textContent = copyrightSince + ' - ' + copyrightNow
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
     }
 
-    (function(){
-        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
 
-        for (var i = 0; i < scriptList.length; ++i) {
-            var item = scriptList[i];
-            lsloader.runInlineScript(item.id,item.id);
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
         }
-    })()
-console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
-</script>
+      });
+    }
 
-                </main>
-            </div>
-        </body>
-        <script src="/js/activate-power-mode.js"></script>
-        <script>
-            POWERMODE.colorful = true; // make power mode colorful
-            POWERMODE.shake = false; // turn off shake
-            document.body.addEventListener('input', POWERMODE);
-        </script>
-    
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
 </html>
