@@ -3,9 +3,27 @@ title: Hello World
 date: 2019-06-13 11:02:50
 tags:
 categories: Daily
-thumbnail: https://cdn.jsdelivr.net/gh/singularity0909/cdn/img/gallery/yellow-and-pink.jpg
+thumbnail:  
 ---
 
-### 这是我的第一篇博文
-入坑Github，成功搭建Hexo博客！
-在此要感谢hwr dalao
+This is my first blog post on GitHub pages.
+
+<!-- more -->
+
+### 2019.06.13
+
+> 入坑 GitHub，成功搭建 Hexo 博客，选用 Material 主题。
+> 
+> 在此感谢 [hwr dalao](https://huangweiran.club/)
+
+### 2019.11.28
+
+> 前后提交了三次申请、耗时两周，网站域名备案总算通过了。
+> 
+> 至此我的 Typecho 博客正式上线，选用 handsome 主题。
+> 
+> https://www.macrohard.cn
+
+### 2020.05.27
+
+> 重新开启 Hexo 博客，换用 Saku 主题。
